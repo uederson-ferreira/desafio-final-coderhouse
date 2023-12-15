@@ -1,0 +1,104 @@
+*{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+
+header{
+    background-color: black;
+}
+
+menu{
+    padding: 5px;
+    background-color: white;
+    font-size:25px;
+}
+
+body{
+    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
+    
+}
+
+h1{
+    font-size: 50px;
+    font-family:Star;
+    color: black;
+    background-color: yellow;
+}
+
+.img{
+    size:5%;
+}
+
+header > center >p{
+    border-top:solid 2px;
+    border-bottom:solid 2px;
+    border-color: yellow;
+    font-size: 25px;
+    color: yellow;
+}
+
+h4{
+    color: white;
+}
+
+h4:hover{
+    color:yellow;
+}
+
+
+header>center>b>menu>a{
+    color: black;
+}
+
+a{
+    color: white;
+}
+
+footer>center>h3{
+    margin-top: 50px;
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    margin-bottom: 0%;
+   
+}
+
+.nomes{
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    display:flex;
+    flex-direction: row;
+}
+
+.Nomes-Dev{
+    padding: 16px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.Nomes-Dev:first-child{
+    padding-left: 0px;
+}
+
+.Nomes-Dev:last-child{
+    padding-right: 0px;
+}
+.Devs{
+    padding-top: 50px;
+}
+
+.planetas{
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 50%;
+    text-align: center;
+    top: 100px;
+
+}
