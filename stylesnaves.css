@@ -1,34 +1,113 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
+}
+nav{
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+nav div{
+    background-color: white;
+    width: max-content;
+    padding: 5px;
+    font-size: 16px;
+    color: black;
+    font-family: inter;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    word-wrap: break-word;
+}
+nav a {
+    padding-right: 10px;
 }
 
 header {
-    background-color: #f1c40f;
+    background-color: black;
     padding: 1.5rem;
     text-align: center;
-}
+    width: 100%;
 
-header h1 {
-    color: #333;
-    margin: 0;
 }
-
-.navios {
+.tudosobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
+    color: #FFE113;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 900;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    word-wrap: break-word;
+    padding: 5px;
+}
+div.qualpagina {
+    margin-left: 10%;
+    color: #FFE113;
+    margin-top: 20px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+section.navios{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 1.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    width: 76%;
+    flex-direction: row;
+    
 }
-
+.navefora {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    height: 140px;
+    margin-left: 10px;
+    padding-bottom: 50px;
+}
+h4 {
+    padding: 0px;
+    margin: 0px;
+    width:max-content;
+    color: black;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+}
 .nave {
     background-color: #4c5161;
-    color: #f1f1f1;
-    margin: 1rem;
-    padding: 1.5rem;
-    width: 30%;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
+}
+img{
+    max-width: 100%;
 }
 
-.nave h2 {
-    margin-bottom: 1rem;
+section.direito{
+    background-color: none;
+    width: 12%;
+}
+aside{
+    background-color: none;
+    width: 12%;
 }
