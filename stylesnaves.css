@@ -265,4 +265,23 @@ footer{
     text-align: left;
     word-wrap: break-word;
     white-space: pre-line;
+    font-size: 14px; 
+    font-family: Inter; 
+    font-weight: 700; 
+    letter-spacing: 0.25px; 
+    word-wrap: break-word;
+}
+.TxtNaves{
+    background-color: #FFE113;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    justify-content: center;
+    display:flow-root;
+    color: black;
+    font-size: 70px;
+    font-family: StarJedi Special Edition;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    word-wrap: break-word
 }
