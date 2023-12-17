@@ -26,7 +26,6 @@ nav div{
 nav a {
     padding-right: 10px;
 }
-
 header {
     background-color: black;
     padding: 1.5rem;
@@ -68,7 +67,134 @@ section.navios{
     width: 76%;
     flex-direction: row;
     position: relative;
-    height: 1000px;
+}
+.CxsDetalhe{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 100px;
+}
+.CxDetalheEsquerdo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.CxDetalheDireito{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.Pergunta {
+    color: black; 
+    font-size: 14px; 
+    font-family: Inter; 
+    font-weight: bold; 
+    word-wrap: break-word;
+}
+.Resposta {
+    color: black; 
+    font-size: 12px; 
+    font-family: Inter; 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+.QuadroFilmesPilotos {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.QuadroPilotos {
+    border-radius: 1%;
+    border: 5px solid black;
+    width: 45%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5%;
+    overflow: hidden;
+}
+.QuadroFilmes {
+    background-color: white;
+    width: 45%;
+    border-radius: 5%;
+    overflow: hidden;
+}
+.TxtQuadroPilotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    text-align: center;
+    width: 100%;
+
+    background-color: #FFE113;
+   
+    color: black;
+    font-size: 20px;
+    font-family: StarJedi Special Edition;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+    gap: 30px;
+}
+.CapasFilmes {
+    display: flex;
+    gap: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.FilmeComTexto {
+    padding-top: 20px;
+    padding-bottom: 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+}
+.NomeFilme {
+    color: black; 
+    font-size: 14px; 
+    font-family: Inter; 
+    font-weight: bold; 
+    word-wrap: break-word;
+    text-align: center;
+}
+.TxtFilmsRela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    text-align: center;
+    width: 100%;
+
+    background-color: #FFE113;
+   
+    color: black;
+    font-size: 20px;
+    font-family: StarJedi Special Edition;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+    gap: 30px;
+}
+.TxtImfoPiloto {
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+    align-items: center;
 }
 .navesgeral {
     display: flex;
@@ -100,6 +226,16 @@ h4 {
     font-weight: 800;
     line-height: 16px;
     letter-spacing: 0.25px;
+}
+.detalhenave {
+    background-color: #4c5161;
+    width: 150px;
+    height: 150px;
+    margin-left: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
 }
 .nave {
     background-color: #4c5161;
@@ -145,19 +281,6 @@ img{
     letter-spacing: 0.25px; 
     word-wrap: break-word;
 }
-.leftpaginas, .rightpaginas{
-    padding-left: 5px; 
-    padding-right: 5px; 
-    padding-top: 1px;
-    padding-bottom: 1px; 
-    border-radius: 5px; 
-    border: 0px black solid; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    display: inline-flex;
-    background-color: black;
-}
 section.esquerdo{
     background-color: none;
     width: 12%;
@@ -188,7 +311,6 @@ footer{
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
 .MapaDoSite{
     left: 44px; 
     top: 92px; 
@@ -240,7 +362,6 @@ footer{
     margin-right: 10px;
     padding-top: 4px;
 }
-
 .Rodape{
     display: flex;
     justify-content: center;
@@ -260,7 +381,6 @@ footer{
     display:flex;
     flex-direction: row;
 }
-
 .CxNomesDevs {
     display: inline-flex;
     width: 200px;
@@ -285,11 +405,12 @@ main > section > .DivTxtNaves{
     height: 200px;
     display: flex;
     justify-content: center;
-    align-items:start;
+    align-items:center;
 
     color: black;
-    font-size: 70px;
-    font-family: StarJedi Special Edition;
-    font-weight: 400;
+    font-size: 55px;
+    font-family: 'StarJedi Special Edition', sans-serif;
+    font-weight: 700;
     letter-spacing: 0.25px;
+    gap: 30px;
 }
