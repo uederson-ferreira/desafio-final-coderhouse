@@ -2,6 +2,10 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 nav{
     background: black;
