@@ -111,13 +111,17 @@ h4 {
     height: 134px;
     border-radius: 50%; /* Adicione esta propriedade para tornar a imagem redonda */
     overflow: hidden; /* Adicione esta propriedade para garantir que a imagem seja cortada corretamente */
-    align-items: center;
+    align-items: end;
     justify-content: center;
     display: flex;
     background-image: url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
 }
 img{
     max-width: 100%;
+    
+}
+div > a {
+    align-self: end;
 }
 .passpaginas{
     display: flex;

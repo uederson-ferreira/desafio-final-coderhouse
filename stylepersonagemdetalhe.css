@@ -239,15 +239,22 @@ h4 {
     letter-spacing: 0.25px;
 }
 .detalhepersonagem {
-    background-color: #4c5161;
+    background-color: #52614c;
     width: 150px;
     height: 150px;
-    margin-left: 25px;
-    align-items: center;
+    margin-left: 25px; 
+    align-items: end;
     justify-content: center;
     display: flex;
-    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
+    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png); 
 }
+ .detalhepersonagem > img {
+    width: 195px;
+    height: 165px;
+    padding-left: 8px;
+}
+ 
+
 .nave {
     background-color: #4c5161;
     width: 120px;
