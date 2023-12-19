@@ -1,139 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espécies de Star Wars</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            color: #fff;
-            background-color: #000;
-            text-align: center;
-        }
-
-        img.logo {
-            max-width: 100px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        h1 {
-            margin-top: 10px;
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-
-        .species-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .species-item {
-            margin: 10px;
-        }
-
-        img.species-image {
-            max-width: 200px;
-            border-radius: 50%;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesespecies.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/starjedi-special-edition" rel="stylesheet">
+    <title>Especies - Star Wars</title>
 </head>
 <body>
-    <img class="logo" src="https://cdn.worldvectorlogo.com/logos/star-wars-2.svg" alt="Star Wars Logo">
-
-    <h1>Espécies de Star Wars</h1>
-
-    <div class="species-container">
-        
-        <div class="species-item">
-            <a href="humanos.html">
-                <img class="species-image" src="https://www.diariodepernambuco.com.br/static/app/noticia_127983242361/2016/12/15/680191/20161215125738504842o.jpeg" alt="Imagem Humano">
-                <h2>Humano</h2>
-            </a>
+    <header>
+        <img src="./img/Logo-Star-Wars.png" alt="Logo-Star-Wars">
+    </header>
+    <nav>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="personagens.html">Personagens</a>
+            <a href="especies.html">Espécies</a>
+            <a href="#filmes">Filmes</a>
+            <a href="naves.html">Naves Espaciais</a>
+            <a href="veiculos.html">Veículos</a>
+            <a href="planetas.html">Planetas</a>
         </div>
-
-        
-        <div class="species-item">
-            <a href="#droid">
-                <img class="species-image" src="https://ew.com/thmb/mWHd9Y7nx8lnABJz2SPTugiayfk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/battle-droids-2000-01242b7f778446af8a7facd2432df426.jpg" alt="Imagem Droid">
-                <h2>Droid</h2>
-            </a>
-        </div>
-
-        
-        <div class="species-item">
-            <a href="#wookie">
-                <img class="species-image" src="https://lumiere-a.akamaihd.net/v1/images/wookiee-bio-1_541e8c87.jpeg?region=0%2C0%2C1280%2C870" alt="Imagem Wookie">
-                <h2>Wookie</h2>
-            </a>
-        </div>
-
-        
-        <div class="species-item">
-            <a href="#rodian">
-                <img class="species-image" src="https://swrpggm.com/wp-content/uploads/2021/12/Rodian-prisoner_FE.jpg" alt="Imagem Rodian">
-                <h2>Rodian</h2>
-            </a>
-        </div>
-
-       
-        <div class="species-item">
-            <a href="#hutt">
-                <img class="species-image" src="https://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg" alt="Imagem Hutt">
-                <h2>Hutt</h2>
-            </a>
-        </div>
-
-        
-        <div class="species-item">
-            <a href="#yoda-species">
-                <img class="species-image" src="https://bordalo.observador.pt/v2/q:84/rs:fill:770:433/c:770:433:nowe:0:0/plain/https://s3.observador.pt/wp-content/uploads/2015/12/star-wars-alternate-ending-vader-father-yoda_770x433_acf_cropped.jpg" alt="Imagem Hutt">
-                <h2>Yoda's Species</h2>
-            </a>
-        </div>
-
-        
-        <div class="species-item">
-            <a href="#trandoshan">
-                <img class="species-image" src="https://lumiere-a.akamaihd.net/v1/images/trandoshian-main_19804be7.jpeg?region=0%2C67%2C1280%2C720" alt="Imagem Trandoshan">
-                <h2>Trandoshan</h2>
-            </a>
-        </div>
-
-        
-        <div class="species-item">
-            <a href="#mon-calamari">
-                <img class="species-image" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/12/star-wars-eclipse-still-mon-calamari.jpg" alt="Imagem Mon Calamari">
-                <h2>Mon Calamari</h2>
-            </a>
-        </div>
-
-        
-        <div class="species-item">
-            <a href="#ewok">
-                <img class="species-image" src="https://cinepop.com.br/wp-content/uploads/2019/11/starwars_1.jpg" alt="Imagem Ewok">
-                <h2>Ewok</h2>
-            </a>
-        </div>
-
-        
-        <div class="species-item">
-            <a href="#sullustan">
-                <img class="species-image" src="https://upload.wikimedia.org/wikipedia/en/9/9e/Nien_Nunb_Return_of_the_Jedi.jpeg" alt="Imagem Sullustan">
-                <h2>Sullustan</h2>
-            </a>
-        </div>
-    </div>
-
+    </nav>
+    
+    <div class="tudosobre">Tudo sobre Star Wars</div>
+    
+    <div class="qualpagina">Home / Especies</div>
+    <main>
+        <section class="esquerdo"></section>
+        <section class="personagios">
+            <div class="DivTxtNaves">espécies</div>
+            <div class="personagensgeral">
+                <div class="personagemfora">   
+                    <div class="personagem">
+                        <a href="especiesdetalhe.html">
+                        <img src="./img/Human.png" alt="humano">
+                        </a>
+                    </div>
+                    <h4>Humanos</h4>
+                </div>
+                <div class="personagemfora">   
+                    <div class="personagem">
+                        <img src="./img/C-3PO.png" alt="C3-PO">
+                    </div>
+                    <h4>Droids</h4>
+                </div>
+                <div class="personagemfora">   
+                    <div class="personagem">
+                        <img src="./img/wookiee.png" alt="Owen lars">
+                    </div>
+                    <h4>Wookies</h4>
+                </div>
+                
+                   
+            </div>
+            <div class="passpaginas">
+                <div class="leftpaginas">
+                    <img class="left" src="./img/ChevronLeft.svg" alt="">
+                </div>
+                <div class="paginas">
+                    <div class="inpaginas">1</div>
+                </div>
+                <div class="paginas">
+                    <div class="inpaginas">2</div>
+                </div>
+                <div class="paginas">
+                    <div class="inpaginas">3</div>
+                </div>
+                <div class="paginas">
+                    <div class="inpaginas">4</div>
+                </div>
+                <div class="paginas">
+                    <div class="inpaginas">5</div>
+                </div>
+                <div class="rightpaginas">
+                    <img src="./img/ChevronRight.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <aside class="esquerdo"></aside>    
+    </main>
     <footer>
-        Grupo 9 Star Wars
+        <div class="Rodape">
+            <div class="VoltarAoTopo">
+                <div class="VoltarAoTopoin">Voltar ao topo</div>
+                <img class="ImgVoltarAoTopo" src="./img/aotopo.svg" alt="VoltarAoTopo">
+            </div>
+            
+            <div class="MapaDoSite">MAPA DO SITE</div>
+
+            <div class="linkspag">
+                <div class="Home">Home</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+                <div class="Home">Personagens</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+                <div class="Home">Espécies</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+                <div class="Home">Filmes</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+                <div class="Home">Ordem de se Assistir os Filmes</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+                <div class="Home">Naves Espaciais</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+                <div class="Home">Veículos</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+                <div class="Home">Planetas</div>
+                <div class="Externallink">
+                    <img class="ImgExternallink" src="./img/ExternalLink.svg" alt="ExternalLink">
+                </div>
+                <img class="barra" src="./img/barra.svg" alt="barra">
+            </div>
+
+            <div class="TituloDesenvolvedores">Desenvolvedores:</div>
+            <div class="CxGeralNomesDevs">
+                <div class="CxNomesDevs">
+                    <div class="NomeDevs">Grabriel 
+                        Carneiro</div>
+                    <div class="RedesSociais">
+                        <img src="./img/linkedin.svg" alt="linkedin">
+                        <img src="./img/github.png" alt="github">
+                        <img src="./img/instagram.png" alt="instagram">
+                        <img src="./img/facebook.png" alt="facebook">
+                        <img src="./img/x.png" alt="x antigo twitter">
+                    </div>
+                </div>
+
+                <div class="CxNomesDevs">
+                    <div class="NomeDevs">Paulo 
+                        Sardeiro Flores Da Cunha</div>
+                    <div class="RedesSociais">
+                        <img src="./img/linkedin.svg" alt="linkedin">
+                        <img src="./img/github.png" alt="github">
+                        <img src="./img/instagram.png" alt="instagram">
+                        <img src="./img/facebook.png" alt="facebook">
+                        <img src="./img/x.png" alt="x antigo twitter">
+                    </div>
+                </div>
+
+                <div class="CxNomesDevs">
+                    <div class="NomeDevs">Thiago 
+                        Bernardo Fernandes</div>
+                    <div class="RedesSociais">
+                        <img src="./img/linkedin.svg" alt="linkedin">
+                        <img src="./img/github.png" alt="github">
+                        <img src="./img/instagram.png" alt="instagram">
+                        <img src="./img/facebook.png" alt="facebook">
+                        <img src="./img/x.png" alt="x antigo twitter">
+                    </div>
+                </div>
+
+                <div class="CxNomesDevs">
+                    <div class="NomeDevs">Uederson 
+                        De Amadeu Ferreira</div>
+                    <div class="RedesSociais">
+                        <img src="./img/linkedin.svg" alt="linkedin">
+                        <img src="./img/github.png" alt="github">
+                        <img src="./img/instagram.png" alt="instagram">
+                        <img src="./img/facebook.png" alt="facebook">
+                        <img src="./img/x.png" alt="x antigo twitter">
+                    </div>    
+                </div>
+            </div>
+         </div>
     </footer>
 </body>
 </html>
