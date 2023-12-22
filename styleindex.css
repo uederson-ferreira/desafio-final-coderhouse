@@ -1,7 +1,6 @@
 body {
     background-color: black;
     margin: 0;
-    overflow: hidden;
 }
 :root {
     --Black: #000;
@@ -59,13 +58,36 @@ body {
     margin: 0px;
 }
 
-.conteudo main {
+.layout {
     display: flex;
     gap: 16px;
 }
-.main__barrasLaterais {
+.layout-barraLateral {
     width: 935px;
     height: 181px;
     transform: rotate(-90deg);
     background: url(https://s3-alpha-sig.figma.com/img/49ac/4eb1/834138eca8a5ae35a683b37310a7d1b7?Expires=1704067200&Signature=FVlY7MMV8YAWHjN80UUhV-KDC33gFC4D3X1C9n8iEBwNgGvDGTAAXwU9CehR4RPyUEEo-~T2aUbc0xsKocVF7Jl52Sh5Sg3JkRVV406RCYaK54vfdTWuuR7QHouqI4TFxUjSX5B9Ta-JGF1WN2YDuOEv2oWOF~~zymvb3umWVTrdDGvIpePnsn99h2O-vUgRRbGJbrR4W7CkGmetNXX6PLx1HNVCAAfGZ8VRuVoLrAr8tluNUSNIwIOo8xFBkF4T0q1TreDdCqRDrS7C~NsnttBxAt3UtqMHDZ9lVF4zMoRsnGznIqzW7usk7JfxEJW8utvKBoB-HgvyG4VSkzD2sQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4), lightgray 50% / cover no-repeat;
+}
+.layout-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.layout-conteudo-roloDeFilmes {
+    width: 886px;
+    height: 350px;
+    margin-top: 30px;
+    flex-shrink: 0;
+}
+.titulo h2 {
+    color: var(--Yellow, #FFE113);
+    text-align: center;
+    font-family: StarJedi Special Edition;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70px;
+    letter-spacing: 0.25px;
+    text-transform: lowercase;
+    margin: 0px;
 }
