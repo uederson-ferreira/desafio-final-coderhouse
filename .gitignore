@@ -1,0 +1,32 @@
+# Arquivos de configuração personalizados
+.DS_Store
+
+# Arquivos de log gerados
+*.log
+*.localized
+*.unused
+*.xcactivitylog
+
+# Arquivos de configuração do Mac
+.CFUserTextEncoding
+
+# Arquivos de cache gerados pelo Xcode
+DerivedData
+*.db
+*.xcodeuserdata
+*.xcuserstate
+*.xcworkspace
+*.xcuserstate
+*.xctargetrun
+
+# Arquivos de configuração do Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Arquivos de configuração do Android Studio
+.gradle
+.idea/
+*.iml
+
+# Arquivos de configuração do CocoaPods
+/Pods
