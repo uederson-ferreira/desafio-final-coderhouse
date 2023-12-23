@@ -26,15 +26,20 @@ header {
     align-items: center;
     width: 100%;
 }
-nav{
+nav {
     grid-area: nav;
     text-transform: uppercase;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 0px;
     background-color: white;
-    margin-bottom: 15px;
+
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    justify-self: center;
 
     font-size: 12px;
     color: black;
@@ -123,6 +128,7 @@ h4 {
     height: 120px;
     align-items: center;
     justify-content: center;
+    align-self: center;
     display: flex;
     background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
 }
@@ -130,15 +136,17 @@ h4 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: row;
     position: absolute;
     width: 70%;
     top: 350px;
-    height: 100%;
     z-index: 1;
+    overflow: hidden;
+    gap: 10px;
 }
 .navefora {
-    padding: 5px;
-    padding-left: 30px;
+    width: 120px;
+    height: 135px;
 }
 .passpaginas{
     display: flex;
@@ -328,7 +336,7 @@ footer {
         text-decoration: none;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 130px 55px 40px auto 800px auto;
+        grid-template-rows: 130px 55px 40px auto 600px auto;
         grid-template-areas:
             "header header header"
             "nav nav nav"
@@ -346,15 +354,20 @@ footer {
         align-items: center;
         width: 100%;
     }
-    nav{
+    nav {
         grid-area: nav;
         text-transform: uppercase;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: 10px;
+        padding-top: 0px;
         background-color: white;
-        margin-bottom: 15px;
+    
+        align-items: center;
+        width: max-content;
+        height: max-content;
+        align-self: center;
+        justify-self: center;
     
         font-size: 12px;
         color: black;
@@ -443,6 +456,7 @@ footer {
         height: 120px;
         align-items: center;
         justify-content: center;
+        align-self: center;
         display: flex;
         background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
     }
@@ -450,16 +464,17 @@ footer {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        flex-direction: row;
         position: absolute;
-       
         width: 70%;
-        top: 360px;
-        height: 100%;
+        top: 370px;
         z-index: 1;
+        overflow: hidden;
+        gap: 10px;
     }
     .navefora {
-        padding: 5px;
-        padding-left: 30px;
+        width: 120px;
+        height: 135px;
     }
     .passpaginas{
         display: flex;
@@ -467,7 +482,7 @@ footer {
         align-items: center;
         gap: 5px;
         z-index: 1;
-        padding-top: 600px;
+        padding-top: 400px;
         padding-bottom: 10px;
     }
     .paginas{
@@ -541,7 +556,7 @@ footer {
         letter-spacing: 0.25px; 
         word-wrap: break-word;
         float:right;
-        width: 100%;
+        width: 76%;
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -654,7 +669,7 @@ footer {
         text-decoration: none;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 130px 55px 40px auto 800px auto;
+        grid-template-rows: 130px 55px 40px auto 450px auto;
         grid-template-areas:
             "header header header"
             "nav nav nav"
@@ -672,15 +687,20 @@ footer {
         align-items: center;
         width: 100%;
     }
-    nav{
+    nav {
         grid-area: nav;
         text-transform: uppercase;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: 10px;
+        padding-top: 0px;
         background-color: white;
-        margin-bottom: 15px;
+    
+        align-items: center;
+        width: max-content;
+        height: max-content;
+        align-self: center;
+        justify-self: center;
     
         font-size: 12px;
         color: black;
@@ -769,6 +789,7 @@ footer {
         height: 120px;
         align-items: center;
         justify-content: center;
+        align-self: center;
         display: flex;
         background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
     }
@@ -776,16 +797,17 @@ footer {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        flex-direction: row;
         position: absolute;
-       
         width: 70%;
         top: 370px;
-        height: 100%;
         z-index: 1;
+        overflow: hidden;
+        gap: 10px;
     }
     .navefora {
-        padding: 5px;
-        padding-left: 30px;
+        width: 120px;
+        height: 135px;
     }
     .passpaginas{
         display: flex;
@@ -793,7 +815,7 @@ footer {
         align-items: center;
         gap: 5px;
         z-index: 1;
-        padding-top: 450px;
+        padding-top: 260px;
         padding-bottom: 10px;
     }
     .paginas{
@@ -867,7 +889,7 @@ footer {
         letter-spacing: 0.25px; 
         word-wrap: break-word;
         float:right;
-        width: 100%;
+        width: 76%;
         padding-top: 20px;
         padding-bottom: 20px;
     }
