@@ -964,4 +964,27 @@ footer {
     .CxGeralNomesDevs {
         display:flex;
         flex-direction: row;
-     
+        flex-wrap: wrap;
+    }
+    
+    .CxNomesDevs {
+        display: flex;
+        width: 200px;
+        flex-direction: column;
+        align-self: center;
+        margin-left: 20px;
+        padding-bottom: 20px;
+        justify-content: center;
+    }
+    .NomeDevs{
+        color: white;
+        text-align: left;
+        word-wrap: break-word;
+        white-space: pre-line;
+        font-size: 14px; 
+        font-family: Inter; 
+        font-weight: 700; 
+        letter-spacing: 0.25px; 
+        word-wrap: break-word;
+    }
+}

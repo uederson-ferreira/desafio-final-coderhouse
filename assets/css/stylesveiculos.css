@@ -987,4 +987,7 @@ footer {
         font-size: 14px; 
         font-family: Inter; 
         font-weight: 700; 
-        lette
+        letter-spacing: 0.25px; 
+        word-wrap: break-word;
+    }
+}
