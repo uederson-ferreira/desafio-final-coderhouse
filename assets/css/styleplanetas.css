@@ -5,67 +5,121 @@
     
 }
 
+.CaixaBranca{
+    background-color: white;
+    height: 300px;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    width: 1050px;
+}
+
 header{
     background-color: black;
 }
 
 menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
     padding: 5px;
     background-color: white;
     font-size:25px;
+    width: 1050px;
+}
+.TudoSobre{
+    text-align: center;
+    color: yellow;
+    font-size: 25px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-color: yellow;
+}
+menu>a{
+    color: black;
+    font-size: 25px;
 }
 
+h1{
+    display: flex;
+    font-size: 50px;
+    font-family:Star;
+    color: black;
+    background-color: yellow;
+    width: 1050px;
+    margin-top: 25px;
+    height: 150px;
+    justify-content: center;
+}
+
+
+.planetas{
+    width: 1050px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    margin-top: -70px;
+    margin-bottom: 25px;
+    text-align: center;
+    top: 100px;
+    background-size:200px;
+}
+div#planeta1{
+    margin-top: -50px;
+}
+div#planeta2{
+    margin-top: -50px;
+}
+div#planeta3{
+    margin-top: -50px;
+}
+div#planeta4{
+    margin-top: -50px;
+}
+div#planeta5{
+    margin-top: -50px;
+}
+#section-planetas{
+    align-items: center;
+}
+.infos{
+    justify-items:start;
+    background-color: black;
+    width: 1050px;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px ;
+    gap: 100px;
+    padding-left: 0px;
+}
 body{
     background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
     
 }
 
-h1{
-    font-size: 50px;
-    font-family:Star;
-    color: black;
-    background-color: yellow;
-}
-
-.img{
-    size:5%;
-}
-
-header > center >p{
-    border-top:solid 2px;
-    border-bottom:solid 2px;
-    border-color: yellow;
-    font-size: 25px;
-    color: yellow;
-}
-
-h4{
-    color: white;
-}
-
-h4:hover{
-    color:yellow;
-}
 
 
-header>center>b>menu>a{
-    color: black;
-}
-
-a{
-    color: white;
-}
-
-footer>center>h3{
-    margin-top: 50px;
-
-}
-
-footer{
+.footer{
     background-color: black;
     color: white;
-    margin-bottom: 0%;
-   
+    margin:0px;
+    padding-bottom: 0px;
+}
+.topo{
+    font-size: 16px;
+    display: flex;
+    justify-items: end;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+footer>.LinksMapa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
 }
 
 .nomes{
@@ -91,14 +145,10 @@ footer{
     padding-right: 0px;
 }
 .Devs{
+    display: flex;
     padding-top: 50px;
+    text-align: start;
+    justify-content: center;
 }
 
-.planetas{
-    background-color: white;
-    margin-top: 0px;
-    margin-bottom: 50%;
-    text-align: center;
-    top: 100px;
 
-}
