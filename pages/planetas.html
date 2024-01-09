@@ -4,46 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planetas</title>
-    <link rel="stylesheet" href="../assets/css/styleplanetas.css"/>
+    <link rel="stylesheet" href="StylePlanetas.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/starjedi-special-edition" rel="StylePlanetas">
 </head>
-<body >
-    <header>
-       <center><img src="LogoStar.png" alt="logo do star wars" width="150" height="100"></center>
-       <center>
-         <b>
-            <menu type="toolbar">
-                <a href="../index.html">Home</a>
-                <a href="../pages/personagens.html">Personagens</a>
-                <a href="../pages/especies.html">Espécies</a>
-                <a href="#filmes">Filmes</a>
-                <a href="../pages/naves.html">Naves Espaciais</a>
-                <a href="../pages/veiculos.html">Veículos</a>
-                <a href="../pages/planetas.html">Planetas</a>
-            </menu>
-         </b>
-        </center>
-       <center><p>Tudo sobre Star Wars</p></center>
-    </header>
-    
-    <section>
-
-       <center><h1>PLANETAS</h1></center>
-      
-
-       <article class="planetas">
-            <img src="../assets/imgTatooine.png" alt="Imagem do planeta Tatooine">
-            <img src="../assets/imgAlderaan.png" alt="Imagem do Planeta Alderaan">
-            <img src="../assets/imgYavin_IV.png" alt="Imagem do Planeta Yavin">
-            <img src="../assets/imgHoth.png" alt="Imagem do Planeta Hoth">
-            <img src="../assets/imgDagobah.png" alt="Imagem do Planeta Dagobah">
-       </article>
-
-    </section>
-
+<body class="body">
+   
     <center>
-    <footer>
+    
+    <header>
+      <center><img src="LogoStar.png" alt="logo do star wars" width="150" height="100" class="logo"></center>
+       
+         
+            
+
+             <menu type="toolbar" class="menu">
+                <a href="Personagens.html">PERSONAGENS</a>
+                <a href="especies.html">ESPÉCIES</a>
+                <a href="filmes.hmtl">FILMES</a>
+                <a href="naves.html">NAVES ESPACIAIS</a>
+                <a href="veiculos.html">VEÍCULOS</a>
+                <a href="planetas.html">PLANETAS</a>
+            </menu>
+
+       <p class="TudoSobre">Tudo sobre Star Wars</p>
+
+    </header>
+
+    <div class="CaixaBranca"></div>
+    
+    <section id="section-planetas">
+
+        <div class="Titulo">
+           
+                 <h1 id="Titulo-Planetas">PLANETAS</h1>
+           
+        </div>
+      
+       <div class="planetas">
+           <div id="planeta1">
+                <img src="Tatooine.png" alt="Imagem do planeta Tatooine">
+                <p>Tatooine</p>
+           </div>
+           <div id="planeta2">
+                <img src="Alderaan.png" alt="Imagem do Planeta Alderaan">
+                <p>Alderaan</p>
+            </div>
+            <div id="planeta3">
+                <img src="Yavin_IV.png" alt="Imagem do Planeta Yavin">
+                <p>Yavin_IV</p>
+            </div>
+            <div id="planeta4">
+                <img src="Hoth.png" alt="Imagem do Planeta Hoth">
+                <p>Hoth</p>
+            </div>
+            <div id="planeta5">
+                <img src="Dagobah.png" alt="Imagem do Planeta Dagobah">
+                <p id="dagobah">Dagobah</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="infos">
+        <img src="Tatooine infos.png" alt="Imagem de tatooine com as informacoes">
+        <img src="Alderaan infos.png" alt="">
+        <img src="Yavin IV infos.png" alt=""> 
+        <img src="Hoth infos.png" alt="">
+        <img src="Dagobah infos.png" alt="">
+        <img src="Bespin infos.png" alt="">
+    
+    </div>
+    
+    <footer class="footer">
+        <p class="topo">Voltar so topo⬆</p>
         <center> <p>MAPA DO SITE</p> </center>
-            <section>
+            <section class="LinksMapa">
                 <a href="home.html">Home ↗ |</a>
                 <a href="personagens.html">Personagens ↗ |</a>
                 <a href="especies.hmtl">Espécies ↗ |</a>
@@ -58,10 +95,34 @@
         <p class="Devs">Desenvolvedores</p>
         
         <div class="nomes">
-            <p class="Nomes-Dev">Gabriel Carneiro<br>De Sousa</br></p>
-            <p class="Nomes-Dev">Paulo Sardeiro<br>Flores Da Cunha</br></p>
-            <p class="Nomes-Dev">Thiago Bernado<br>Fernandes</br></p>
-            <p class="Nomes-Dev">Uederson De<br>Amadeu Ferreira</br></p>
+            <p class="Nomes-Dev">Gabriel Carneiro<br>De Sousa</br>
+                <img src="iconLinkedin.png" alt="icon linkedin ">
+                <img src="iconGitHub.png" alt="icon GitHub">
+                <img src="iconInstragram.png" alt="icon instagram">
+                <img src="iconFacebook.png" alt="icon facebook">
+                <img src="iconTwitter.png" alt="icon twitter">
+            </p>
+            <p class="Nomes-Dev">Paulo Sardeiro<br>Flores Da Cunha</br>
+                <img src="iconLinkedin.png" alt="icon linkedin ">
+                <img src="iconGitHub.png" alt="icon GitHub">
+                <img src="iconInstragram.png" alt="icon instagram">
+                <img src="iconFacebook.png" alt="icon facebook">
+                <img src="iconTwitter.png" alt="icon twitter">
+            </p>
+            <p class="Nomes-Dev">Thiago Bernado<br>Fernandes</br>
+                <img src="iconLinkedin.png" alt="icon linkedin ">
+                <img src="iconGitHub.png" alt="icon GitHub">
+                <img src="iconInstragram.png" alt="icon instagram">
+                <img src="iconFacebook.png" alt="icon facebook">
+                <img src="iconTwitter.png" alt="icon twitter">
+            </p>
+            <p class="Nomes-Dev">Uederson De<br>Amadeu Ferreira</br>
+                <img src="iconLinkedin.png" alt="icon linkedin ">
+                <img src="iconGitHub.png" alt="icon GitHub">
+                <img src="iconInstragram.png" alt="icon instagram">
+                <img src="iconFacebook.png" alt="icon facebook">
+                <img src="iconTwitter.png" alt="icon twitter">
+            </p>
         </div>
     </footer>
     </center>
