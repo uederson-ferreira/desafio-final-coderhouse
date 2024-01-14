@@ -8,13 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/starjedi-special-edition" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Veículos - Star Wars</title>
 </head>
-<body class="container">
-    <header>
-        <img src="../assets/img/Logo-Star-Wars.png" alt="Logo-Star-Wars">
+<body class="container max-w-full">
+    <header class="flex items-center justify-center max-w-full">
+        <img src="../assets/img/Logo-Star-Wars.png" alt="Logo-Star-Wars" class="justify-self-center items-center">
     </header>
-    <nav>
+    <!-- Nav antes do uso do TwailWindCSS -->
+    <!-- <nav>
         <a href="../index.html">Home</a>
         <a href="../pages/personagens.html">Personagens</a>
         <a href="../pages/especies.html">Espécies</a>
@@ -22,7 +26,45 @@
         <a href="../pages/naves.html">Naves Espaciais</a>
         <a href="../pages/veiculos.html">Veículos</a>
         <a href="../pages/planetas.html">Planetas</a>
-    </nav>
+    </nav> -->
+    <nav class="bg-white-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-8 lg:px-8">
+          <div class="relative flex h-10 items-center justify-between">
+
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+                <img class="h-8 w-auto" src="../assets/img/logo.JPG" alt="Your Company">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-1">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="../index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+                  <a href="../pages/personagens.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Personagens</a>
+                  <a href="../pages/especies.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Espécies</a>
+                  <a href="#filmes" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Filmes</a>
+                  <a href="../pages/naves.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Naves Espaciais</a>
+                  <a href="../pages/veiculos.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Veículos</a>
+                  <a href="../pages/planetas.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Planetas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-0 px-2 pb-3 pt-2 bg-black-800">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="../index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+            <a href="../pages/personagens.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Personagens</a>
+            <a href="../pages/especies.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Espécies</a>
+            <a href="#filmes" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Filmes</a>
+            <a href="../pages/naves.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Naves Espaciais</a>
+            <a href="../pages/veiculos.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Veículos</a>
+            <a href="../pages/planetas.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Planetas</a>
+          </div>
+        </div>
+    </nav>  
     
     <div class="tudosobre">Tudo sobre Star Wars</div>
     
