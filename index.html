@@ -1,154 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styleindex.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/starjedi-special-edition" rel="stylesheet">
-    <title>Naves - Star Wars</title>
-</head>
-<body class="container">
-    <header>
-        <img src="./assets/img/Logo-Star-Wars.png" alt="Logo-Star-Wars">
-    </header>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="./pages/personagens.html">Personagens</a>
-        <a href="./pages/especies.html">Espécies</a>
-        <a href="#filmes">Filmes</a>
-        <a href="./pages/naves.html">Naves Espaciais</a>
-        <a href="./pages/veiculos.html">Veículos</a>
-        <a href="./pages/planetas.html">Planetas</a>
-    </nav>
-    
-    <div class="tudosobre">Tudo sobre Star Wars</div>
- 
-    <main>
-        <section class="esquerdo"></section>
-        <section class="central">
-          <div class="explore">
-            <h3>explore os personagens de star wars</h3>
-            <div class="gallery">
-              <img class="imgwallpaper" src="./assets/img/star wars wallpaper 11 1.png" alt="">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styleindex.css" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preconnect" href="https://www.dafont.com/" />
+    <link rel="stylesheet" href="https://www.dafont.com/star-jedi.font" />
+    <title>Star Wars</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="#" class="logoStarWars">
+          <img
+            src="https://s3-alpha-sig.figma.com/img/eea4/cf26/13d58d26568277cea1f96bbaabcf6ba9?Expires=1706486400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cqRJwtZvKFy67pKjEzFDqsuqRQaRUFQlndWLWejAbQrbgu3sbCD034yr7sSnOL4HDBkhz6XX~hDze-2ujr5RJumhQLwFRkaAX9nxLYlpNm0qNAf85-kVNEP4IHcotZUJnI8CfVJ56fHJEOUb1Pcyt7OOMdqmWakE83n0aWyqeBafjJ-XgJ7SvO7GzrfgevFb-T34cjhM7UUUY52-ZQFiPeWkPP6P8Sfr3Cv~72t328a-5aZO~YjwRxNCr1EORYNZJBOq5HCjLXFB0PE20osKESjFJMUXjYvy8OAYwUczrulOwakXoihB-ueHf6wxqFQIlkd4FN38hyNB4op7gId6~g__"
+            alt="Star Wars. Clique para ir para home"
+          />
+        </a>
+
+        <nav>
+          <ul class="navBar navBar__item navBar__item--fonte">
+            <li><a href="./pages/personagens.html">personagens</a></li>
+            <li><a href="./pages/especies.html">espécies</a></li>
+            <li class="navBar__dropdown">
+              <a href="./pages/filmes.html">filmes</a>
+              <ul class="navBar__subMenu navBar__subMenu--fonte">
+                <li>
+                  <a href="./pages/oredem-de-se-assistir-os-filmes.html"
+                    >Ordem de se Assistir os Filmes</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="./pages/naves.html">naves</a></li>
+            <li><a href="./pages/veiculos.html">veículos</a></li>
+            <li><a href="./pages/planetas.html">planetas</a></li>
+          </ul>
+        </nav>
+
+        <h1 class="titulo titulo__fonte">Tudo Sobre Star Wars</h1>
+      </header>
+
+      <div class="innerWrapper margin">
+        <div class="barraEsquerda"></div>
+        <div class="carrossel">
+          <img
+            src="./assets/img/Explore os Personagens de Star Wars.png"
+            alt="Explore os Personagens de Star Wars"
+          />
+        </div>
+        <div
+          class="ordemDeAssistir ordemDeAssistir__item ordemDeAssistir__item--fonte"
+        >
+          <div>
+            <img
+              src="./assets/img/Filme 1_ Episode IV_ A New Hope.png"
+              alt="Filme 1, Episode IV A New Hope"
+            />
+            <p>Episode IV: A New Hope</p>
+          </div>
+          <div>
+            <img
+              src="./assets/img/Filme 2_ Episode V_ The Empire Strikes Back.png"
+              alt="Filme 2, Episode V The Empire Strikes Back"
+            />
+            <p>Episode V: The Empire Strikes Back</p>
+          </div>
+          <div>
+            <img
+              src="./assets/img/Filme 3_ Episode VI_ Return of The Jedi.png"
+              alt="Filme 3, Episode VI Return of The Jedi"
+            />
+            <p>Episode VI: The Return of The Jedi</p>
+          </div>
+          <div>
+            <img
+              src="./assets/img/Filme 4_ Episode I_ The Phantom Menace.png"
+              alt="Filme 4, Episode I The Phantom Menace.png"
+            />
+            <p>Episode I: The Phantom Menace</p>
+          </div>
+          <div>
+            <img
+              src="./assets/img/Filme 5_ Episode II_ Attack of The Clones.png"
+              alt="Filme 5, Episode II Attack of The Clones"
+            />
+            <p>Episode II: Attack of The Clones</p>
+          </div>
+          <div>
+            <img
+              src="./assets/img/Filme 6_ Episode III_ Regenge of The Sith.png"
+              alt="Filme 6, Episode III Regenge of The Sith"
+            />
+            <p>Episode III: Regenge of The Sith</p>
+          </div>
+        </div>
+        <div class="personagens">
+          <div class="personagens--titulo">
+            <h2>Personagens</h2>
+          </div>
+          <div
+            class="personagens__conjunto personagens__conjunto__item personagens__conjunto__item--fonte"
+          >
+            <div>
+              <img src="./assets/img/Luke skywalker.png" alt="Luke skywalker" />
+              <p>Luke skywalker</p>
+            </div>
+            <div>
+              <img src="./assets/img/C-3PO.png" alt="C-3PO" />
+              <p>C-3PO</p>
+            </div>
+            <div>
+              <img src="./assets/img/R2-D2.png" alt="R2-D2" />
+              <p>R2-D2</p>
+            </div>
+            <div>
+              <img src="./assets/img/Darth Vader.png" alt="Darth Vader" />
+              <p>Darth Vader</p>
+            </div>
+            <div>
+              <img src="./assets/img/Leia Organa.png" alt="Leia Organa" />
+              <p>Leia Organa</p>
             </div>
           </div>
-          <div class="ordem">ordem de assistir os filmes</div>
-          <div class="personagens">personagens</div>
-          <div class="especies">espécies</div>
-          <div class="filmes">filmes</div>
-          <div class="naves">naves espaciais</div>
-          <div class="veiculos">veiculos</div>
-          <div class="planetas">planetas</div>
-        </section>
-  
-        <aside class="esquerdo"></aside>  
-    </main>
-    
-    <footer>
-        <div class="Rodape">
-            <div class="VoltarAoTopo">
-                <div class="VoltarAoTopoin">Voltar ao topo</div>
-                <img class="ImgVoltarAoTopo" src="./assets/img/aotopo.svg" alt="VoltarAoTopo">
-            </div>
-            
-            <div class="MapaDoSite">MAPA DO SITE</div>
+          <div class="personagens__botão">
+            <a
+              href="./pages/personagens.html"
+              class="personagens__botão--fonte personagens__botão--seta"
+            >
+              ver mais
+              <img
+                src="./assets/img/Seta circular direita.png"
+                alt="seta para direita"
+              />
+            </a>
+          </div>
+        </div>
 
-            <div class="linkspag">
-                <div class="Home">Home</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="./assets/img/barra.svg" alt="barra">
-                <div class="Home">Personagens</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="./assets/img/barra.svg" alt="barra">
-                <div class="Home">Espécies</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="./assets/img/barra.svg" alt="barra">
-                <div class="Home">Filmes</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="./assets/img/barra.svg" alt="barra">
-                <div class="Home">Ordem de se Assistir os Filmes</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="./assets/img/barra.svg" alt="barra">
-                <div class="Home">Naves Espaciais</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="./assets/img/barra.svg" alt="barra">
-                <div class="Home">Veículos</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="./assets/img/barra.svg" alt="barra">
-                <div class="Home">Planetas</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="./assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-            </div>
-
-            <div class="TituloDesenvolvedores">Desenvolvedores:</div>
-            <div class="CxGeralNomesDevs">
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Grabriel 
-                        Carneiro</div>
-                    <div class="RedesSociais">
-                        <img src="./assets/img/linkedin.svg" alt="linkedin">
-                        <img src="./assets/img/github.png" alt="github">
-                        <img src="./assets/img/instagram.png" alt="instagram">
-                        <img src="./assets/img/facebook.png" alt="facebook">
-                        <img src="./assets/img/x.png" alt="x antigo twitter">
-                    </div>
-                </div>
-
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Paulo 
-                        Sardeiro Flores Da Cunha</div>
-                    <div class="RedesSociais">
-                        <img src="./assets/img/linkedin.svg" alt="linkedin">
-                        <img src="./assets/img/github.png" alt="github">
-                        <img src="./assets/img/instagram.png" alt="instagram">
-                        <img src="./assets/img/facebook.png" alt="facebook">
-                        <img src="./assets/img/x.png" alt="x antigo twitter">
-                    </div>
-                </div>
-
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Thiago 
-                        Bernardo Fernandes</div>
-                    <div class="RedesSociais">
-                        <img src="./assets/img/linkedin.svg" alt="linkedin">
-                        <img src="./assets/img/github.png" alt="github">
-                        <img src="./assets/img/instagram.png" alt="instagram">
-                        <img src="./assets/img/facebook.png" alt="facebook">
-                        <img src="./assets/img/x.png" alt="x antigo twitter">
-                    </div>
-                </div>
-
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Uederson 
-                        De Amadeu Ferreira</div>
-                    <div class="RedesSociais">
-                        <img src="./assets/img/linkedin.svg" alt="linkedin">
-                        <img src="./assets/img/github.png" alt="github">
-                        <img src="./assets/img/instagram.png" alt="instagram">
-                        <img src="./assets/img/facebook.png" alt="facebook">
-                        <img src="./assets/img/x.png" alt="x antigo twitter">
-                    </div>    
-                </div>
-            </div>
-         </div>
-    </footer>
-</body>
+        <div class="barraDireita"></div>
+      </div>
+    </div>
+  </body>
 </html>
