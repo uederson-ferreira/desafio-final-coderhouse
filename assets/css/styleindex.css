@@ -201,16 +201,19 @@
     grid-template-columns: 181px 1fr 181px;
     grid-template-rows: repeat(7, auto);
   }
+  .innerWrapper > div:not(.barraEsquerda, .barraDireita) {
+    margin: 2rem 1rem 2rem;
+  }
 
   .barraEsquerda {
     grid-area: 1 / 1 / 8 / 1;
-    background-image: url(../img/Barra\ Lateral.png);
+    background-image: url(../img/Barra\ Lateral.svg);
   }
   .barraDireita {
     grid-area: 1 / 3 / 8 / 3;
-    background-image: url(../img/Barra\ Lateral.png);
+    background-image: url(../img/Barra\ Lateral.svg);
   }
-  .carrossel {
+  .roloDeFotos {
     grid-area: 1 / 2 / 1 / 2;
   }
   .ordemDeAssistir {
@@ -230,10 +233,6 @@
   }
   .planetas {
     grid-area: 7 / 2 / 7 / 2;
-  }
-
-  .margin > div:not(.barraEsquerda, .barraDireita) {
-    margin: 2rem 1rem 2rem;
   }
 
   .ordemDeAssistir {
@@ -256,26 +255,25 @@
     margin: 8px 0 0;
   }
 
-  .personagens {
+  .personagens,
+  .especies,
+  .naves,
+  .veiculos,
+  .planetas {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
-    background-image: url(../img/background-white.svg);
-    border-radius: 5px;
     padding: 20px;
   }
-
-  .personagens--titulo {
+  .personagens,
+  .especies,
+  .naves,
+  .veiculos {
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+  .tituloSeção h2 {
     grid-area: 1 / 1;
-  }
-  .personagens__item {
-    grid-area: 2 / 1;
-  }
-  .personagens__botão {
-    grid-area: 3 / 1;
-  }
-
-  .personagens--titulo h2 {
     font-family: StarJedi Special Edition;
     line-height: 4.209rem;
     margin: 0;
@@ -283,47 +281,182 @@
     background-color: var(--yellow);
     border-radius: 5px;
   }
-
-  .personagens__conjunto {
+  .conjuntoItens {
+    grid-area: 2 / 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px 0 20px;
   }
-  .personagens__conjunto__item img {
+  .itens img {
     max-width: 124px;
     height: auto;
     width: auto;
+    margin-bottom: 5px;
   }
-  .personagens__conjunto__item--fonte p {
+  .descriçãoItem p {
     line-height: 1rem;
-    letter-spacing: 0.25px;
-    margin: 8px 0 0;
+    margin: 0;
+    max-width: 124px;
   }
-
-  .personagens__botão {
+  .botão {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .personagens__botão--fonte {
+  .botão a {
+    grid-area: 3 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    width: fit-content;
+  }
+  .botão--fonte a {
     font-size: 1rem;
     line-height: 1rem;
-    letter-spacing: 0.25px;
     color: var(--black);
     text-transform: uppercase;
     text-decoration: none;
-    gap: 5px;
   }
-  .personagens__botão--seta img {
+  .botão__seta img {
     width: 1rem;
     height: 1rem;
+  }
+
+  .planetas > div > h2 {
+    color: var(--white);
+    background-color: var(--black);
+    border: none;
+  }
+  .planetas p {
+    color: var(--white);
+  }
+  .planetas a {
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #margin {
+    margin-bottom: 100px;
   }
 }
 
 @layer footer {
+  .footer {
+    display: grid;
+    grid-template-columns: 181px 1fr 181px;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .footer > div {
+    margin: 25px 10px 25px;
+  }
+  .footer > div:first-child {
+    margin: 20px 0 25px;
+  }
+  .footer > div:last-child {
+    margin: 25px 0 25px;
+  }
+
+  .fonteTitulo h5 {
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+
+  .botãoTopo {
+    grid-area: 1 / 2 / 1 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .botãoTopo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .botãoTopo--fonte a {
+    font-size: 1rem;
+    line-height: 1rem;
+    color: var(--white);
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .mapaDoSite {
+    grid-area: 2 / 1 / 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mapaDoSite__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .mapaDoSite div > a {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 5px;
+  }
+  .mapaDoSite--fonteLinks a {
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1rem;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .desenvolvedores {
+    grid-area: 3 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .desenvolvedores > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .desenvolvedores__conjunto > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 164px;
+    gap: 10px;
+  }
+  .desenvolvedores--fonteNomes p {
+    color: var(--white);
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  .desenvolvedores__redesSociais figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 5px;
+    margin: 0;
+  }
 }
