@@ -87,10 +87,24 @@
     font-size: var(--p);
   }
 
-  /* .wrapper {
-    max-width: 1280px;
+  .wrapper {
+    max-width: 425px;
     margin: 0 auto;
-  } */
+  }
+
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      min-width: 768px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .wrapper {
+      min-width: 1200px;
+      margin: 0 auto;
+    }
+  }
 
   /* a {
     color: var(--black);
@@ -110,72 +124,40 @@
   header {
     margin: 2rem 0 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
   }
 
-  header a {
-    grid-area: 1 / 1 / 1 / 3;
+  .logoStarWars {
+    grid-area: 1 / 2 / 1 / 3;
   }
-  header nav {
+  .menuNavBar {
+    grid-area: 1 / 1 / 1 / 1;
+  }
+  .titulo {
     grid-area: 2 / 1 / 2 / 3;
-  }
-  header h1 {
-    grid-area: 3 / 1 / 3 / 3;
   }
 
   .logoStarWars {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    max-width: 190px;
+    align-items: end;
+    justify-content: end;
+    justify-self: end;
+    margin-right: 16px;
+    max-width: 140px;
   }
 
   .navBar {
-    display: inline-flex;
-    flex-direction: row;
-    padding: 5px;
-    margin: 20px 0 20px;
-    gap: 20px;
-    background-color: var(--white);
-  }
-  .navBar__item li {
-    list-style: none;
-  }
-  .navBar__item--fonte a {
-    font-size: 1rem;
-    line-height: 24px;
-    letter-spacing: 0.25px;
-    color: var(--dim-gray);
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .navBar__item--fonte a:hover {
-    color: var(--black);
+    display: none;
   }
 
-  .navBar__dropdown {
-    position: relative;
-  }
-  .navBar__subMenu {
-    display: none;
-    position: absolute;
-    padding: 10px 18px 10px;
-    top: 32px;
-    right: -65px;
-    bottom: -75px;
-    left: -65px;
-    text-align: left;
-    line-height: 0.1px;
-    border-top: 1px solid var(--dim-gray);
-    background-color: var(--yellow);
-  }
-  .navBar__subMenu--fonte a {
-    font-size: 0.9rem;
-  }
-  .navBar__dropdown:hover .navBar__subMenu {
-    display: block;
+  .menuNavBar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    justify-self: start;
+    margin-left: 16px;
+    max-width: 40px;
   }
 
   .titulo {
@@ -183,7 +165,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 0;
+    margin: 20px 0 0;
     border-top: 2px solid var(--yellow);
     border-bottom: 2px solid var(--yellow);
   }
@@ -193,57 +175,127 @@
     line-height: 1.5rem;
     color: var(--yellow);
   }
+
+  @media screen and (min-width: 1024px) {
+    header {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3, auto);
+    }
+
+    .logoStarWars {
+      grid-area: 1 / 1;
+    }
+    .menuNavBar {
+      display: none;
+    }
+    .navBar {
+      grid-area: 2 / 1;
+    }
+    .titulo {
+      grid-area: 3 / 1;
+    }
+
+    .logoStarWars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      max-width: 195px;
+    }
+
+    .navBar {
+      display: inline-flex;
+      flex-direction: row;
+      padding: 5px;
+      margin: 20px 0 20px;
+      gap: 20px;
+      background-color: var(--white);
+    }
+    .navBar__item li {
+      list-style: none;
+    }
+    .navBar__item--fonte a {
+      font-size: 1rem;
+      line-height: 24px;
+      letter-spacing: 0.25px;
+      color: var(--dim-gray);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .navBar__item--fonte a:hover {
+      color: var(--black);
+    }
+    .navBar__dropdown {
+      position: relative;
+    }
+    .navBar__subMenu {
+      display: none;
+      position: absolute;
+      padding: 10px 18px 10px;
+      top: 32px;
+      right: -65px;
+      bottom: -75px;
+      left: -65px;
+      text-align: left;
+      line-height: 0.1px;
+      border-top: 1px solid var(--dim-gray);
+      background-color: var(--yellow);
+    }
+    .navBar__subMenu--fonte a {
+      font-size: 0.9rem;
+    }
+    .navBar__dropdown:hover .navBar__subMenu {
+      display: block;
+    }
+  }
 }
 
 @layer conteudo {
   .innerWrapper {
     display: grid;
-    grid-template-columns: 181px 1fr 181px;
-    grid-template-rows: repeat(7, auto);
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
   }
-  .innerWrapper > div:not(.barraEsquerda, .barraDireita) {
+  .innerWrapper > div:not(.ordemDeAssistir, .barraEsquerda, .barraDireita) {
     margin: 2rem 1rem 2rem;
   }
 
-  .barraEsquerda {
-    grid-area: 1 / 1 / 8 / 1;
-    background-image: url(../img/Barra\ Lateral.svg);
-  }
-  .barraDireita {
-    grid-area: 1 / 3 / 8 / 3;
-    background-image: url(../img/Barra\ Lateral.svg);
-  }
   .roloDeFotos {
-    grid-area: 1 / 2 / 1 / 2;
+    display: none;
   }
   .ordemDeAssistir {
-    grid-area: 2 / 2 / 2 / 2;
+    grid-area: 1 / 1;
   }
   .personagens {
-    grid-area: 3 / 2 / 3 / 2;
+    grid-area: 2 / 1;
   }
   .especies {
-    grid-area: 4 / 2 / 4 / 2;
+    grid-area: 3 / 1;
   }
   .naves {
-    grid-area: 5 / 2 / 5 / 2;
+    grid-area: 4 / 1;
   }
   .veiculos {
-    grid-area: 6 / 2 / 6 / 2;
+    grid-area: 5 / 1;
   }
   .planetas {
-    grid-area: 7 / 2 / 7 / 2;
+    grid-area: 6 / 1;
   }
 
   .ordemDeAssistir {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
     gap: 20px;
+    padding: 0 1rem 0;
+    margin: 2rem 0 2rem;
   }
   .ordemDeAssistir__item img {
-    max-width: 158px;
+    max-width: 125px;
     height: auto;
     width: auto;
   }
@@ -251,8 +303,8 @@
     color: var(--yellow);
     text-align: end;
     line-height: 1rem;
-    max-width: 158px;
-    margin: 8px 0 0;
+    max-width: 125px;
+    margin: 8px 0 8px;
   }
 
   .personagens,
@@ -261,9 +313,9 @@
   .veiculos,
   .planetas {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
-    padding: 20px;
+    padding: 10px;
   }
   .personagens,
   .especies,
@@ -275,9 +327,10 @@
   .tituloSeção h2 {
     grid-area: 1 / 1;
     font-family: StarJedi Special Edition;
-    line-height: 4.209rem;
+    font-size: 2rem;
+    line-height: 2rem;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--yellow);
     border-radius: 5px;
   }
@@ -286,8 +339,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 10px;
     margin: 20px 0 20px;
+  }
+  .conjuntoItens > div:nth-child(n + 5) {
+    display: none;
   }
   .itens img {
     max-width: 124px;
@@ -341,23 +398,31 @@
   #margin {
     margin-bottom: 100px;
   }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1024px) {
+    /* .barraEsquerda {
+      grid-area: 1 / 1 / 8 / 1;
+      background-image: url(../img/Barra\ Lateral.svg);
+    }
+    .barraDireita {
+      grid-area: 1 / 3 / 8 / 3;
+      background-image: url(../img/Barra\ Lateral.svg);
+    } */
+  }
 }
 
 @layer footer {
   .footer {
     display: grid;
-    grid-template-columns: 181px 1fr 181px;
+    grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
   }
 
   .footer > div {
-    margin: 25px 10px 25px;
-  }
-  .footer > div:first-child {
-    margin: 20px 0 25px;
-  }
-  .footer > div:last-child {
-    margin: 25px 0 25px;
+    margin: 25px 16px 25px;
   }
 
   .fonteTitulo h5 {
@@ -365,11 +430,10 @@
     font-size: 1rem;
     line-height: 1rem;
     text-transform: uppercase;
-    margin: 0 0 10px;
   }
 
   .botãoTopo {
-    grid-area: 1 / 2 / 1 / 3;
+    grid-area: 1 / 1;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -391,7 +455,7 @@
   }
 
   .mapaDoSite {
-    grid-area: 2 / 1 / 2 / 4;
+    grid-area: 2 / 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -422,7 +486,7 @@
   }
 
   .desenvolvedores {
-    grid-area: 3 / 2 / 3 / 3;
+    grid-area: 3 / 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
