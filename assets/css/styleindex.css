@@ -79,6 +79,7 @@
 
   .wrapper {
     margin: 0 auto;
+    min-width: 320px;
   }
 
   /* a {
@@ -101,7 +102,6 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
-    min-width: 320px;
   }
 
   .logoStarWars {
@@ -242,10 +242,10 @@
 
 @layer conteudo {
   .innerWrapper {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(6, auto);
-    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .innerWrapper > div:not(.ordemDeAssistir, .barraEsquerda, .barraDireita) {
     margin: 1rem;
@@ -254,29 +254,13 @@
   .roloDeFotos {
     display: none;
   }
-  .personagens {
-    grid-area: 2 / 1;
-  }
-  .especies {
-    grid-area: 3 / 1;
-  }
-  .naves {
-    grid-area: 4 / 1;
-  }
-  .veiculos {
-    grid-area: 5 / 1;
-  }
-  .planetas {
-    grid-area: 6 / 1;
-  }
 
-  .ordem {
-    grid-area: 1 / 1;
+  .filmes {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
   }
-  .ordem__titulo {
+  .filmes__titulo {
     grid-area: 1 / 1;
     font-family: StarJedi Special Edition;
     font-size: 2rem;
@@ -284,27 +268,21 @@
     margin: 0 0 20px;
     color: var(--yellow);
   }
-  .oredem__conjuntoFilmes {
+  .filmes__conjunto {
     grid-area: 2 / 1;
     display: flex;
     overflow-x: auto;
-    /* scrollbar-width: thin;
-    scrollbar-color: var(--white) var(--yellow); */
     gap: 20px;
   }
-  /* .ordem:hover {
-    scrollbar-color: #555 #888;
-  } */
-  .ordem__item img {
-    max-width: 125px;
-    max-height: 144px;
-    height: 144px;
-    width: auto;
+  .filmes__item img {
+    width: 125px;
+    height: 147px;
   }
-  .ordem__item--fonte p {
+  .filmes__item--fonte p {
     color: var(--yellow);
     text-align: end;
     line-height: 1rem;
+    width: 125px;
     margin: 4px 0 4px;
   }
 
@@ -318,6 +296,7 @@
     grid-template-rows: repeat(3, auto);
     padding: 10px;
     gap: 10px;
+    max-width: 320px;
   }
   .personagens,
   .especies,
@@ -347,14 +326,13 @@
   }
   .itens img {
     width: auto;
-    max-width: 100%;
+    max-width: 129px;
     height: auto;
-    max-height: 100%;
     margin-bottom: 5px;
   }
   .descriçãoItem p {
-    width: 100%;
-    max-width: 100%;
+    width: auto;
+    max-width: 129px;
     line-height: 1rem;
     margin: 0;
   }
@@ -405,56 +383,40 @@
     border-radius: 5px;
   }
 
-  @media screen and (min-width: 375px) {
-  }
-
-  @media screen and (min-width: 425px) {
-  }
-
-  @media screen and (min-width: 567px) {
+  @media screen and (min-width: 580px) {
+    .personagens,
+    .especies,
+    .naves,
+    .veiculos,
+    .planetas {
+      max-width: 768px;
+    }
+    .conjuntoItens {
+      flex-wrap: nowrap;
+    }
   }
 
   @media screen and (min-width: 768px) {
-    .innerWrapper {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: repeat(7, auto);
-    }
-
     .roloDeFotos {
       display: block;
-      grid-area: 1 / 1;
-    }
-    .ordem {
-      grid-area: 2 / 1;
-    }
-    .personagens {
-      grid-area: 3 / 1;
-    }
-    .especies {
-      grid-area: 4 / 1;
-    }
-    .naves {
-      grid-area: 5 / 1;
-    }
-    .veiculos {
-      grid-area: 6 / 1;
-    }
-    .planetas {
-      grid-area: 7 / 1;
     }
 
-    .conjuntoItens > div:nth-child(4) {
+    .conjuntoItens > div:nth-child(5) {
       display: block;
     }
 
+    .filmes__item img {
+      width: 150px;
+      height: 172px;
+    }
+    .filmes__item--fonte p {
+      width: 150px;
+    }
+
+    .filmes__titulo,
     .tituloSeção h2 {
       font-size: 4rem;
       line-height: 4rem;
-    }
-
-    .conjuntoItens {
-      flex-wrap: nowrap;
     }
   }
 
@@ -463,6 +425,8 @@
       display: grid;
       grid-template-columns: 150px auto 150px;
       grid-template-rows: repeat(7, auto);
+      justify-content: normal;
+      align-items: normal;
     }
 
     .barraEsquerda {
@@ -496,37 +460,82 @@
       grid-area: 7 / 2 / 7 / 2;
     }
 
-    .conjuntoItens > div:nth-child(5) {
-      display: block;
+    .personagens,
+    .especies,
+    .naves,
+    .veiculos,
+    .planetas {
+      max-width: 100%;
     }
 
+    .filmes__item img {
+      width: 180px;
+      height: 202px;
+    }
+    .filmes__item--fonte p {
+      width: 180px;
+    }
+
+    .filmes__titulo,
     .tituloSeção h2 {
       font-size: 4.375rem;
       line-height: 4.375rem;
     }
+
+    .itens img {
+      width: 160px;
+      max-width: 180px;
+      height: auto;
+    }
+    .descriçãoItem p {
+      width: 160px;
+      max-width: 180px;
+    }
   }
 
   @media screen and (min-width: 1440px) {
+    .innerWrapper {
+      grid-template-columns: 170px auto 170px;
+    }
+
     .conjuntoItens > div:nth-child(6) {
       display: block;
     }
 
+    .ordem__titulo,
     .tituloSeção h2 {
       font-size: 5rem;
       line-height: 5rem;
+    }
+
+    .filmes__item img {
+      width: 260px;
+      height: 282px;
+    }
+    .filmes__item--fonte p {
+      width: 260px;
+    }
+
+    .itens img {
+      width: 170px;
+      max-width: 190px;
+      height: auto;
+    }
+    .descriçãoItem p {
+      width: 170px;
+      max-width: 190px;
     }
   }
 }
 
 @layer footer {
-  .footer {
+  footer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
-    min-width: 320px;
   }
 
-  .footer > div {
+  footer > div {
     margin: 25px 16px 25px;
   }
 
