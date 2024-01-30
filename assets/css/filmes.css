@@ -1,0 +1,150 @@
+*{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    
+}
+header{
+    background-color: black;
+}
+#divLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+    padding: 5px;
+    background-color: white;
+    font-size:25px;
+    width: 1050px;
+}
+#divMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TudoSobre{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: yellow;
+    font-size: 25px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-color: yellow;
+    margin-top:  20px; ;
+    margin-bottom: 20px;
+    width: 100%;
+}
+#divTitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+menu>a{
+    color: black;
+    font-size: 25px;
+}
+
+h1{
+    display: flex;
+    font-size: 50px;
+    font-family:Star;
+    color: black;
+    background-color: yellow;
+    width: 1050px;
+    margin-top: 25px;
+    height: 150px;
+    justify-content: center;
+}
+body{
+    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
+    
+}
+
+p{
+    color: white;
+}
+
+.container{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 1050px;
+    margin-bottom: 100px;
+    text-align: center;
+    margin-top: -50px;
+}
+#divContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+}
+p{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.topo{
+    font-size: 16px;
+    display: flex;
+    justify-items: end;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-top: 20px;
+}
+a{
+    color: white;
+}
+footer>.LinksMapa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+}
+
+.nomes{
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    display:flex;
+    flex-direction: row;
+}
+
+.Nomes-Dev{
+    padding: 16px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.Nomes-Dev:first-child{
+    padding-left: 0px;
+}
+
+.Nomes-Dev:last-child{
+    padding-right: 0px;
+}
+.Devs{
+    display: flex;
+    padding-top: 50px;
+    text-align: start;
+    justify-content: center;
+}

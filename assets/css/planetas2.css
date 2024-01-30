@@ -1,0 +1,177 @@
+*{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    
+}
+
+@font-face {
+    font-family: jedi;
+    src: url(StarJedi\ Special\ Edition.ttf);
+  }
+  
+  div {
+    font-family: jedi;
+  }
+body{
+    background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
+    width: 100%;
+    
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header{
+    background-color: black;
+}
+
+.divmenu{
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+    padding: 5px;
+    background-color: white;
+    font-size:25px;
+    width: 1050px;
+}
+.TudoSobre{
+    text-align: center;
+    color: yellow;
+    font-size: 25px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-color: yellow;
+    margin-top:  20px; ;
+    margin-bottom: 20px;
+    width: 100%;
+}
+menu>a{
+    color: black;
+    font-size: 25px;
+}
+p{
+    color: white;
+}
+.titulo{
+    font-size: 50px;
+    background-color: black;
+    color: white;
+    width: 1070px;
+    text-align: center;
+    height: 200px;
+}
+.planetas{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+    gap:100px;
+    padding-left: 0px;
+    width: 1070px;
+    height: 1150px;
+    margin-top: -90px; 
+    text-align: center;
+    
+}
+
+#divPagination{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pagination{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    justify-content: space-around;
+    width: 150px;
+    margin-top: -15px;
+}
+.page-link{
+    border: solid;
+    border-color: black;
+}
+.btnUm{
+    color: black;
+}
+
+
+
+
+.divTitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#divSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer{
+    background-color: black;
+    color: white;
+}
+.topo{
+    font-size: 16px;
+    display: flex;
+    justify-items: end;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-top: 20px;
+}
+a{
+    color: white;
+}
+footer>.LinksMapa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+}
+
+.nomes{
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    display:flex;
+    flex-direction: row;
+}
+
+.Nomes-Dev{
+    padding: 16px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.Nomes-Dev:first-child{
+    padding-left: 0px;
+}
+
+.Nomes-Dev:last-child{
+    padding-right: 0px;
+}
+.Devs{
+    display: flex;
+    padding-top: 50px;
+    text-align: start;
+    justify-content: center;
+}
