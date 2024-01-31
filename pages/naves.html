@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/stylesnaves_grid_flex.css">
+    <link rel="stylesheet" href="../assets/css/stylesnaves.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,6 +12,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Naves - Star Wars</title>
+    <style>
+        /* Estilo para o popup */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        /* Estilo para o fundo escurecido ao exibir o popup */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
 
     
 </head>
@@ -29,7 +56,7 @@
         <a href="../pages/veiculos.html">Veículos</a>
         <a href="../pages/planetas.html">Planetas</a>
     </nav> -->
-    <nav class="bg-white-800">
+    <nav class="bg-black bg-white-800">
         <div class="mx-auto max-w-7xl px-2 sm:px-8 lg:px-8">
           <div class="relative flex h-10 items-center justify-between">
 
@@ -70,7 +97,11 @@
 
     <div class="tudosobre">Tudo sobre Star Wars</div>
     
-    <div class="qualpagina">Home / Naves Espaciais</div>
+    <div class="qualpagina">Home / Naves Espaciais
+        <!-- Botão para abrir o popup
+        <button class="Botao" onclick="mostrarPopup()">Fan de verdade clica aqui!!!</button> -->
+    </div>
+    
     
     
     <main>
@@ -167,7 +198,23 @@
             </div>
         </section>
   
-        <aside class="esquerdo"></aside>  
+        <aside class="esquerdo">
+                <!-- Popup de cadastro -->
+                <div id="overlay"></div>
+                <div id="popup">
+                    <h2>Cadastro de Usuário</h2>
+                    <form id="formularioCadastro">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                        <br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <br>
+                        <button type="button" onclick="enviarFormulario()">Cadastrar</button>
+                    </form>
+                    <button onclick="fecharPopup()">Fechar</button>
+                </div>
+        </aside>  
     </main>
     
 
@@ -274,5 +321,67 @@
             </div>
          </div>
     </footer>
+    <script>
+        window.onload = function () {
+            // Aguardar 5 segundos (5000 milissegundos) antes de chamar mostrarPopup()
+            setTimeout(function () {
+                mostrarPopup();
+            }, 5000);
+        };
+
+            // Função para definir um cookie
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        // Função para obter o valor de um cookie
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        // Função para verificar se o popup já foi exibido
+        function checkPopup() {
+            var popupShown = getCookie("popupShown");
+            if (!popupShown) {
+                mostrarPopup();
+                setCookie("popupShown", "true", 1);  // Define o cookie para indicar que o popup foi exibido
+            }
+        }
+
+        function mostrarPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function fecharPopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function enviarFormulario() {
+            // Lógica de processamento do formulário
+
+            // Exemplo de exibição de mensagem
+            alert('Cadastro realizado com sucesso!');
+
+            // Fechar o popup após o cadastro
+            fecharPopup();
+        }
+    </script>
 </body>
 </html>
