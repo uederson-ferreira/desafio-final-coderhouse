@@ -322,6 +322,22 @@ footer {
     letter-spacing: 0.25px; 
     word-wrap: break-word;
 }
+.RedesSociais{
+    display: flex;
+    align-items:baseline;
+    justify-content:flex-start; 
+}
+.botaoDentro{
+    display: flex;
+    background-color: #69cdea;
+    justify-content: center;
+    align-items: center;
+}
+.Botao{
+    border-radius: 10%;
+    background-color: white;
+    text-align: center;
+}
 
 /*Media Query Tablete e PC*/
  
@@ -656,6 +672,11 @@ footer {
         letter-spacing: 0.25px; 
         word-wrap: break-word;
     }
+    .RedesSociais{
+        display: flex;
+        align-items:baseline;
+        justify-content:flex-start; 
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -987,5 +1008,10 @@ footer {
         font-weight: 700; 
         letter-spacing: 0.25px; 
         word-wrap: break-word;
+    }
+    .RedesSociais{
+        display: flex;
+        align-items:baseline;
+        justify-content:flex-start; 
     }
 }
