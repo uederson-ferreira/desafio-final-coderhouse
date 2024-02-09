@@ -134,10 +134,24 @@
     border-bottom: 2px solid var(--yellow);
   }
   .titulo__fonte {
-    font-size: 1.3rem;
-    line-height: 1.3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     font-weight: 900;
     color: var(--yellow);
+  }
+
+  @media screen and (min-width: 375px) {
+    .titulo__fonte {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .titulo__fonte {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -151,8 +165,8 @@
     }
 
     .titulo__fonte {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
     }
   }
 
@@ -165,7 +179,6 @@
 
     .logoStarWars {
       grid-area: 1 / 1;
-      display: flex;
       align-items: center;
       justify-content: center;
       justify-self: center;
@@ -187,7 +200,8 @@
       background-color: var(--white);
     }
     .navBar--fonte a {
-      font-size: 1rem;
+      font-size: 1.25rem;
+      line-height: 1.25rem;
       color: var(--dim-gray);
       text-transform: uppercase;
       text-decoration: none;
@@ -201,9 +215,9 @@
     .navBar__subMenu {
       display: none;
       position: absolute;
-      top: 32px;
+      top: 25px;
       right: -65px;
-      bottom: -75px;
+      bottom: -85px;
       left: -65px;
       padding: 20px 18px 20px;
       text-align: left;
@@ -211,8 +225,8 @@
       list-style: none;
       background-color: var(--light-gray);
     }
-    .navBar__subMenu--fonte a {
-      font-size: 0.9rem;
+    #navBar__subMenu--fonte a {
+      font-size: 1rem;
     }
     .navBar__dropdown:hover .navBar__subMenu {
       display: block;
@@ -220,21 +234,34 @@
 
     .titulo {
       grid-area: 3 / 1;
-      font-size: 1.8rem;
-      line-height: 1.8rem;
+      font-size: 2.75rem;
+      line-height: 2.75rem;
       margin: 0;
     }
   }
 
   @media screen and (min-width: 1440px) {
     .navBar--fonte a {
-      font-size: 1.2rem;
-      line-height: 1.2rem;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    .navBar__subMenu {
+      top: 29px;
+      right: -80px;
+      bottom: -90px;
+      left: -80px;
+
+      line-height: 0.1px;
+    }
+
+    #navBar__subMenu--fonte a {
+      font-size: 1.25rem;
     }
 
     .titulo {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 3rem;
+      line-height: 3rem;
     }
   }
 }
@@ -256,9 +283,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
   }
 
-  .margin > div:not(.filmes) {
+  .content > div:not(.filmes) {
     margin: 16px;
   }
 
@@ -270,6 +298,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
+    margin: 16px 0 16px;
   }
   .filmes__titulo {
     grid-area: 1 / 1;
@@ -339,6 +368,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
   }
   .item--img {
     max-width: 100%;
@@ -348,6 +378,7 @@
     text-align: center;
     width: 129px;
     margin: 0;
+    color: var(--black);
   }
 
   .conjuntoItens div:nth-child(n + 5) {
@@ -376,13 +407,15 @@
 
   .planetas {
     background-color: var(--black);
-    margin-bottom: 100px;
   }
   .tituloSeção__planetas {
     color: var(--white);
     background-color: var(--black);
   }
   .conjuntoItens__planetas {
+    color: var(--white);
+  }
+  .item__planetas--p {
     color: var(--white);
   }
   .botão__planetas a {
@@ -405,18 +438,6 @@
   }
 
   @media screen and (min-width: 600px) {
-    .filmes__titulo,
-    .tituloSeção {
-      font-size: 2rem;
-      line-height: 2rem;
-      padding: 15px;
-    }
-
-    .filmes__item--p,
-    .item--p {
-      width: 150px;
-    }
-
     .personagens,
     .especies,
     .naves,
@@ -432,25 +453,41 @@
       gap: 15px;
     }
 
+    .filmes__titulo,
+    .tituloSeção {
+      font-size: 2rem;
+      line-height: 2rem;
+      padding: 15px;
+    }
+
+    .filmes__item--p,
     .item--p {
-      font-size: 1.25rem;
+      width: 150px;
     }
 
     .conjuntoItens div:nth-child(4) {
       display: none;
-    }
-
-    .botão--fonte a {
-      font-size: 1.25rem;
-    }
-    .botão--seta {
-      width: 1.25rem;
     }
   }
 
   @media screen and (min-width: 768px) {
     .roloDeFotos {
       display: block;
+      width: 100%;
+      padding: 0 16px 0;
+    }
+
+    .personagens,
+    .especies,
+    .naves,
+    .veiculos,
+    .planetas {
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .conjuntoItens {
+      gap: 20px;
     }
 
     .filmes__titulo,
@@ -463,120 +500,76 @@
     .filmes__item--p,
     .item--p {
       width: 155px;
-    }
-
-    .personagens,
-    .especies,
-    .naves,
-    .veiculos,
-    .planetas {
-      padding: 20px;
-      gap: 20px;
-    }
-
-    .conjuntoItens,
-    .item {
-      gap: 20px;
+      font-size: 1.25rem;
+      line-height: 1.25rem;
     }
 
     .conjuntoItens div:nth-child(4) {
-      display: block;
+      display: flex;
+    }
+
+    .botão--fonte a {
+      font-size: 1.25rem;
+    }
+
+    .botão--seta {
+      width: 1.25rem;
     }
   }
 
   @media screen and (min-width: 1024px) {
+    .innerWrapper {
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
     .barraEsquerda,
     .barraDireita {
-      display: none;
-      width: 150px;
+      display: block;
+      background-image: url(../img/Barra\ Lateral.svg);
+      width: 200px;
     }
-  }
+    .barraEsquerda {
+      margin-right: 16px;
+    }
+    .barraDireita {
+      margin-left: 16px;
+    }
 
-  /* @media screen and (min-width: 580px) {
     .conjuntoItens {
       flex-wrap: nowrap;
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    .roloDeFotos {
-      display: block;
-    }
-
-    .conjuntoItens > div:nth-child(5) {
-      display: block;
-    }
-
-    .filmes__item img {
-      width: 150px;
-      height: 172px;
-    }
-    .filmes__item--fonte p {
-      width: 150px;
-    }
 
     .filmes__titulo,
-    .tituloSeção h2 {
-      font-size: 4rem;
-      line-height: 4rem;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .filmes__item img {
-      width: 180px;
-      height: 202px;
-    }
-    .filmes__item--fonte p {
-      width: 180px;
+    .tituloSeção {
+      font-size: 2.75rem;
+      line-height: 2.75rem;
     }
 
-    .filmes__titulo,
-    .tituloSeção h2 {
-      font-size: 4.375rem;
-      line-height: 4.375rem;
-    }
-
-    .itens img {
-      width: 160px;
-      max-width: 180px;
-      height: auto;
-    }
-    .descriçãoItem p {
-      width: 160px;
-      max-width: 180px;
+    .filmes__item--p,
+    .item--p {
+      width: 170px;
     }
   }
 
   @media screen and (min-width: 1440px) {
-    .conjuntoItens > div:nth-child(6) {
-      display: block;
+    .filmes__titulo,
+    .tituloSeção {
+      font-size: 3rem;
+      line-height: 3rem;
     }
 
-    .ordem__titulo,
-    .tituloSeção h2 {
-      font-size: 5rem;
-      line-height: 5rem;
+    .filmes__item--p,
+    .item--p {
+      width: 190px;
+      font-size: 1.4rem;
+      line-height: 1.4rem;
     }
 
-    .filmes__item img {
-      width: 260px;
-      height: 282px;
+    .conjuntoItens div:nth-child(5) {
+      display: flex;
     }
-    .filmes__item--fonte p {
-      width: 260px;
-    }
-
-    .itens img {
-      width: 170px;
-      max-width: 190px;
-      height: auto;
-    }
-    .descriçãoItem p {
-      width: 170px;
-      max-width: 190px;
-    }
-  } */
+  }
 }
 
 @layer footer {
@@ -584,7 +577,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
-    margin: 100px 0 25px;
+    margin-bottom: 25px;
   }
 
   footer > div {
@@ -614,8 +607,8 @@
   .mapaDoSite--titulo,
   .desenvolvedores--titulo {
     color: var(--white);
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     text-transform: uppercase;
     margin: 0 0 20px;
   }
@@ -665,6 +658,7 @@
   .desenvolvedores__Item {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     width: 165px;
   }
   .desenvolvedores__Item--fonte {
@@ -681,5 +675,13 @@
     flex-direction: row;
     gap: 5px;
     margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .mapaDoSite--titulo,
+    .desenvolvedores--titulo {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
   }
 }
