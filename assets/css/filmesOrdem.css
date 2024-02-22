@@ -94,6 +94,12 @@
     font-size: 500px;
     background-image: var(--gradiente);
     flex-direction: column;
+    background-image: linear-gradient(to right, #f9ff18, #ffea0023, #40e0d000);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    z-index: 10;
+    position:relative;
 }
 header{
     background-color: black;
