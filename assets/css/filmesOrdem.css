@@ -2,10 +2,9 @@
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: 0px;
-    
+    margin-bottom: 0px; 
 }
-
+/*
 @layer header {
     header {
       margin: 2rem 0 0;
@@ -79,102 +78,28 @@
         line-height: 2.5rem;
       }
     }
-  
-    @media screen and (min-width: 1024px) {
-      header {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(3, auto);
-      }
-  
-      .logoStarWars {
-        grid-area: 1 / 1;
-        align-items: center;
-        justify-content: center;
-        justify-self: center;
-        max-width: 195px;
-        margin: 0;
-      }
-  
-      .menuNavBar {
-        display: none;
-      }
-  
-      .navBar {
-        grid-area: 2 / 1;
-        display: inline-flex;
-        padding: 5px;
-        margin: 20px 0 20px;
-        gap: 20px;
-        list-style: none;
-        background-color: var(--white);
-      }
-      .navBar--fonte a {
-        font-size: 1.25rem;
-        line-height: 1.25rem;
-        color: var(--dim-gray);
-        text-transform: uppercase;
-        text-decoration: none;
-      }
-      .navBar--fonte a:hover {
-        color: var(--black);
-      }
-      .navBar__dropdown {
-        position: relative;
-      }
-      .navBar__subMenu {
-        display: none;
-        position: absolute;
-        top: 25px;
-        right: -65px;
-        bottom: -85px;
-        left: -65px;
-        padding: 20px 18px 20px;
-        text-align: left;
-        line-height: 0.1px;
-        list-style: none;
-        background-color: var(--light-gray);
-      }
-      #navBar__subMenu--fonte a {
-        font-size: 1rem;
-      }
-      .navBar__dropdown:hover .navBar__subMenu {
-        display: block;
-      }
-  
-      .titulo {
-        grid-area: 3 / 1;
-        font-size: 2.75rem;
-        line-height: 2.75rem;
-        margin: 0;
-      }
-    }
-  
-    @media screen and (min-width: 1440px) {
-      .navBar--fonte a {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-      }
-  
-      .navBar__subMenu {
-        top: 29px;
-        right: -80px;
-        bottom: -90px;
-        left: -80px;
-  
-        line-height: 0.1px;
-      }
-  
-      #navBar__subMenu--fonte a {
-        font-size: 1.25rem;
-      }
-  
-      .titulo {
-        font-size: 3rem;
-        line-height: 3rem;
-      }
-    }
-  }
+}*/
+:root{
+  --gradiente: linear-gradient(
+        to right,
+        rgb(255, 255, 0),
+        rgb(opacity: 1),
+    )
+}
+.classNumber{
+    display: flex;
+    margin-top: -520px;
+    margin-left: -40px;
+    color: yellow;
+    font-size: 500px;
+    background-image: var(--gradiente);
+    flex-direction: column;
+}
+header{
+    background-color: black;
+    margin-top: 0px;
+}
+
 #divLogo{
     display: flex;
     flex-direction: column;
@@ -209,10 +134,12 @@ menu{
     margin-bottom: 20px;
     width: 100%;
 }
+
 #divTitulo{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 menu>a{
     color: black;
@@ -230,6 +157,9 @@ h1{
     height: 150px;
     justify-content: center;
 }
+
+
+
 body{
     background-image:url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png);
     
@@ -238,22 +168,85 @@ body{
 p{
     color: white;
 }
-
-.container{
-    background-color: black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 1050px;
-    margin-bottom: 100px;
-    text-align: center;
-    margin-top: -50px;
+h2{
+    size: 80px;
+    color: yellow;
 }
-#divContainer{
+#secInfos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: black;
+    width: 1050px;
+    gap: 20px;
+}
+.banner{
+    margin-top:50px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.tituloFilmes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#divInfos{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.sinopse{
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.gridSinopse{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom:solid 2px;
+    border-color: yellow;
+    align-items: center;
+}
+.saibaMais{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    border: solid;
+    border-radius: 5px;
+    width: 130px;
+}
+.divSaibaMais{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: center;
+}
+.seta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+.divSinopses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    size: 1fr;
+    size: 500px;
+}
+
+
 
 .footer{
     background-color: black;
@@ -314,4 +307,5 @@ footer>.LinksMapa{
     padding-top: 50px;
     text-align: start;
     justify-content: center;
+    margin-left: -540px;
 }
