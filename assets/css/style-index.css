@@ -1,0 +1,29 @@
+@layer content {
+  .carrossel {
+    display: none;
+  }
+
+  .secoes {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 5px;
+    gap: 20px;
+    width: fit-content;
+    padding: 10px;
+  }
+
+  .tituloSecoes {
+    font-family: StarJedi Special Edition;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--yellow);
+    border-radius: 5px;
+  }
+  .itens {
+    display: flex;
+    flex-direction: row;
+  }
+}

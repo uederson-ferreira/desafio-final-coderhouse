@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Human",
+    "images": {
+      "small": "./assets/img/small/especies/luke-skywalker-small.png",
+      "medium": "./assets/img/medium/especies/luke-skywalker-medium.png",
+      "big": "./assets/img/big/especies/luke-skywalker-big.png"
+    }
+  },
+  {
+    "name": "Droid",
+    "images": {
+      "small": "./assets/img/small/especies/c-3po-small.png",
+      "medium": "./assets/img/medium/especies/c-3po-medium.png",
+      "big": "./assets/img/big/especies/c-3po-big.png"
+    }
+  },
+  {
+    "name": "Wookie",
+    "images": {
+      "small": "./assets/img/small/especies/r2-d2-small.png",
+      "medium": "./assets/img/medium/especies/r2-d2-medium.png",
+      "big": "./assets/img/big/especies/r2-d2-big.png"
+    }
+  },
+  {
+    "name": "Rodian",
+    "images": {
+      "small": "./assets/img/small/especies/darth-vader-small.png",
+      "medium": "./assets/img/medium/especies/darth-vader-medium.png",
+      "big": "./assets/img/big/especies/darth-vader-big.png"
+    }
+  },
+  {
+    "name": "Hutt",
+    "images": {
+      "small": "./assets/img/small/especies/leia-organa-small.png",
+      "medium": "./assets/img/medium/especies/leia-organa-medium.png",
+      "big": "./assets/img/big/especies/leia-organa-big.png"
+    }
+  },
+  {
+    "name": "Yoda's Species",
+    "images": {
+      "small": "./assets/img/small/especies/yoda's-species-small.png",
+      "medium": "./assets/img/medium/especies/yoda's-species-medium.png",
+      "big": "./assets/img/big/especies/yoda's-species-big.png"
+    }
+  },
+  {
+    "name": "Trandoshan",
+    "images": {
+      "small": "./assets/img/small/especies/trandoshan-small.png",
+      "medium": "./assets/img/medium/especies/trandoshan-medium.png",
+      "big": "./assets/img/big/especies/trandoshan-big.png"
+    }
+  },
+  {
+    "name": "Mon Calamari",
+    "images": {
+      "small": "./assets/img/small/personagens/mon-calamari-small.png",
+      "medium": "./assets/img/medium/personagens/mon-calamari-medium.png",
+      "big": "./assets/img/big/personagens/mon-calamari-big.png"
+    }
+  },
+  {
+    "name": "Ewok",
+    "images": {
+      "small": "./assets/img/small/especies/ewok-small.png",
+      "medium": "./assets/img/medium/especies/ewok-medium.png",
+      "big": "./assets/img/big/especies/ewok-big.png"
+    }
+  },
+  {
+    "name": "Sullustan",
+    "images": {
+      "small": "./assets/img/small/especies/sullustan-small.png",
+      "medium": "./assets/img/medium/especies/Sullustan-medium.png",
+      "big": "./assets/img/big/especies/Sullustan-big.png"
+    }
+  }
+]

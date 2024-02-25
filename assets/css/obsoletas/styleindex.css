@@ -1,0 +1,385 @@
+@layer header {
+  header {
+    margin: 32px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .logoStarWars {
+    grid-area: 1 / 2 / 1 / 3;
+    display: flex;
+    justify-self: end;
+    margin-right: 16px;
+    max-width: 140px;
+    z-index: 2;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+  #iconeMenu {
+    grid-area: 1 / 1 / 1 / 1;
+    display: flex;
+    margin-left: 16px;
+    width: 40px;
+    z-index: 2;
+  }
+  #menu {
+    background-color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 32px 16px 100px;
+    position: absolute;
+    top: 113px;
+    left: -360px;
+    height: 100%;
+    width: 320px;
+    z-index: 3;
+    transition: 0.3s;
+  }
+  .menuNavBar {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+  }
+  .menuNavBar__item li {
+    list-style: none;
+    text-align: start;
+  }
+  .menuNavBar__item--fonte a {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    color: var(--black);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .barraTransversal {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  #blurBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+  }
+
+  .titulo {
+    grid-area: 2 / 1 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 0 0;
+    border-top: 2px solid var(--yellow);
+    border-bottom: 2px solid var(--yellow);
+  }
+  .titulo__fonte {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+    color: var(--yellow);
+  }
+
+  @media screen and (min-width: 375px) {
+    .titulo__fonte {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .logoStarWars {
+      max-width: 155px;
+    }
+
+    #iconeMenu {
+      width: 50px;
+    }
+
+    .titulo__fonte {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    header {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3, auto);
+    }
+
+    .logoStarWars {
+      grid-area: 1 / 1;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+      max-width: 195px;
+      margin: 0;
+    }
+
+    #iconeMenu {
+      display: none;
+    }
+
+    .navBar {
+      grid-area: 2 / 1;
+      display: inline-flex;
+      padding: 5px;
+      margin: 20px 0 20px;
+      gap: 20px;
+      list-style: none;
+      background-color: var(--white);
+    }
+    .navBar--fonte a {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+      color: var(--dim-gray);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .navBar--fonte a:hover {
+      color: var(--black);
+    }
+    .navBar__dropdown {
+      position: relative;
+    }
+    .navBar__subMenu {
+      display: none;
+      position: absolute;
+      top: 25px;
+      right: -65px;
+      bottom: -85px;
+      left: -65px;
+      padding: 20px 18px 20px;
+      text-align: left;
+      line-height: 0.1px;
+      list-style: none;
+      background-color: var(--light-gray);
+    }
+    #navBar__subMenu--fonte a {
+      font-size: 1rem;
+    }
+    .navBar__dropdown:hover .navBar__subMenu {
+      display: block;
+    }
+
+    .titulo {
+      grid-area: 3 / 1;
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .navBar--fonte a {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    .navBar__subMenu {
+      top: 29px;
+      right: -80px;
+      bottom: -90px;
+      left: -80px;
+
+      line-height: 0.1px;
+    }
+
+    #navBar__subMenu--fonte a {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@layer base-content {
+  .innerWrapper {
+  }
+
+  .barraLateral {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    gap: 32px;
+    margin: 16px 16px 100px;
+  }
+}
+
+@layer content {
+  .carrossel {
+    display: none;
+  }
+
+  .secoes {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 5px;
+    gap: 20px;
+    width: fit-content;
+    padding: 10px;
+  }
+
+  .tituloSecoes {
+    font-family: StarJedi Special Edition;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding: 10px;
+    background-color: var(--yellow);
+    border-radius: 5px;
+  }
+  .itens {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@layer footer {
+  footer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    margin-bottom: 25px;
+  }
+
+  footer > div,
+  .navFooter {
+    margin: 25px 16px 25px;
+  }
+
+  .botãoTopo {
+    grid-area: 1 / 1;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 5px;
+  }
+  .botãoTopo--fonte a {
+    font-size: 1rem;
+    color: var(--white);
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .botãoTopo--seta {
+    width: 1rem;
+    height: auto;
+  }
+
+  .navFooter--titulo,
+  .desenvolvedores--titulo {
+    color: var(--white);
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+  }
+
+  .navFooter {
+    grid-area: 2 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navFooter__conjuntoLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .navFooter__links {
+    display: flex;
+    white-space: nowrap;
+    gap: 5px;
+  }
+  .navFooter__links:not(:first-child):before {
+    content: url(../img/shared/barra.svg);
+    float: left;
+    margin-right: 20px;
+  }
+  .navFooter__links::after {
+    content: url(../img/shared/external-link.svg);
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-left: 5px;
+  }
+  .navFooter__links--fonteLinks a {
+    color: var(--white);
+    font-size: 1rem;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .desenvolvedores {
+    grid-area: 3 / 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .desenvolvedores__conjuntoItens {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .desenvolvedores__Item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 165px;
+  }
+  .desenvolvedores__Item--fonte {
+    color: var(--white);
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+  }
+  .desenvolvedores__redesSociais {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .mapaDoSite--titulo,
+    .desenvolvedores--titulo {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+  }
+}

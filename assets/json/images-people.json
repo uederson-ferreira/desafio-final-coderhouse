@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Luke Skywalker",
+    "images": {
+      "small": "./assets/img/small/people/luke-skywalker-small.png",
+      "medium": "./assets/img/medium/people/luke-skywalker-medium.png",
+      "big": "./assets/img/big/people/luke-skywalker-big.png"
+    }
+  },
+  {
+    "name": "C-3PO",
+    "images": {
+      "small": "./assets/img/small/people/c-3po-small.png",
+      "medium": "./assets/img/medium/people/c-3po-medium.png",
+      "big": "./assets/img/big/people/c-3po-big.png"
+    }
+  },
+  {
+    "name": "R2-D2",
+    "images": {
+      "small": "./assets/img/small/people/r2-d2-small.png",
+      "medium": "./assets/img/medium/people/r2-d2-medium.png",
+      "big": "./assets/img/big/people/r2-d2-big.png"
+    }
+  },
+  {
+    "name": "Darth Vader",
+    "images": {
+      "small": "./assets/img/small/people/darth-vader-small.png",
+      "medium": "./assets/img/medium/people/darth-vader-medium.png",
+      "big": "./assets/img/big/people/darth-vader-big.png"
+    }
+  },
+  {
+    "name": "Leia Organa",
+    "images": {
+      "small": "./assets/img/small/people/leia-organa-small.png",
+      "medium": "./assets/img/medium/people/leia-organa-medium.png",
+      "big": "./assets/img/big/people/leia-organa-big.png"
+    }
+  },
+  {
+    "name": "Owen Lars",
+    "images": {
+      "small": "./assets/img/small/people/owen-lars-small.png",
+      "medium": "./assets/img/medium/people/owen-lars-medium.png",
+      "big": "./assets/img/big/people/luke-owen-lars.png"
+    }
+  },
+  {
+    "name": "Beru Whitesun lars",
+    "images": {
+      "small": "./assets/img/small/people/beru-whitesun-lars-small.png",
+      "medium": "./assets/img/medium/people/beru-whitesun-lars-medium.png",
+      "big": "./assets/img/big/people/beru-whitesun-lars-big.png"
+    }
+  },
+  {
+    "name": "R5-D4",
+    "images": {
+      "small": "./assets/img/small/people/r5-d4-small.png",
+      "medium": "./assets/img/medium/people/r5-d4-medium.png",
+      "big": "./assets/img/big/people/r5-d4-big.png"
+    }
+  },
+  {
+    "name": "Biggs Darklighter",
+    "images": {
+      "small": "./assets/img/small/people/biggs-darklighter-small.png",
+      "medium": "./assets/img/medium/people/biggs-darklighter-medium.png",
+      "big": "./assets/img/big/people/biggs-darklighter-big.png"
+    }
+  },
+  {
+    "name": "Obi-Wan Kenobi",
+    "images": {
+      "small": "./assets/img/small/people/obi-wan-kenobi-small.png",
+      "medium": "./assets/img/medium/people/obi-wan-kenobi-medium.png",
+      "big": "./assets/img/big/people/obi-wan-kenobi-big.png"
+    }
+  }
+]
