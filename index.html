@@ -11,6 +11,16 @@
       href="https://fonts.cdnfonts.com/css/starjedi-special-edition"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      href="./assets/img/shared/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/shared/favicon.ico"
+      type="image/x-icon"
+    />
     <title>Universo Star Wars</title>
   </head>
   <body>
@@ -26,27 +36,26 @@
         </div>
 
         <div class="iconeMenuHamburguer">
-          <img
-            src="./assets/img/shared/menu.svg"
-            alt="Menu Hamburguer"
-            id="botaoMenuHamburguer"
-          />
+          <img src="./assets/img/shared/menu.svg" alt="Menu Hamburguer" />
         </div>
 
-        <div class="menuHamburguer">
+        <div class="menuHamburguer" id="closeMenuHamburguer">
           <nav>
-            <ul class="menuHamburguer__lista lista__item lista__item--fonte">
+            <ul
+              class="menuHamburguer__conteudo conteudo__itens conteudo__item--fonte itemFeedback"
+            >
               <li><a href="">personagens</a></li>
               <li><a href="">espécies</a></li>
-              <li class="lista__itemDropdown">
+              <li class="conteudo__dropdown">
                 <div>
                   <a href="">filmes</a>
                   <img
                     src="./assets/img/shared/chevron-para-baixo.svg"
                     alt=""
+                    class="conteudo__dropdown--img"
                   />
                 </div>
-                <ul class="itemDropdown__Submenu itemDropdown__Submenu--fonte">
+                <ul class="dropdown__subMenu dropdown__subMenu--fonte">
                   <li><a href="">ordem de assistir os filmes</a></li>
                 </ul>
               </li>
@@ -60,12 +69,12 @@
         <!-- <div id="blurBackground"></div> -->
 
         <nav>
-          <ul class="navBar navBar__item--fonte">
+          <ul class="navBar navBar__item--fonte respostaFonte">
             <li><a href="./pages/personagens.html">personagens</a></li>
             <li><a href="./pages/especies.html">espécies</a></li>
-            <li class="navBar__dropdown">
+            <li class="itemDropdown">
               <a href="./pages/filmes.html">filmes</a>
-              <ul class="dropdown__subMenu dropdown__subMenu--fonte">
+              <ul class="subMenu subMenu__item subMenu__item--fonte">
                 <li>
                   <a href="./pages/oredem-de-se-assistir-os-filmes.html"
                     >ordem de assistir a trilogia</a
@@ -75,7 +84,9 @@
             </li>
             <li><a href="./pages/naves.html">naves</a></li>
             <li><a href="./pages/veiculos.html">veículos</a></li>
-            <li><a href="../desafio-final-coderhouse/pages/planetas2.html">planetas</a></li>
+            <li>
+              <a href="./pages/planetas2.html">planetas</a>
+            </li>
           </ul>
         </nav>
 
@@ -86,10 +97,6 @@
       </header>
 
       <div class="innerWrapper">
-        <div class="barrasLaterais">
-          <img src="./assets/img/shared/barra-lateral.svg" alt="" />
-        </div>
-
         <main class="content">
           <div class="secoes">
             <h2 class="tituloSecoes">personagens</h2>
@@ -111,162 +118,197 @@
             <div id="veiculos" class="itens">.</div>
           </div>
         </main>
-
-        <div class="barrasLaterais">
-          <img src="./assets/img/shared/barra-lateral.svg" alt="" />
-        </div>
       </div>
 
       <footer>
-        <div class="botãoTopo botãoTopo--fonte">
+        <div class="botaoPsicao botao botao--fonte botaoFeedback">
           <a href="#"
             >Voltar ao topo
             <img
               src="./assets/img/shared/seta-circular-cima.svg"
               alt="seta para cima"
-              class="botãoTopo--seta"
+              class="botao--img"
           /></a>
         </div>
 
         <nav class="navFooter">
-          <h5 class="navFooter--titulo">Mapa do Site</h5>
+          <h3 class="titulosFooter">Mapa do Site</h3>
 
-          <div class="navFooter__conjuntoLinks">
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Home </a>
-            </div>
+          <div
+            class="grupoLinks grupoLinks__item grupoLinks__item--fonte grupoLinks__item--img linksFeedback"
+          >
+            <a href="#"
+              >Home <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
 
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Personagens </a>
-            </div>
+            <img src="./assets/img/shared/barra.svg" alt="" />
 
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Espécies </a>
-            </div>
+            <a href="./pages/personagens.html"
+              >Personagens
+              <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
 
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Filmes </a>
-            </div>
+            <img src="./assets/img/shared/barra.svg" alt="" />
 
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Ordem de se Assistir os Filmes </a>
-            </div>
+            <a href="./pages/especies.html"
+              >Espécies <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
 
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Naves Espaciais </a>
-            </div>
+            <img src="./assets/img/shared/barra.svg" alt="" />
 
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Veículos </a>
-            </div>
+            <a href="./pages/filmes.html"
+              >Filmes <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
 
-            <div class="navFooter__links navFooter__links--fonteLinks">
-              <a href="#">Planetas </a>
-            </div>
+            <img src="./assets/img/shared/barra.svg" alt="" />
+
+            <a href="./pages/oredem-de-se-assistir-os-filmes.html"
+              >Ordem de se Assistir os Filmes
+              <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
+
+            <img src="./assets/img/shared/barra.svg" alt="" />
+
+            <a href="./pages/naves.html"
+              >Naves Espaciais
+              <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
+
+            <img src="./assets/img/shared/barra.svg" alt="" />
+
+            <a href="./pages/veiculos.html"
+              >Veículos <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
+
+            <img src="./assets/img/shared/barra.svg" alt="" />
+
+            <a href="./pages/planetas.html"
+              >Planetas <img src="./assets/img/shared/external-link.svg" alt=""
+            /></a>
           </div>
         </nav>
 
         <div class="desenvolvedores">
-          <h5 class="desenvolvedores--titulo">Desenvolvedores</h5>
+          <h3 class="titulosFooter">Desenvolvedores</h3>
 
-          <address class="desenvolvedores__conjuntoItens">
-            <div class="desenvolvedores__Item">
-              <p class="desenvolvedores__Item--fonte">Gabriel Carneiro Sousa</p>
-              <figure class="desenvolvedores__redesSociais">
-                <a href="">
+          <address class="grupoDev grupoDev__item">
+            <div>
+              <p class="grupoDev__item--fonte">Gabriel Carneiro Sousa</p>
+              <figure class="grupoDev__item--img grupoDevFeedback">
+                <a
+                  href="https://www.linkedin.com/in/gabriel-carneiro-186680279/"
+                  target="_blank"
+                >
                   <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
                 </a>
-                <a href="">
+                <a
+                  href="https://github.com/GabrielCarneiroSousa"
+                  target="_blank"
+                >
                   <img src="./assets/img/shared/github.svg" alt="github" />
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/htmlbiel/" target="_blank">
                   <img
                     src="./assets/img/shared/instagram.svg"
                     alt="instagram"
                   />
                 </a>
-                <a href="">
+                <a href="" target="_blank">
                   <img src="./assets/img/shared/facebook.svg" alt="facebook" />
                 </a>
-                <a href="">
+                <a href="https://twitter.com/oMavv_x" target="_blank">
                   <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
                 </a>
               </figure>
             </div>
 
-            <div class="desenvolvedores__Item">
-              <p class="desenvolvedores__Item--fonte">
+            <div>
+              <p class="grupoDev__item--fonte">
                 Paulo Sardeiro Flores Da Cunha
               </p>
-              <figure class="desenvolvedores__redesSociais">
-                <a href="">
+              <figure class="grupoDev__item--img grupoDevFeedback">
+                <a href="" target="_blank">
                   <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
                 </a>
-                <a href="">
+                <a href="" target="_blank">
                   <img src="./assets/img/shared/github.svg" alt="github" />
                 </a>
-                <a href="">
+                <a
+                  href="https://www.instagram.com/sardeiropaulofelipe"
+                  target="_blank"
+                >
                   <img
                     src="./assets/img/shared/instagram.svg"
                     alt="instagram"
                   />
                 </a>
-                <a href="">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100016552265918"
+                  target="_blank"
+                >
                   <img src="./assets/img/shared/facebook.svg" alt="facebook" />
                 </a>
-                <a href="">
+                <a href="" target="_blank">
                   <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
                 </a>
               </figure>
             </div>
 
-            <div class="desenvolvedores__Item">
-              <p class="desenvolvedores__Item--fonte">
-                Thiago Bernardo Fernandes
-              </p>
-              <figure class="desenvolvedores__redesSociais">
-                <a href="">
+            <div>
+              <p class="grupoDev__item--fonte">Thiago Bernardo Fernandes</p>
+              <figure class="grupoDev__item--img grupoDevFeedback">
+                <a
+                  href="https://www.linkedin.com/in/thiago-bernardo-fernandes/"
+                  target="_blank"
+                >
                   <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
                 </a>
-                <a href="">
+                <a
+                  href="https://github.com/thiagobernardofernandes"
+                  target="_blank"
+                >
                   <img src="./assets/img/shared/github.svg" alt="github" />
                 </a>
-                <a href="">
+                <a
+                  href="https://www.instagram.com/thiago_bernardo"
+                  target="_blank"
+                >
                   <img
                     src="./assets/img/shared/instagram.svg"
                     alt="instagram"
                   />
                 </a>
-                <a href="">
+                <a
+                  href="https://www.facebook.com/bernardofernandesthiago/"
+                  target="_blank"
+                >
                   <img src="./assets/img/shared/facebook.svg" alt="facebook" />
                 </a>
-                <a href="">
+                <a href="https://twitter.com/ThiagoB09013321" target="_blank">
                   <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
                 </a>
               </figure>
             </div>
 
-            <div class="desenvolvedores__Item">
-              <p class="desenvolvedores__Item--fonte">
-                Uederson De Amadeu Ferreira
-              </p>
-              <figure class="desenvolvedores__redesSociais">
-                <a href="">
+            <div>
+              <p class="grupoDev__item--fonte">Uederson De Amadeu Ferreira</p>
+              <figure class="grupoDev__item--img grupoDevFeedback">
+                <a href="" target="_blank">
                   <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
                 </a>
-                <a href="">
+                <a href="https://github.com/uederson-ferreira" target="_blank">
                   <img src="./assets/img/shared/github.svg" alt="github" />
                 </a>
-                <a href="">
+                <a href="" target="_blank">
                   <img
                     src="./assets/img/shared/instagram.svg"
                     alt="instagram"
                   />
                 </a>
-                <a href="">
+                <a href="" target="_blank">
                   <img src="./assets/img/shared/facebook.svg" alt="facebook" />
                 </a>
-                <a href="">
+                <a href="" target="_blank">
                   <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
                 </a>
               </figure>

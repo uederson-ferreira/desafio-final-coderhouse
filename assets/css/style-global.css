@@ -111,7 +111,6 @@
     justify-self: end;
     margin-right: 16px;
     max-width: 160px;
-    z-index: 2;
   }
 
   /* navbar so aparece somente no display de desktop */
@@ -125,65 +124,70 @@
     display: flex;
     margin-left: 16px;
     width: 40px;
-    z-index: 2;
   }
+
   /* menu que aparece quando clicado no menu hamburguer */
   .menuHamburguer {
     background-color: var(--black);
     padding: 32px 16px 32px 32px;
     position: absolute;
     top: 168px;
-    left: -390px;
     height: 100%;
     width: 320px;
-    z-index: 3;
-    transition: 0.3s;
+    transition: left 0.5s ease;
   }
+  #closeMenuHamburguer {
+    left: -360px;
+  }
+  #openMenuHamburguer {
+    left: 0px;
+  }
+
   /* modificações para o conjunto de navegação que fica no menu */
-  .menuHamburguer__lista {
+  .menuHamburguer__conteudo {
     display: flex;
     flex-direction: column;
     gap: 32px;
   }
-  .lista__item li {
+  .conteudo__itens li {
     list-style: none;
     text-align: start;
   }
-  .lista__item--fonte a {
+  .conteudo__item--fonte a {
+    display: inline-block;
     font-size: 1.25rem;
     color: var(--dark-gray);
     list-style: none;
     text-transform: uppercase;
   }
-  /* estilização para repsta ao usuario */
-  .lista__item--fonte a:hover {
-    color: var(--white);
-  }
-  .lista__item--fonte a:active {
-    color: var(--yellow);
-    transform: scale(1.02);
-    display: inline-block;
-  }
+
   /* modificações para o item dropdown */
-  .lista__itemDropdown div {
+  .conteudo__dropdown div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-width: 272px;
   }
-  .lista__itemDropdown img {
-    width: 24px;
+  .conteudo__dropdown--img {
+    max-width: 24px;
   }
-  .itemDropdown__Submenu {
+  .dropdown__subMenu {
     display: none;
     margin: 30px 0 0 20px;
   }
-  .itemDropdown__Submenu--fonte a {
+  .dropdown__subMenu--fonte a {
     font-size: 1rem;
   }
-  /* colocar para a pagina atual */
-  #paginaAtual__menuHamburguer a {
+
+  /* estilização para repsta ao usuario */
+  .itemFeedback a:hover {
+    transform: scale(1.01);
     color: var(--white);
+  }
+  .itemFeedback a:active {
+    color: var(--yellow);
+    transform: scale(0.98);
+    color: var(--yellow);
   }
 
   /* #blurBackground {
@@ -253,16 +257,13 @@
     header {
       display: grid;
       grid-template-columns: auto;
-      grid-template-rows: repeat(3, auto);
+      grid-template-rows: repeat(4, auto);
     }
 
     .logo {
       grid-area: 1 / 1;
-      align-items: center;
-      justify-content: center;
       justify-self: center;
       max-width: 200px;
-      margin: 0;
     }
 
     .iconeMenuHamburguer {
@@ -273,51 +274,54 @@
       grid-area: 2 / 1;
       display: inline-flex;
       padding: 5px;
-      margin: 20px 0 20px;
+      margin: 20px;
       gap: 35px;
       list-style: none;
       background-color: var(--white);
     }
     .navBar__item--fonte a {
+      display: inline-block;
       font-size: 1.25rem;
       line-height: 1.25rem;
-      color: var(--dim-gray);
       text-transform: uppercase;
       text-decoration: none;
+      color: var(--dim-gray);
     }
-    .navBar__item--fonte a:hover {
-      color: var(--black);
-    }
-    .navBar__item--fonte a:active {
-      transform: scale(1.02);
-      transition: 0.3s;
-      display: inline-block;
-    }
-    .navBar__dropdown {
+    .itemDropdown {
       position: relative;
     }
-    .dropdown__subMenu {
-      display: none;
+    .subMenu {
       position: absolute;
+      display: none;
       top: 25px;
-      right: -120px;
       left: -20px;
+      width: 210px;
       padding: 20px 18px 20px;
-      text-align: left;
-      line-height: 0.1px;
-      list-style: none;
       background-color: var(--gainsboro);
       border-right: 2px solid var(--dim-gray);
       border-bottom: 2px solid var(--dim-gray);
       border-left: 2px solid var(--dim-gray);
     }
-    .dropdown__subMenu--fonte a {
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1rem;
+    .subMenu__item {
+      text-align: left;
+      list-style: none;
     }
-    .navBar__dropdown:hover .dropdown__subMenu {
+    .subMenu__item--fonte a {
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 750;
+    }
+
+    .itemDropdown:hover .subMenu {
       display: block;
+    }
+
+    .respostaFonte a:hover {
+      color: var(--black);
+      transform: scale(1.01);
+    }
+    .respostaFonte a:active {
+      transform: scale(0.98);
     }
 
     .slogan {
@@ -338,15 +342,12 @@
       line-height: 1.5rem;
     }
 
-    .dropdown__subMenu {
+    .subMenu {
       top: 29px;
-      right: -160px;
-      left: -20px;
+      width: 250px;
     }
-
-    .dropdown__subMenu--fonte a {
+    .subMenu__item--fonte a {
       font-size: 1.25rem;
-      font-weight: 700;
       line-height: 1.25rem;
     }
   }
@@ -356,180 +357,102 @@
   .innerWrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-
-  .barrasLaterais {
-    display: none;
+    background-image: url(../img/shared/background-Estrelas.png);
+    background-size: cover;
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
     gap: 32px;
-    margin: 16px 16px 100px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    .innerWrapper {
-      justify-content: space-between;
-      align-items: stretch;
-    }
-
-    .barrasLaterais {
-      display: block;
-      width: 200px;
-    }
+    padding: 16px 16px 100px;
+    background-color: var(--black);
   }
 }
 
-/* @layer footerGabriel {
-  .footer {
-    background-color: black;
-    color: white;
-  }
-  p {
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  .topo {
-    font-size: 16px;
-    display: flex;
-    justify-items: end;
-    justify-content: flex-end;
-    padding-right: 20px;
-  }
-  .mapa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-top: 20px;
-  }
-  a {
-    color: white;
-  }
-  footer > .LinksMapa {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-  }
-
-  .nomes {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .Nomes-Dev {
-    padding: 16px;
-    text-align: left;
-    margin-bottom: 0px;
-  }
-
-  .Nomes-Dev:first-child {
-    padding-left: 0px;
-  }
-
-  .Nomes-Dev:last-child {
-    padding-right: 0px;
-  }
-  .Devs {
-    display: flex;
-    padding-top: 50px;
-    text-align: start;
-    justify-content: center;
-    margin-left: -540px;
-  }
-}
-
-@layer footerThiago {
+@layer footer {
   footer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
-    margin-bottom: 25px;
+    margin: 25px 16px 50px;
   }
 
-  footer > div,
-  .navFooter {
-    margin: 25px 16px 25px;
-  }
-
-  .botãoTopo {
+  .botaoPosicao {
     grid-area: 1 / 1;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    gap: 5px;
+    display: inline-block;
   }
-  .botãoTopo--fonte a {
+  .botao a {
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    margin-left: auto;
+  }
+  .botao--fonte a {
     font-size: 1rem;
+    line-height: 1rem;
     color: var(--white);
     font-style: normal;
     font-weight: 600;
     text-transform: uppercase;
-    text-decoration: none;
   }
-  .botãoTopo--seta {
+  .botao--img {
     width: 1rem;
-    height: auto;
+  }
+  .botaoFeedback a:hover {
+    transform: scale(1.01);
+  }
+  .botaoFeedback a:active {
+    transform: scale(0.98);
+    color: var(--yellow);
   }
 
-  .navFooter--titulo,
-  .desenvolvedores--titulo {
-    color: var(--white);
+  .titulosFooter {
     font-size: 1.25rem;
     line-height: 1.25rem;
     text-transform: uppercase;
-    margin: 0 0 20px;
+    margin: 0px 0 20px;
+    color: var(--white);
   }
 
   .navFooter {
     grid-area: 2 / 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 50px 0 0;
   }
-  .navFooter__conjuntoLinks {
+  .grupoLinks {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    align-content: center;
     flex-wrap: wrap;
+    white-space: nowrap;
     gap: 20px;
   }
-  .navFooter__links {
+  .grupoLinks__item a {
     display: flex;
-    white-space: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
   }
-  .navFooter__links:not(:first-child):before {
-    content: url(../img/shared/barra.svg);
-    float: left;
-    margin-right: 20px;
-  }
-  .navFooter__links::after {
-    content: url(../img/shared/external-link.svg);
-    display: flex;
-    align-items: center;
-    float: right;
-    margin-left: 5px;
-  }
-  .navFooter__links--fonteLinks a {
-    color: var(--white);
+  .grupoLinks__item--fonte a {
     font-size: 1rem;
     font-style: normal;
-    text-decoration: none;
     font-weight: 500;
+    text-decoration: none;
+    color: var(--white);
+  }
+  .grupoLinks__item--img img {
+    height: 1rem;
+    width: 1rem;
+  }
+  .linksFeedback a:hover {
+    transform: scale(1.01);
+  }
+  .linksFeedback a:active {
+    transform: scale(0.98);
+    color: var(--yellow);
   }
 
   .desenvolvedores {
@@ -537,44 +460,46 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 100px 0 0;
   }
-  .desenvolvedores__conjuntoItens {
+  .grupoDev {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
   }
-  .desenvolvedores__Item {
+  .grupoDev__item > div {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 165px;
   }
-  .desenvolvedores__Item--fonte {
+  .grupoDev__item--fonte {
     color: var(--white);
     text-align: left;
     font-size: 1rem;
     line-height: 1rem;
     font-style: normal;
     font-weight: 500;
-    margin: 0;
   }
-  .desenvolvedores__redesSociais {
+  .grupoDev__item--img {
     display: flex;
     flex-direction: row;
     gap: 5px;
-    margin: 0;
+  }
+  .grupoDevFeedback > a:hover {
+    transform: scale(1.05);
+  }
+  .grupoDevFeedback > a:active {
+    transform: scale(0.98);
+    fill: var(--yellow);
   }
 
   @media screen and (min-width: 768px) {
-    .mapaDoSite--titulo,
-    .desenvolvedores--titulo {
+    .titulosFooter {
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
   }
-
-  @media screen and (min-width: 1024px) {
-  }
-} */
+}
