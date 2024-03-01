@@ -124,23 +124,37 @@
     display: flex;
     margin-left: 16px;
     width: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .iconeMenuHamburguer--Feedback:hover {
+    transform: scale(1.1);
+  }
+  .iconeMenuHamburguer--Feedback:active {
+    transform: scale(0.97);
   }
 
   /* menu que aparece quando clicado no menu hamburguer */
   .menuHamburguer {
     background-color: var(--black);
+    border-right: 2px solid var(--dark-gray);
     padding: 32px 16px 32px 32px;
     position: absolute;
-    top: 168px;
+    left: -360px;
+    top: 165px;
     height: 100%;
     width: 320px;
     transition: left 0.5s ease;
+    z-index: 3;
   }
-  #closeMenuHamburguer {
-    left: -360px;
-  }
-  #openMenuHamburguer {
+  .openMenuHamburguer {
     left: 0px;
+  }
+  .noScroll {
+    overflow: hidden;
+  }
+  .blurBackground {
+    filter: blur(5px) opacity(0.7);
   }
 
   /* modificações para o conjunto de navegação que fica no menu */
@@ -170,12 +184,20 @@
   }
   .conteudo__dropdown--img {
     max-width: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .conteudo__dropdown--imgClose {
+    transform: rotate(-180deg);
   }
   .dropdown__subMenu {
     display: none;
     margin: 30px 0 0 20px;
   }
-  .dropdown__subMenu--fonte a {
+  .subMenuOpen {
+    display: block;
+  }
+  .dropdown__subMenu .dropdown__subMenu--fonte a {
     font-size: 1rem;
   }
 
@@ -190,16 +212,6 @@
     color: var(--yellow);
   }
 
-  /* #blurBackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  } */
-
   /* slogan da pagina */
   .slogan {
     grid-area: 2 / 1 / 2 / 3;
@@ -211,6 +223,8 @@
     margin: 20px 0 0;
     border-top: 2px solid var(--yellow);
     border-bottom: 2px solid var(--yellow);
+    background-color: var(--black);
+    z-index: 4;
   }
   .slogan--fonte p {
     font-size: 1.5rem;
@@ -241,6 +255,10 @@
 
     .iconeMenuHamburguer {
       width: 50px;
+    }
+
+    .menuHamburguer {
+      top: 177px;
     }
 
     .slogan--fonte p {
@@ -301,6 +319,7 @@
       border-right: 2px solid var(--dim-gray);
       border-bottom: 2px solid var(--dim-gray);
       border-left: 2px solid var(--dim-gray);
+      z-index: 5;
     }
     .subMenu__item {
       text-align: left;
@@ -316,11 +335,11 @@
       display: block;
     }
 
-    .respostaFonte a:hover {
+    .feedbackNavBar a:hover {
       color: var(--black);
       transform: scale(1.01);
     }
-    .respostaFonte a:active {
+    .feedbackNavBar a:active {
       transform: scale(0.98);
     }
 
@@ -341,7 +360,6 @@
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
-
     .subMenu {
       top: 29px;
       width: 250px;

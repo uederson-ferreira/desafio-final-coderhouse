@@ -1,51 +1,43 @@
 //Menu Hamburguer
-// document.querySelector(".iconeMenuHamburguer").addEventListener("click", () => {
-//   let menu = document.getElementsByClassName("menuHamburguer")[0];
-//   let openMenu = document.getElementById("openMenuHamburguer");
-//   let closeMenu = document.getElementById("closeMenuHamburguer");
+document.querySelector(".iconeMenuHamburguer").addEventListener("click", () => {
+  const menu = document.querySelector(".menuHamburguer");
+  const innerWrapper = document.querySelector(".innerWrapper");
+  const footer = document.querySelector("footer");
+  const iconMenu = document.querySelector("#iconMenu");
 
-//   console.log("oi");
+  if (menu.classList.contains("openMenuHamburguer")) {
+    console.log("Fechando menu");
+    menu.classList.toggle("openMenuHamburguer");
+    document.body.classList.toggle("noScroll");
+    innerWrapper.classList.toggle("blurBackground");
+    footer.classList.toggle("blurBackground");
+    iconMenu.src = "./assets/img/shared/menu.svg";
+  } else {
+    console.log("Abrindo menu");
+    menu.classList.toggle("openMenuHamburguer");
+    document.body.classList.toggle("noScroll");
+    innerWrapper.classList.toggle("blurBackground");
+    footer.classList.toggle("blurBackground");
+    iconMenu.src = "./assets/img/shared/exit.svg";
+  }
+});
 
-//   if (menu.id === closeMenu.id) {
-//     console.log("O elemento possui o mesmo ID que closeMenuHamburguer");
-//     menu.setAttribute("id", "openMenuHamburguer");
-//   } else if (menu.id === openMenu) {
-//     console.log("O elemento NÃO possui o mesmo ID que closeMenuHamburguer");
-//     menu.removeAttribute("id");
-//   }
-// });
+document
+  .querySelector(".conteudo__dropdown--img")
+  .addEventListener("click", () => {
+    const subMenu = document.querySelector(".dropdown__subMenu");
+    const iconChevron = document.querySelector(".conteudo__dropdown--img");
 
-// document.querySelector(".iconeMenuHamburguer").addEventListener("click", () => {
-//   let botaoMenu = document.querySelector(".iconeMenuHamburguer");
-//   let menu = document.querySelector(".menuHamburguer");
-
-//   let openMenu = document.getElementById("openMenuHamburguer");
-//   let closeMenu = document.getElementById("closeMenuHamburguer");
-
-//   if (menu.style.left !== "0px") {
-//     closeMenu.toggleAttribute("id");
-//     openMenu.toggleAttribute("id");
-//   } else {
-//     openMenu.toggleAttribute("id");
-//     closeMenu.toggleAttribute("id");
-//   }
-// });
-
-// document.getElementById("iconeMenu").addEventListener("click", () => {
-//   let navbar = document.getElementById("menu");
-//   let blurBackground = document.getElementById("blurBackground");
-//   let botaoMenu = document.getElementById("botaoMenu");
-
-//   if (navbar.style.left === "0px") {
-//     navbar.style.left = "-360px";
-//     blurBackground.style.display = "none";
-//     botaoMenu.src = "./assets/img/shared/menu.svg";
-//   } else {
-//     navbar.style.left = "0";
-//     blurBackground.style.display = "block";
-//     botaoMenu.src = "./assets/img/shared/exit.svg";
-//   }
-// });
+    if (subMenu.classList.contains("subMenuOpen")) {
+      console.log("fechando subMenu");
+      subMenu.classList.toggle("subMenuOpen");
+      iconChevron.classList.toggle("conteudo__dropdown--imgClose");
+    } else {
+      console.log("abrindo subMenu");
+      subMenu.classList.toggle("subMenuOpen");
+      iconChevron.classList.toggle("conteudo__dropdown--imgClose");
+    }
+  });
 
 const templatePersonagens = document.getElementById("personagens");
 
