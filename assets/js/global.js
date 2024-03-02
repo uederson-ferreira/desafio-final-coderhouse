@@ -1,9 +1,12 @@
 //Menu Hamburguer
-document.querySelector(".iconeMenuHamburguer").addEventListener("click", () => {
+document.querySelector(".botaoMenuHamburguer").addEventListener("click", () => {
   const menu = document.querySelector(".menuHamburguer");
   const innerWrapper = document.querySelector(".innerWrapper");
   const footer = document.querySelector("footer");
   const iconMenu = document.querySelector("#iconMenu");
+  const basePath = window.location.pathname === "/index.html" ? "./" : "../";
+
+  console.log("clicou no botão Menu Hamburguer");
 
   if (menu.classList.contains("openMenuHamburguer")) {
     console.log("Fechando menu");
@@ -11,31 +14,31 @@ document.querySelector(".iconeMenuHamburguer").addEventListener("click", () => {
     document.body.classList.toggle("noScroll");
     innerWrapper.classList.toggle("blurBackground");
     footer.classList.toggle("blurBackground");
-    iconMenu.src = "./assets/img/shared/menu.svg";
+    iconMenu.src = basePath + "assets/img/shared/menu.svg";
   } else {
     console.log("Abrindo menu");
     menu.classList.toggle("openMenuHamburguer");
     document.body.classList.toggle("noScroll");
     innerWrapper.classList.toggle("blurBackground");
     footer.classList.toggle("blurBackground");
-    iconMenu.src = "./assets/img/shared/exit.svg";
+    iconMenu.src = basePath + "assets/img/shared/exit.svg";
   }
 });
 
 document
-  .querySelector(".conteudo__dropdown--img")
+  .querySelector(".conteudo__dropdown--chevron")
   .addEventListener("click", () => {
     const subMenu = document.querySelector(".dropdown__subMenu");
-    const iconChevron = document.querySelector(".conteudo__dropdown--img");
+    const iconChevron = document.querySelector(".conteudo__dropdown--chevron");
 
     if (subMenu.classList.contains("subMenuOpen")) {
       console.log("fechando subMenu");
       subMenu.classList.toggle("subMenuOpen");
-      iconChevron.classList.toggle("conteudo__dropdown--imgClose");
+      iconChevron.classList.toggle("conteudo__dropdown--chevronOpen");
     } else {
       console.log("abrindo subMenu");
       subMenu.classList.toggle("subMenuOpen");
-      iconChevron.classList.toggle("conteudo__dropdown--imgClose");
+      iconChevron.classList.toggle("conteudo__dropdown--chevronOpen");
     }
   });
 
@@ -59,7 +62,7 @@ function forma(arrayPersonagens) {
   });
 }
 
-fetch("../assets/json/images-people.json")
+fetch("../assets/json/images-characters.json")
   .then((response) => response.json())
   .then((personagensImage) => {
     fetch("https://swapi.dev/api/people")

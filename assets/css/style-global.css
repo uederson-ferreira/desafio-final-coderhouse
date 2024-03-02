@@ -104,7 +104,7 @@
     grid-template-rows: repeat(2, auto);
   }
 
-  /* logo */
+  /* logo site */
   .logo {
     grid-area: 1 / 2 / 1 / 3;
     display: flex;
@@ -113,28 +113,28 @@
     max-width: 160px;
   }
 
-  /* navbar so aparece somente no display de desktop */
+  /* navbar, somente aparece no display desktop (1024px) */
   .navBar {
     display: none;
   }
 
-  /* menu hamburguer */
-  .iconeMenuHamburguer {
+  /* botão menu hamburguer */
+  .botaoMenuHamburguer {
     grid-area: 1 / 1 / 1 / 1;
     display: flex;
     margin-left: 16px;
     width: 40px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
   }
-  .iconeMenuHamburguer--Feedback:hover {
-    transform: scale(1.1);
+  /* reposta ao clique do usuário */
+  .botaoMenuHamburguer:hover {
+    transform: scale(1.05);
   }
-  .iconeMenuHamburguer--Feedback:active {
-    transform: scale(0.97);
+  .botaoMenuHamburguer:active {
+    transform: scale(0.95);
   }
-
-  /* menu que aparece quando clicado no menu hamburguer */
+  /* menu de navegação hamburguer */
   .menuHamburguer {
     background-color: var(--black);
     border-right: 2px solid var(--dark-gray);
@@ -147,17 +147,19 @@
     transition: left 0.5s ease;
     z-index: 3;
   }
+  /* class para abrir o menu */
   .openMenuHamburguer {
     left: 0px;
   }
+  /* proibe o scroll quando o menu estiver aberto */
   .noScroll {
     overflow: hidden;
   }
+  /* acrescenta um blur no innerWrapper e footer quando o menu está aberto */
   .blurBackground {
     filter: blur(5px) opacity(0.7);
   }
-
-  /* modificações para o conjunto de navegação que fica no menu */
+  /* conteudo do menuHamburguer */
   .menuHamburguer__conteudo {
     display: flex;
     flex-direction: column;
@@ -167,49 +169,52 @@
     list-style: none;
     text-align: start;
   }
-  .conteudo__item--fonte a {
+  .conteudo__itens--fonte a {
     display: inline-block;
     font-size: 1.25rem;
     color: var(--dark-gray);
     list-style: none;
     text-transform: uppercase;
+    transition: 0.2s ease;
+  }
+  /* resposta ao clique do usuário */
+  .conteudo__itens--fonte a:hover {
+    transform: scale(1.02);
+    color: var(--white);
+  }
+  .conteudo__itens--fonte a:active {
+    transform: scale(0.98);
+    color: var(--yellow);
   }
 
-  /* modificações para o item dropdown */
+  /* item que tem abrir o subMenu */
   .conteudo__dropdown div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-width: 272px;
   }
-  .conteudo__dropdown--img {
+  /* chevron fechado */
+  .conteudo__dropdown--chevron {
     max-width: 24px;
     cursor: pointer;
     transition: 0.3s ease;
   }
-  .conteudo__dropdown--imgClose {
+  /* chevron aberto */
+  .conteudo__dropdown--chevronOpen {
     transform: rotate(-180deg);
   }
+  /* subMenu */
   .dropdown__subMenu {
     display: none;
     margin: 30px 0 0 20px;
   }
+  /* class para abrir subMenu */
   .subMenuOpen {
     display: block;
   }
-  .dropdown__subMenu .dropdown__subMenu--fonte a {
+  .dropdown__subMenu--fonte a {
     font-size: 1rem;
-  }
-
-  /* estilização para repsta ao usuario */
-  .itemFeedback a:hover {
-    transform: scale(1.01);
-    color: var(--white);
-  }
-  .itemFeedback a:active {
-    color: var(--yellow);
-    transform: scale(0.98);
-    color: var(--yellow);
   }
 
   /* slogan da pagina */
@@ -253,7 +258,7 @@
       max-width: 180px;
     }
 
-    .iconeMenuHamburguer {
+    .botaoMenuHamburguer {
       width: 50px;
     }
 
@@ -284,10 +289,11 @@
       max-width: 200px;
     }
 
-    .iconeMenuHamburguer {
+    .botaoMenuHamburguer {
       display: none;
     }
 
+    /* Menu de navegação desktop */
     .navBar {
       grid-area: 2 / 1;
       display: inline-flex;
@@ -297,15 +303,16 @@
       list-style: none;
       background-color: var(--white);
     }
-    .navBar__item--fonte a {
+    .navBar__itens--fonte a {
       display: inline-block;
       font-size: 1.25rem;
       line-height: 1.25rem;
       text-transform: uppercase;
       text-decoration: none;
       color: var(--dim-gray);
+      transition: 0.2s ease;
     }
-    .itemDropdown {
+    .itensDropdown {
       position: relative;
     }
     .subMenu {
@@ -321,25 +328,25 @@
       border-left: 2px solid var(--dim-gray);
       z-index: 5;
     }
-    .subMenu__item {
+    .subMenu__itens {
       text-align: left;
       list-style: none;
     }
-    .subMenu__item--fonte a {
+    .subMenu__itens--fonte a {
       font-size: 1rem;
       line-height: 1rem;
       font-weight: 750;
     }
 
-    .itemDropdown:hover .subMenu {
+    .itensDropdown:hover .subMenu {
       display: block;
     }
-
-    .feedbackNavBar a:hover {
+    /* resposta ao clique do usuário */
+    .navBar__itens--fonte a:hover {
       color: var(--black);
       transform: scale(1.01);
     }
-    .feedbackNavBar a:active {
+    .navBar__itens--fonte a:active {
       transform: scale(0.98);
     }
 
@@ -356,7 +363,7 @@
 
   @media screen and (min-width: 1440px) {
     /* tela desktop */
-    .navBar__item--fonte a {
+    .navBar__itens--fonte a {
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
@@ -364,7 +371,7 @@
       top: 29px;
       width: 250px;
     }
-    .subMenu__item--fonte a {
+    .subMenu__itens--fonte a {
       font-size: 1.25rem;
       line-height: 1.25rem;
     }
@@ -396,17 +403,17 @@
     margin: 25px 16px 50px;
   }
 
-  .botaoPosicao {
+  .btnTopoPosicao {
     grid-area: 1 / 1;
     display: inline-block;
   }
-  .botao a {
+  .btnTopo a {
     display: flex;
     gap: 5px;
     width: fit-content;
     margin-left: auto;
   }
-  .botao--fonte a {
+  .btnTopo--fonte a {
     font-size: 1rem;
     line-height: 1rem;
     color: var(--white);
@@ -414,13 +421,14 @@
     font-weight: 600;
     text-transform: uppercase;
   }
-  .botao--img {
+  .btnTopo--img {
     width: 1rem;
   }
-  .botaoFeedback a:hover {
+  /* resposta ao clique do usuário */
+  .btnTopo a:hover {
     transform: scale(1.01);
   }
-  .botaoFeedback a:active {
+  .btnTopo a:active {
     transform: scale(0.98);
     color: var(--yellow);
   }
@@ -465,10 +473,11 @@
     height: 1rem;
     width: 1rem;
   }
-  .linksFeedback a:hover {
+  /* resposta ao clique do usuário */
+  .grupoLinks__item a:hover {
     transform: scale(1.01);
   }
-  .linksFeedback a:active {
+  .grupoLinks__item a:active {
     transform: scale(0.98);
     color: var(--yellow);
   }
@@ -506,10 +515,11 @@
     flex-direction: row;
     gap: 5px;
   }
-  .grupoDevFeedback > a:hover {
+  /* resposta ao clique do usuário */
+  .grupoDev__item--img > a:hover {
     transform: scale(1.05);
   }
-  .grupoDevFeedback > a:active {
+  .grupoDev__item--img > a:active {
     transform: scale(0.98);
     fill: var(--yellow);
   }
