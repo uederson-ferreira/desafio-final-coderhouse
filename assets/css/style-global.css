@@ -25,12 +25,18 @@
     --h5: calc(var(--h6) * var(--scale));
     --h6: calc(var(--p) * var(--scale));
     --p: var(--base-size);
+
+    --fonte-principal: StarJedi Special Edition;
+    --fonte-secundaria: inter, sans-serif;
   }
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: initial;
   }
 
   html {
@@ -38,7 +44,7 @@
   }
 
   body {
-    font-family: inter, sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 800;
     line-height: var(--base-size);
     letter-spacing: 0.25px;
@@ -86,13 +92,121 @@
     min-width: 320px;
   }
 
-  a {
-    text-decoration: none;
-  }
-
   img {
     width: 100%;
     max-width: 100%;
+  }
+
+  ::selection {
+    background-color: var(--gray);
+    color: var(--yellow);
+  }
+}
+
+@layer preset {
+  .btn {
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  .btn:active {
+    transform: scale(0.95);
+  }
+
+  .btn--fonte {
+    font-size: 1rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .btnTopo--img {
+    width: 1rem;
+  }
+
+  .animationWord:hover {
+    transform: scale(1.01);
+  }
+  .animationWord:active {
+    transform: scale(0.99);
+  }
+
+  .hoverWhite:hover {
+    color: var(--white);
+  }
+  .hoverBlack:hover {
+    color: var(--black);
+  }
+  .activeYellow:active {
+    color: var(--yellow);
+  }
+
+  .fonte-navegação {
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    color: var(--dim-gray);
+    transition: 0.3s ease;
+  }
+  .fonte-navegaçãoSubmenu {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 750;
+    text-transform: uppercase;
+    color: var(--dim-gray);
+  }
+
+  .fonte-tituloFooter {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    margin: 0px 0 20px;
+    color: var(--white);
+  }
+
+  .colorWhite {
+    color: var(--white);
+  }
+  .colorBlack {
+    color: var(--black);
+  }
+
+  @media screen and (min-width: 768px) {
+    .fonte-navegação {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    .fonte-navegaçãoSubmenu {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .fonte-navegação {
+      font-size: 1.625rem;
+      line-height: 1.625rem;
+    }
+    .fonte-navegaçãoSubmenu {
+      font-size: 1.375rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .fonte-navegação {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+    }
+    .fonte-navegaçãoSubmenu {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
   }
 }
 
@@ -104,7 +218,6 @@
     grid-template-rows: repeat(2, auto);
   }
 
-  /* logo site */
   .logo {
     grid-area: 1 / 2 / 1 / 3;
     display: flex;
@@ -113,141 +226,102 @@
     max-width: 160px;
   }
 
-  /* navbar, somente aparece no display desktop (1024px) */
   .navBar {
     display: none;
   }
 
-  /* botão menu hamburguer */
-  .botaoMenuHamburguer {
+  .menuIcon {
     grid-area: 1 / 1 / 1 / 1;
     display: flex;
-    margin-left: 16px;
     width: 40px;
-    cursor: pointer;
-    transition: 0.2s ease;
+    margin-left: 16px;
   }
-  /* reposta ao clique do usuário */
-  .botaoMenuHamburguer:hover {
-    transform: scale(1.05);
-  }
-  .botaoMenuHamburguer:active {
-    transform: scale(0.95);
-  }
-  /* menu de navegação hamburguer */
-  .menuHamburguer {
-    background-color: var(--black);
-    border-right: 2px solid var(--dark-gray);
+
+  .menu {
+    z-index: 3;
+    height: 100%;
+    width: 320px;
     padding: 32px 16px 32px 32px;
+    border-right: 2px solid var(--dark-gray);
+    background-color: var(--black);
+    transition: left 0.5s ease;
+  }
+  .menu--positionStart {
     position: absolute;
     left: -360px;
     top: 165px;
-    height: 100%;
-    width: 320px;
-    transition: left 0.5s ease;
-    z-index: 3;
   }
-  /* class para abrir o menu */
-  .openMenuHamburguer {
+  .menu--positionOpen {
     left: 0px;
   }
-  /* proibe o scroll quando o menu estiver aberto */
+
   .noScroll {
     overflow: hidden;
   }
-  /* acrescenta um blur no innerWrapper e footer quando o menu está aberto */
   .blurBackground {
     filter: blur(5px) opacity(0.7);
   }
-  /* conteudo do menuHamburguer */
-  .menuHamburguer__conteudo {
+
+  .menu--contentPosition {
     display: flex;
     flex-direction: column;
+    text-align: start;
     gap: 32px;
   }
-  .conteudo__itens li {
-    list-style: none;
-    text-align: start;
-  }
-  .conteudo__itens--fonte a {
-    display: inline-block;
-    font-size: 1.25rem;
-    color: var(--dark-gray);
-    list-style: none;
-    text-transform: uppercase;
-    transition: 0.2s ease;
-  }
-  /* resposta ao clique do usuário */
-  .conteudo__itens--fonte a:hover {
-    transform: scale(1.02);
-    color: var(--white);
-  }
-  .conteudo__itens--fonte a:active {
-    transform: scale(0.98);
-    color: var(--yellow);
-  }
-
-  /* item que tem abrir o subMenu */
-  .conteudo__dropdown div {
+  .menu__dropdown--contentPosition {
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-width: 272px;
   }
-  /* chevron fechado */
-  .conteudo__dropdown--chevron {
+  .menu__dropdown--chevron {
     max-width: 24px;
-    cursor: pointer;
     transition: 0.3s ease;
   }
-  /* chevron aberto */
-  .conteudo__dropdown--chevronOpen {
+  .menu__dropdown--chevronOpen {
     transform: rotate(-180deg);
   }
-  /* subMenu */
-  .dropdown__subMenu {
+
+  .menu__submenu {
     display: none;
     margin: 30px 0 0 20px;
   }
-  /* class para abrir subMenu */
-  .subMenuOpen {
+  .menu__submenuOpen {
     display: block;
   }
-  .dropdown__subMenu--fonte a {
-    font-size: 1rem;
-  }
 
-  /* slogan da pagina */
   .slogan {
-    grid-area: 2 / 1 / 2 / 3;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    align-items: center;
     padding: 10px;
     margin: 20px 0 0;
     border-top: 2px solid var(--yellow);
     border-bottom: 2px solid var(--yellow);
     background-color: var(--black);
-    z-index: 4;
   }
-  .slogan--fonte p {
+  .slogan--position {
+    grid-area: 2 / 1 / 2 / 3;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .slogan--fonte {
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 900;
     color: var(--yellow);
   }
-  .slogan img {
+  .slogan--img {
     max-width: 1.5rem;
   }
 
   @media screen and (min-width: 375px) {
     /* tela mobile */
-    .slogan--fonte p {
+    .slogan--fonte {
       font-size: 1.75rem;
       line-height: 1.75rem;
     }
-    .slogan img {
+    .slogan--img {
       max-width: 1.75rem;
     }
   }
@@ -258,19 +332,19 @@
       max-width: 180px;
     }
 
-    .botaoMenuHamburguer {
+    .menuIcon {
       width: 50px;
     }
 
-    .menuHamburguer {
-      top: 177px;
+    .menu {
+      top: 175px;
     }
 
-    .slogan--fonte p {
+    .slogan--fonte {
       font-size: 2rem;
       line-height: 2rem;
     }
-    .slogan img {
+    .slogan--img {
       max-width: 2rem;
     }
   }
@@ -289,65 +363,39 @@
       max-width: 200px;
     }
 
-    .botaoMenuHamburguer {
+    .menuIcon--position {
       display: none;
     }
 
-    /* Menu de navegação desktop */
     .navBar {
       grid-area: 2 / 1;
       display: inline-flex;
+      gap: 35px;
       padding: 5px;
       margin: 20px;
-      gap: 35px;
-      list-style: none;
       background-color: var(--white);
     }
-    .navBar__itens--fonte a {
-      display: inline-block;
-      font-size: 1.25rem;
-      line-height: 1.25rem;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--dim-gray);
-      transition: 0.2s ease;
-    }
-    .itensDropdown {
+    .navBar__dropdown {
       position: relative;
     }
-    .subMenu {
-      position: absolute;
+    .navBar__submenu {
       display: none;
-      top: 25px;
-      left: -20px;
-      width: 210px;
+      width: 215px;
       padding: 20px 18px 20px;
       background-color: var(--gainsboro);
       border-right: 2px solid var(--dim-gray);
       border-bottom: 2px solid var(--dim-gray);
       border-left: 2px solid var(--dim-gray);
+    }
+    .navBar__submenu--position {
       z-index: 5;
-    }
-    .subMenu__itens {
+      position: absolute;
+      top: 31px;
+      left: -20px;
       text-align: left;
-      list-style: none;
     }
-    .subMenu__itens--fonte a {
-      font-size: 1rem;
-      line-height: 1rem;
-      font-weight: 750;
-    }
-
-    .itensDropdown:hover .subMenu {
+    .navBar__dropdown:hover .navBar__submenu {
       display: block;
-    }
-    /* resposta ao clique do usuário */
-    .navBar__itens--fonte a:hover {
-      color: var(--black);
-      transform: scale(1.01);
-    }
-    .navBar__itens--fonte a:active {
-      transform: scale(0.98);
     }
 
     .slogan {
@@ -356,24 +404,18 @@
       line-height: 2.25rem;
       margin: 0;
     }
-    .slogan img {
+    .slogan--img {
       max-width: 2.25rem;
     }
   }
 
   @media screen and (min-width: 1440px) {
     /* tela desktop */
-    .navBar__itens--fonte a {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
+    .navBar__submenu {
+      width: 300px;
     }
-    .subMenu {
-      top: 29px;
-      width: 250px;
-    }
-    .subMenu__itens--fonte a {
-      font-size: 1.25rem;
-      line-height: 1.25rem;
+    .navBar__submenu--position {
+      top: 33px;
     }
   }
 }
@@ -403,42 +445,12 @@
     margin: 25px 16px 50px;
   }
 
-  .btnTopoPosicao {
+  .btnTopo {
     grid-area: 1 / 1;
-    display: inline-block;
-  }
-  .btnTopo a {
     display: flex;
     gap: 5px;
     width: fit-content;
     margin-left: auto;
-  }
-  .btnTopo--fonte a {
-    font-size: 1rem;
-    line-height: 1rem;
-    color: var(--white);
-    font-style: normal;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  .btnTopo--img {
-    width: 1rem;
-  }
-  /* resposta ao clique do usuário */
-  .btnTopo a:hover {
-    transform: scale(1.01);
-  }
-  .btnTopo a:active {
-    transform: scale(0.98);
-    color: var(--yellow);
-  }
-
-  .titulosFooter {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-    text-transform: uppercase;
-    margin: 0px 0 20px;
-    color: var(--white);
   }
 
   .navFooter {
@@ -447,7 +459,7 @@
     flex-direction: column;
     margin: 50px 0 0;
   }
-  .grupoLinks {
+  .links {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -455,31 +467,23 @@
     white-space: nowrap;
     gap: 20px;
   }
-  .grupoLinks__item a {
+  .links__item {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 5px;
   }
-  .grupoLinks__item--fonte a {
+  .links__item--fonte {
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     text-decoration: none;
     color: var(--white);
   }
-  .grupoLinks__item--img img {
+  .links__item--img {
     height: 1rem;
     width: 1rem;
-  }
-  /* resposta ao clique do usuário */
-  .grupoLinks__item a:hover {
-    transform: scale(1.01);
-  }
-  .grupoLinks__item a:active {
-    transform: scale(0.98);
-    color: var(--yellow);
   }
 
   .desenvolvedores {

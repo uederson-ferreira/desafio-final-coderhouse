@@ -35,191 +35,344 @@
           </a>
         </div>
 
-        <div class="botaoMenuHamburguer">
+        <div class="btn menuIcon">
           <img
-            src="./assets/img/shared/menu.svg"
-            alt="Menu Hamburguer"
-            id="iconMenu"
+            src="./assets/img/shared/menu-white.svg"
+            alt="Menu"
+            class="menuIcon"
           />
         </div>
 
-        <div class="menuHamburguer">
+        <div class="menu menu--positionStart">
           <nav>
-            <ul
-              class="menuHamburguer__conteudo conteudo__itens conteudo__itens--fonte"
-            >
-              <li><a href="./pages/scroll.html">personagens</a></li>
-              <li><a href="">espécies</a></li>
-              <li class="conteudo__dropdown">
-                <div>
-                  <a href="">filmes</a>
+            <ul class="menu--contentPosition">
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação animationWord hoverWhite activeYellow"
+                  >
+                    personagens
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação animationWord hoverWhite activeYellow"
+                  >
+                    espécies
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <div class="menu__dropdown--contentPosition">
+                  <a href="./pages/characters.html">
+                    <p
+                      class="fonte-navegação animationWord hoverWhite activeYellow"
+                    >
+                      filmes
+                    </p>
+                  </a>
                   <img
-                    src="./assets/img/shared/chevron.svg"
+                    src="./assets/img/shared/chevron-white.svg"
                     alt=""
-                    class="conteudo__dropdown--chevron"
+                    class="btn menu__dropdown--chevron"
                   />
                 </div>
-                <ul class="dropdown__subMenu dropdown__subMenu--fonte">
-                  <li><a href="">ordem de assistir os filmes</a></li>
+
+                <ul class="menu__submenu">
+                  <li>
+                    <a href="./pages/characters.html">
+                      <p
+                        class="fonte-navegaçãoSubmenu animationWord hoverWhite activeYellow"
+                      >
+                        ordem se assistir a trilogia
+                      </p>
+                    </a>
+                  </li>
                 </ul>
               </li>
-              <li><a href="">naves</a></li>
-              <li><a href="">veículos</a></li>
-              <li><a href="">planetas</a></li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação animationWord hoverWhite activeYellow"
+                  >
+                    naves
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação animationWord hoverWhite activeYellow"
+                  >
+                    veículos
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação animationWord hoverWhite activeYellow"
+                  >
+                    planetas
+                  </p>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
 
         <nav>
-          <ul class="navBar navBar__itens--fonte">
-            <li><a href="./pages/personagens.html">personagens</a></li>
-            <li><a href="./pages/especies.html">espécies</a></li>
-            <li class="itensDropdown">
-              <a href="./pages/filmes.html">filmes</a>
-              <ul class="subMenu subMenu__itens subMenu__itens--fonte">
+          <ul class="navBar">
+            <li>
+              <a href="./pages/personagens.html">
+                <p class="fonte-navegação animationWord hoverBlack">
+                  personagens
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/especies.html">
+                <p class="fonte-navegação animationWord hoverBlack">espécies</p>
+              </a>
+            </li>
+
+            <li class="navBar__dropdown">
+              <a href="./pages/filmes.html">
+                <p class="fonte-navegação animationWord hoverBlack">filmes</p>
+              </a>
+
+              <ul class="navBar__submenu navBar__submenu--position">
                 <li>
-                  <a href="./pages/oredem-de-se-assistir-os-filmes.html"
-                    >ordem de assistir a trilogia</a
-                  >
+                  <a href="./pages/oredem-de-se-assistir-os-filmes.html">
+                    <p class="fonte-navegaçãoSubmenu animationWord hoverBlack">
+                      oredem de assistir a trilogia
+                    </p>
+                  </a>
                 </li>
               </ul>
             </li>
-            <li><a href="./pages/naves.html">naves</a></li>
-            <li><a href="./pages/veiculos.html">veículos</a></li>
+
             <li>
-              <a href="./pages/planetas2.html">planetas</a>
+              <a href="./pages/naves.html">
+                <p class="fonte-navegação animationWord hoverBlack">naves</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/veiculos.html">
+                <p class="fonte-navegação animationWord hoverBlack">veículos</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/planetas2.html">
+                <p class="fonte-navegação animationWord hoverBlack">palnetas</p>
+              </a>
             </li>
           </ul>
         </nav>
 
-        <div class="slogan slogan--fonte">
-          <p>Tudo Sobre Star Wars</p>
-          <img src="./assets/img/shared/estrela.png" alt="" />
+        <div class="slogan slogan--position">
+          <p class="slogan--fonte">Tudo Sobre Star Wars</p>
+          <img
+            src="./assets/img/shared/estrela.png"
+            alt=""
+            class="slogan--img"
+          />
         </div>
       </header>
 
       <div class="innerWrapper">
         <main class="content">
-          <div class="secoes">
-            <h2 class="tituloSecoes">personagens</h2>
-            <div id="personagens" class="itens"></div>
-          </div>
-
-          <div class="secoes">
-            <h2 class="tituloSecoes">espécies</h2>
-            <div id="especies" class="itens">.</div>
-          </div>
-
-          <div class="secoes">
-            <h2 class="tituloSecoes">naves espaciais</h2>
-            <div id="navesEspaciais" class="itens">.</div>
-          </div>
-
-          <div class="secoes">
-            <h2 class="tituloSecoes">veículos</h2>
-            <div id="veiculos" class="itens">.</div>
+          <div class="secao secao--bgWhite">
+            <img src="./assets/img/shared/exit-black.svg" alt="sair" class="" />
+            <div class="">
+              <h2 class="titulo titulo--bgYellow">
+                Explorando a saga intergalatica
+              </h2>
+            </div>
           </div>
         </main>
       </div>
 
       <footer>
-        <div class="btnTopoPsicao btnTopo btnTopo--fonte">
-          <a href="#"
-            >Voltar ao topo
-            <img
-              src="./assets/img/shared/seta-circular-cima.svg"
-              alt="seta para cima"
-              class="btnTopo--img"
-          /></a>
+        <div class="btn btnTopo">
+          <p class="btn--fonte colorWhite">Voltar ao topo</p>
+          <img
+            src="./assets/img/shared/seta-circular-cima.svg"
+            alt="seta para cima"
+            class="btnTopo--img"
+          />
         </div>
 
         <nav class="navFooter">
-          <h3 class="titulosFooter">Mapa do Site</h3>
+          <h3 class="fonte-tituloFooter">Mapa do Site</h3>
 
-          <div
-            class="grupoLinks grupoLinks__item grupoLinks__item--fonte grupoLinks__item--img"
-          >
-            <a href="#"
-              >Home <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+          <div class="links">
+            <a href="#" class="links__item animationWord">
+              <p class="links__item--fonte">Home</p>
+              <img src="./assets/img/shared/external-link-white.svg" alt="" />
+            </a>
 
-            <img src="./assets/img/shared/barra.svg" alt="" />
+            <img
+              src="./assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
 
-            <a href="./pages/personagens.html"
-              >Personagens
-              <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+            <a
+              href="./pages/personagens.html"
+              class="links__item animationWord"
+            >
+              <p class="links__item--fonte">Personagens</p>
+              <img src="./assets/img/shared/external-link-white.svg" alt="" />
+            </a>
 
-            <img src="./assets/img/shared/barra.svg" alt="" />
+            <img
+              src="./assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
 
-            <a href="./pages/especies.html"
-              >Espécies <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+            <a href="./pages/especies.html" class="links__item animationWord">
+              <p class="links__item--fonte">Espécies</p>
+              <img
+                src="./assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
 
-            <img src="./assets/img/shared/barra.svg" alt="" />
+            <img
+              src="./assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
 
-            <a href="./pages/filmes.html"
-              >Filmes <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+            <a href="./pages/filmes.html" class="links__item animationWord">
+              <p class="links__item--fonte">Filmes</p>
+              <img
+                src="./assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
 
-            <img src="./assets/img/shared/barra.svg" alt="" />
+            <img
+              src="./assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
 
-            <a href="./pages/oredem-de-se-assistir-os-filmes.html"
-              >Ordem de se Assistir os Filmes
-              <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+            <a
+              href="./pages/oredem-de-se-assistir-os-filmes.html"
+              class="links__item animationWord"
+            >
+              <p class="links__item--fonte">Ordem de se Assistir os Filmes</p>
+              <img
+                src="./assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
 
-            <img src="./assets/img/shared/barra.svg" alt="" />
+            <img
+              src="./assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
 
-            <a href="./pages/naves.html"
-              >Naves Espaciais
-              <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+            <a href="./pages/naves.html" class="links__item animationWord">
+              <p class="links__item--fonte">Naves Espaciais</p>
+              <img
+                src="./assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
 
-            <img src="./assets/img/shared/barra.svg" alt="" />
+            <img
+              src="./assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
 
-            <a href="./pages/veiculos.html"
-              >Veículos <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+            <a href="./pages/veiculos.html" class="links__item animationWord">
+              <p class="links__item--fonte">Veículos</p>
+              <img
+                src="./assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
 
-            <img src="./assets/img/shared/barra.svg" alt="" />
+            <img
+              src="./assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
 
-            <a href="./pages/planetas.html"
-              >Planetas <img src="./assets/img/shared/external-link.svg" alt=""
-            /></a>
+            <a href="./pages/planetas.html" class="links__item animationWord">
+              <p class="links__item--fonte">Planetas</p>
+              <img
+                src="./assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
           </div>
         </nav>
 
         <div class="desenvolvedores">
-          <h3 class="titulosFooter">Desenvolvedores</h3>
+          <h3 class="fonte-tituloFooter">Desenvolvedores</h3>
 
           <address class="grupoDev grupoDev__item">
             <div>
               <p class="grupoDev__item--fonte">Gabriel Carneiro Sousa</p>
-              <figure class="grupoDev__item--img grupoDevFeedback">
+              <figure class="grupoDev__item--img">
                 <a
                   href="https://www.linkedin.com/in/gabriel-carneiro-186680279/"
                   target="_blank"
                 >
-                  <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
+                  <img
+                    src="./assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                  />
                 </a>
                 <a
                   href="https://github.com/GabrielCarneiroSousa"
                   target="_blank"
                 >
-                  <img src="./assets/img/shared/github.svg" alt="github" />
+                  <img
+                    src="./assets/img/shared/github-white.svg"
+                    alt="github"
+                  />
                 </a>
                 <a href="https://www.instagram.com/htmlbiel/" target="_blank">
                   <img
-                    src="./assets/img/shared/instagram.svg"
+                    src="./assets/img/shared/instagram-white.svg"
                     alt="instagram"
                   />
                 </a>
                 <a href="" target="_blank">
-                  <img src="./assets/img/shared/facebook.svg" alt="facebook" />
+                  <img
+                    src="./assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                  />
                 </a>
                 <a href="https://twitter.com/oMavv_x" target="_blank">
-                  <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
+                  <img
+                    src="./assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                  />
                 </a>
               </figure>
             </div>
@@ -230,17 +383,23 @@
               </p>
               <figure class="grupoDev__item--img">
                 <a href="" target="_blank">
-                  <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
+                  <img
+                    src="./assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                  />
                 </a>
                 <a href="https://github.com/SardeiroPaulo" target="_blank">
-                  <img src="./assets/img/shared/github.svg" alt="github" />
+                  <img
+                    src="./assets/img/shared/github-white.svg"
+                    alt="github"
+                  />
                 </a>
                 <a
                   href="https://www.instagram.com/sardeiropaulofelipe"
                   target="_blank"
                 >
                   <img
-                    src="./assets/img/shared/instagram.svg"
+                    src="./assets/img/shared/instagram-white.svg"
                     alt="instagram"
                   />
                 </a>
@@ -248,10 +407,16 @@
                   href="https://www.facebook.com/profile.php?id=100016552265918"
                   target="_blank"
                 >
-                  <img src="./assets/img/shared/facebook.svg" alt="facebook" />
+                  <img
+                    src="./assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                  />
                 </a>
                 <a href="" target="_blank">
-                  <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
+                  <img
+                    src="./assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                  />
                 </a>
               </figure>
             </div>
@@ -263,20 +428,26 @@
                   href="https://www.linkedin.com/in/thiago-bernardo-fernandes/"
                   target="_blank"
                 >
-                  <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
+                  <img
+                    src="./assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                  />
                 </a>
                 <a
                   href="https://github.com/thiagobernardofernandes"
                   target="_blank"
                 >
-                  <img src="./assets/img/shared/github.svg" alt="github" />
+                  <img
+                    src="./assets/img/shared/github-white.svg"
+                    alt="github"
+                  />
                 </a>
                 <a
                   href="https://www.instagram.com/thiago_bernardo"
                   target="_blank"
                 >
                   <img
-                    src="./assets/img/shared/instagram.svg"
+                    src="./assets/img/shared/instagram-white.svg"
                     alt="instagram"
                   />
                 </a>
@@ -284,10 +455,16 @@
                   href="https://www.facebook.com/bernardofernandesthiago/"
                   target="_blank"
                 >
-                  <img src="./assets/img/shared/facebook.svg" alt="facebook" />
+                  <img
+                    src="./assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                  />
                 </a>
                 <a href="https://twitter.com/ThiagoB09013321" target="_blank">
-                  <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
+                  <img
+                    src="./assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                  />
                 </a>
               </figure>
             </div>
@@ -296,22 +473,34 @@
               <p class="grupoDev__item--fonte">Uederson De Amadeu Ferreira</p>
               <figure class="grupoDev__item--img">
                 <a href="" target="_blank">
-                  <img src="./assets/img/shared/linkedin.svg" alt="linkedin" />
+                  <img
+                    src="./assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                  />
                 </a>
                 <a href="https://github.com/uederson-ferreira" target="_blank">
-                  <img src="./assets/img/shared/github.svg" alt="github" />
+                  <img
+                    src="./assets/img/shared/github-white.svg"
+                    alt="github"
+                  />
                 </a>
                 <a href="" target="_blank">
                   <img
-                    src="./assets/img/shared/instagram.svg"
+                    src="./assets/img/shared/instagram-white.svg"
                     alt="instagram"
                   />
                 </a>
                 <a href="" target="_blank">
-                  <img src="./assets/img/shared/facebook.svg" alt="facebook" />
+                  <img
+                    src="./assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                  />
                 </a>
                 <a href="" target="_blank">
-                  <img src="./assets/img/shared/twitter.svg" alt="Twitter" />
+                  <img
+                    src="./assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                  />
                 </a>
               </figure>
             </div>
@@ -319,6 +508,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./assets/js/global.js"></script>
   </body>
 </html>

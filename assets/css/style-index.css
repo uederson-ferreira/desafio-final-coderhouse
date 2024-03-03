@@ -1,27 +1,51 @@
-@layer content {
-  .carrossel {
-    display: none;
-  }
-
-  .secoes {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    border-radius: 5px;
-    gap: 20px;
-    width: fit-content;
-    padding: 10px;
-  }
-
-  .tituloSecoes {
-    font-family: StarJedi Special Edition;
+@layer base {
+  .titulo {
+    font-family: var(--fonte-principal);
     font-size: 1.5rem;
     line-height: 1.5rem;
     margin: 0;
     padding: 10px;
+  }
+  .titulo--bgYellow {
     background-color: var(--yellow);
     border-radius: 5px;
   }
+  .titulo--yellow {
+    color: var(--yellow);
+  }
+  .titulo--white {
+    color: var(--white);
+  }
+
+  .secao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    padding: 10px;
+  }
+  .secao--bgWhite {
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+}
+
+@layer apresentação {
+  .btnExit {
+    width: 50px;
+  }
+}
+
+@layer carrossel {
+  .carrossel {
+    display: none;
+  }
+}
+
+@layer filmes {
+}
+
+@layer seções {
   .itens {
     display: flex;
     flex-direction: row;

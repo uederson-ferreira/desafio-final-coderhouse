@@ -1,5 +1,21 @@
+//scroll botão voltar ao topo
+$(document).ready(() => {
+  const scrollButton = $(".btnTopo");
+
+  scrollButton.click(() => {
+    console.log("Clicou no botão de scroll 'voltar ao topo'");
+
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+  });
+});
+
 //Menu Hamburguer
-document.querySelector(".botaoMenuHamburguer").addEventListener("click", () => {
+document.querySelector(".btnMenuHamburguer").addEventListener("click", () => {
   const menu = document.querySelector(".menuHamburguer");
   const innerWrapper = document.querySelector(".innerWrapper");
   const footer = document.querySelector("footer");
@@ -14,17 +30,18 @@ document.querySelector(".botaoMenuHamburguer").addEventListener("click", () => {
     document.body.classList.toggle("noScroll");
     innerWrapper.classList.toggle("blurBackground");
     footer.classList.toggle("blurBackground");
-    iconMenu.src = basePath + "assets/img/shared/menu.svg";
+    iconMenu.src = basePath + "assets/img/shared/menu-white.svg";
   } else {
     console.log("Abrindo menu");
     menu.classList.toggle("openMenuHamburguer");
     document.body.classList.toggle("noScroll");
     innerWrapper.classList.toggle("blurBackground");
     footer.classList.toggle("blurBackground");
-    iconMenu.src = basePath + "assets/img/shared/exit.svg";
+    iconMenu.src = basePath + "assets/img/shared/exit-white.svg";
   }
 });
 
+//Conteudo dropdown do menu hamburguer
 document
   .querySelector(".conteudo__dropdown--chevron")
   .addEventListener("click", () => {
@@ -42,39 +59,39 @@ document
     }
   });
 
-const templatePersonagens = document.getElementById("personagens");
+// const templatePersonagens = document.getElementById("personagens");
 
-function forma(arrayPersonagens) {
-  arrayPersonagens.forEach((personagem) => {
-    let divPersonagem = document.createElement("div");
-    let linkPersonagem = document.createElement("a");
-    let fotoPersonagem = document.createElement("img");
-    let nomePersonagem = document.createElement("p");
+// function forma(arrayPersonagens) {
+//   arrayPersonagens.forEach((personagem) => {
+//     let divPersonagem = document.createElement("div");
+//     let linkPersonagem = document.createElement("a");
+//     let fotoPersonagem = document.createElement("img");
+//     let nomePersonagem = document.createElement("p");
 
-    fotoPersonagem.src = personagem.images.small;
-    nomePersonagem.textContent = personagem.name;
+//     fotoPersonagem.src = personagem.images.small;
+//     nomePersonagem.textContent = personagem.name;
 
-    divPersonagem.append(linkPersonagem);
-    linkPersonagem.append(fotoPersonagem);
-    linkPersonagem.append(nomePersonagem);
+//     divPersonagem.append(linkPersonagem);
+//     linkPersonagem.append(fotoPersonagem);
+//     linkPersonagem.append(nomePersonagem);
 
-    templatePersonagens.appendChild(divPersonagem);
-  });
-}
+//     templatePersonagens.appendChild(divPersonagem);
+//   });
+// }
 
-fetch("../assets/json/images-characters.json")
-  .then((response) => response.json())
-  .then((personagensImage) => {
-    fetch("https://swapi.dev/api/people")
-      .then((response) => response.json())
-      .then((dada) => {
-        const personagens = personagensImage.map((itemImage) => ({
-          ...itemImage,
-          ...dada.results.find((itemDada) => itemDada.name === itemImage.name),
-        }));
+// fetch("../assets/json/images-characters.json")
+//   .then((response) => response.json())
+//   .then((personagensImage) => {
+//     fetch("https://swapi.dev/api/people")
+//       .then((response) => response.json())
+//       .then((dada) => {
+//         const personagens = personagensImage.map((itemImage) => ({
+//           ...itemImage,
+//           ...dada.results.find((itemDada) => itemDada.name === itemImage.name),
+//         }));
 
-        console.log(personagens);
+//         console.log(personagens);
 
-        forma(personagens);
-      });
-  });
+//         forma(personagens);
+//       });
+//   });
