@@ -1,4 +1,4 @@
-//scroll botão voltar ao topo
+// scroll botão voltar ao topo
 $(document).ready(() => {
   const scrollButton = $(".btnTopo");
 
@@ -15,48 +15,34 @@ $(document).ready(() => {
 });
 
 //Menu Hamburguer
-document.querySelector(".btnMenuHamburguer").addEventListener("click", () => {
-  const menu = document.querySelector(".menuHamburguer");
+document.querySelector(".btnMenu").addEventListener("click", () => {
+  const menu = document.querySelector(".menu");
   const innerWrapper = document.querySelector(".innerWrapper");
   const footer = document.querySelector("footer");
-  const iconMenu = document.querySelector("#iconMenu");
+  const menuIcon = document.querySelector(".btnMenu");
   const basePath = window.location.pathname === "/index.html" ? "./" : "../";
 
-  console.log("clicou no botão Menu Hamburguer");
+  menu.classList.toggle("menu--positionOpen");
+  document.body.classList.toggle("noScroll");
+  innerWrapper.classList.toggle("blurBackground");
+  footer.classList.toggle("blurBackground");
 
-  if (menu.classList.contains("openMenuHamburguer")) {
-    console.log("Fechando menu");
-    menu.classList.toggle("openMenuHamburguer");
-    document.body.classList.toggle("noScroll");
-    innerWrapper.classList.toggle("blurBackground");
-    footer.classList.toggle("blurBackground");
-    iconMenu.src = basePath + "assets/img/shared/menu-white.svg";
+  if (menu.classList.contains("menu--positionOpen")) {
+    menuIcon.src = basePath + "assets/img/shared/exit-white.svg";
   } else {
-    console.log("Abrindo menu");
-    menu.classList.toggle("openMenuHamburguer");
-    document.body.classList.toggle("noScroll");
-    innerWrapper.classList.toggle("blurBackground");
-    footer.classList.toggle("blurBackground");
-    iconMenu.src = basePath + "assets/img/shared/exit-white.svg";
+    menuIcon.src = basePath + "assets/img/shared/menu-white.svg";
   }
 });
 
 //Conteudo dropdown do menu hamburguer
 document
-  .querySelector(".conteudo__dropdown--chevron")
+  .querySelector(".menu__dropdown--chevron")
   .addEventListener("click", () => {
-    const subMenu = document.querySelector(".dropdown__subMenu");
-    const iconChevron = document.querySelector(".conteudo__dropdown--chevron");
+    const subMenu = document.querySelector(".menu__submenu");
+    const iconChevron = document.querySelector(".menu__dropdown--chevron");
 
-    if (subMenu.classList.contains("subMenuOpen")) {
-      console.log("fechando subMenu");
-      subMenu.classList.toggle("subMenuOpen");
-      iconChevron.classList.toggle("conteudo__dropdown--chevronOpen");
-    } else {
-      console.log("abrindo subMenu");
-      subMenu.classList.toggle("subMenuOpen");
-      iconChevron.classList.toggle("conteudo__dropdown--chevronOpen");
-    }
+    subMenu.classList.toggle("menu__submenuOpen");
+    iconChevron.classList.toggle("menu__dropdown--chevronOpen");
   });
 
 // const templatePersonagens = document.getElementById("personagens");

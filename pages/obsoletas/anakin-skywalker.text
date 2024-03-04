@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anakin Skywalker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        color: #fff;
+        background-color: #000;
+        text-align: center;
+      }
+
+      img.logo {
+        max-width: 100px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      img.character-image {
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+
+      h1 {
+        margin-top: 10px;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+        margin-top: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="logo"
+      src="https://cdn.worldvectorlogo.com/logos/star-wars-2.svg"
+      alt="Star Wars Logo"
+    />
+
+    <h1>Anakin Skywalker</h1>
+
+    <img
+      class="character-image"
+      src="https://i0.wp.com/sociedadejedi.com.br/wp-content/uploads/2019/05/tmp_TQKngy_f69a383ae2e3a901_MCDSTWA_FE034.jpg?fit=2048%2C1361&ssl=1"
+      alt="Anakin Skywalker Image"
+    />
+
+    <p>
+      Birth Year: 41.9BBY <br />
+      Species: Unknown <br />
+      Height: 188cm <br />
+      Mass: 84kg <br />
+      Gender: Male <br />
+      Hair Color: Blond <br />
+      Skin Color: Fair <br />
+      Homeworld: Tatooine
+    </p>
+
+    <h2>Filmes Relacionados</h2>
+    <ul>
+      <li>Episode I: The Phantom Menace</li>
+      <li>Episode II: Attack of the Clones</li>
+      <li>Episode III: Revenge of the Sith</li>
+    </ul>
+
+    <h2>Veículos Relacionados</h2>
+    <ul>
+      <li>Zephyr-G swoop bike</li>
+      <li>XJ-6 airspeeder</li>
+    </ul>
+
+    <h2>Naves Relacionadas</h2>
+    <ul>
+      <li>Naboo fighter</li>
+      <li>Trade Federation cruiser</li>
+      <li>Jedi Interceptor</li>
+    </ul>
+
+    <footer>Grupo 9 Star Wars</footer>
+  </body>
+</html>

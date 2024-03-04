@@ -98,7 +98,7 @@
   }
 
   ::selection {
-    background-color: var(--gray);
+    background-color: rgb(67, 81, 235);
     color: var(--yellow);
   }
 }
@@ -109,11 +109,31 @@
     transition: 0.2s ease;
   }
 
+  .btn--bgBlur {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+  }
+
   .btn:hover {
     transform: scale(1.05);
   }
   .btn:active {
     transform: scale(0.95);
+  }
+
+  .btn--width {
+    width: 40px;
+  }
+  .btn--widthImg {
+    width: 1rem;
+  }
+
+  .btn--center {
+    margin: auto;
+  }
+  .btn--left {
+    margin-left: auto;
   }
 
   .btn--fonte {
@@ -122,10 +142,6 @@
     text-transform: uppercase;
     font-style: normal;
     font-weight: 600;
-  }
-
-  .btnTopo--img {
-    width: 1rem;
   }
 
   .animationWord:hover {
@@ -145,12 +161,37 @@
     color: var(--yellow);
   }
 
+  .background {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .bgYellow {
+    background-color: var(--yellow);
+    border-radius: 5px;
+  }
+  .bgWhite {
+    background-color: var(--white);
+    border-radius: 5px;
+  }
+
+  .tituloPagina {
+    font-family: var(--fonte-principal);
+    font-size: 3.5rem;
+    line-height: 2.875rem;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
   .fonte-navegação {
     display: inline-block;
     font-size: 1.25rem;
     line-height: 1.25rem;
     text-transform: uppercase;
-    color: var(--dim-gray);
     transition: 0.2s ease;
   }
   .fonte-navegaçãoSubmenu {
@@ -158,17 +199,17 @@
     line-height: 1rem;
     font-weight: 750;
     text-transform: uppercase;
-    color: var(--dim-gray);
   }
 
-  .fonte-tituloFooter {
+  .Footer--titulo {
     font-size: 1.25rem;
     line-height: 1.25rem;
     text-transform: uppercase;
     margin: 0px 0 20px;
     color: var(--white);
   }
-  .fonte-itemFooter {
+
+  .Footer--paragrafo {
     font-size: 1rem;
     line-height: 1rem;
     font-weight: 500;
@@ -182,8 +223,18 @@
   .colorBlack {
     color: var(--black);
   }
+  .colorDimGray {
+    color: var(--dim-gray);
+  }
+  .colorYellow {
+    color: var(--yellow);
+  }
 
   @media screen and (min-width: 768px) {
+    .btn--width {
+      width: 50px;
+    }
+
     .fonte-navegação {
       font-size: 1.5rem;
       line-height: 1.5rem;
@@ -230,18 +281,16 @@
     display: flex;
     justify-self: end;
     margin-right: 16px;
-    max-width: 160px;
+    max-width: 150px;
   }
 
   .navBar {
     display: none;
   }
 
-  .menuIcon {
+  .btnMenu {
     grid-area: 1 / 1 / 1 / 1;
-    display: flex;
-    width: 40px;
-    margin-left: 16px;
+    margin: auto 16px auto;
   }
 
   .menu {
@@ -336,11 +385,7 @@
   @media screen and (min-width: 768px) {
     /* tela tablet */
     .logo {
-      max-width: 180px;
-    }
-
-    .menuIcon {
-      width: 50px;
+      max-width: 200px;
     }
 
     .menu {
@@ -367,17 +412,17 @@
     .logo {
       grid-area: 1 / 1;
       justify-self: center;
-      max-width: 200px;
+      max-width: 250px;
     }
 
-    .menuIcon {
+    .btnMenu {
       display: none;
     }
 
     .navBar {
       grid-area: 2 / 1;
       display: inline-flex;
-      gap: 35px;
+      gap: 30px;
       padding: 5px;
       margin: 20px;
       background-color: var(--white);
@@ -418,6 +463,10 @@
 
   @media screen and (min-width: 1440px) {
     /* tela desktop */
+    .logo {
+      max-width: 300px;
+    }
+
     .navBar__submenu {
       width: 300px;
     }
@@ -438,6 +487,7 @@
   .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
     padding: 16px 16px 100px;
     background-color: var(--black);
@@ -449,15 +499,13 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(3, auto);
-    margin: 25px 16px 50px;
+    margin: 25px 16px 25px;
   }
 
   .btnTopo {
     grid-area: 1 / 1;
     display: flex;
     gap: 5px;
-    width: fit-content;
-    margin-left: auto;
   }
 
   .navFooter {
@@ -504,11 +552,23 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 165px;
+    width: 140px;
   }
   .grupoDev__item--img {
     display: flex;
     flex-direction: row;
     gap: 5px;
+  }
+  .copyright {
+    font-size: 0.8em;
+    color: var(--white);
+  }
+  .disclaimer {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 0;
+    font-size: 0.6em;
+    font-weight: 500;
+    color: var(--white);
   }
 }
