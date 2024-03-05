@@ -18,6 +18,8 @@
     --light-gray: rgba(211, 211, 211, 1);
     --gainsboro: rgba(220, 220, 220, 1);
 
+    --green: rgba(70, 160, 70, 1);
+
     --h1: calc(var(--h2) * var(--scale));
     --h2: calc(var(--h3) * var(--scale));
     --h3: calc(var(--h4) * var(--scale));
@@ -109,12 +111,6 @@
     transition: 0.2s ease;
   }
 
-  .btn--bgBlur {
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
-  }
-
   .btn:hover {
     transform: scale(1.05);
   }
@@ -165,7 +161,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: fit-content;
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
   }
@@ -178,11 +174,16 @@
     background-color: var(--white);
     border-radius: 5px;
   }
+  .bgBlur {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+  }
 
   .tituloPagina {
     font-family: var(--fonte-principal);
-    font-size: 3.5rem;
-    line-height: 2.875rem;
+    font-size: 3.25rem;
+    line-height: 2.675rem;
     letter-spacing: 2px;
     margin: 0;
   }
@@ -487,10 +488,15 @@
   .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 32px;
     padding: 16px 16px 100px;
     background-color: var(--black);
+  }
+
+  @media screen and (min-width: 425px) {
+    .content {
+      max-width: 425px;
+    }
   }
 }
 
