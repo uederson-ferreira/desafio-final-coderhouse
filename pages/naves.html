@@ -3,386 +3,668 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style-global.css">
     <link rel="stylesheet" href="../assets/css/stylesnaves.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/starjedi-special-edition" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <title>Naves - Star Wars</title>
-    <!-- <style>
-        /* Estilo para o popup */
-        #popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
 
-        /* Estilo para o fundo escurecido ao exibir o popup */
-        #overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-    </style> -->
-
-    
 </head>
 <body class="container max-w-full">
-    <header class="flex items-center justify-center max-w-full">
-        <img src="../assets/img/Logo-Star-Wars.png" alt="Logo-Star-Wars" class="justify-self-center items-center">
-    </header>
-    <!-- Nav antes do uso do TwailWindCSS -->
-    <!-- <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/personagens.html">Personagens</a>
-        <a href="../pages/especies.html">Espécies</a>
-        <a href="#filmes">Filmes</a>
-        <a href="../pages/naves.html">Naves Espaciais</a>
-        <a href="../pages/veiculos.html">Veículos</a>
-        <a href="../pages/planetas.html">Planetas</a>
-    </nav> -->
-    <nav class="bg-black bg-white-800">
-        <div class="mx-auto max-w-7xl px-2 sm:px-8 lg:px-8">
-          <div class="relative flex h-10 items-center justify-between">
+    <header>
+        <div class="logo">
+          <a href="#">
+            <img
+              src="../assets/img/shared/logo.svg"
+              alt="Star Wars. Clique para ir para home"
+            />
+          </a>
+        </div>
 
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="flex flex-shrink-0 items-center">
-                <img class="h-8 w-auto" src="../assets/img/logo.JPG" alt="Your Company">
-              </div>
-              <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-1">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="../index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-                  <a href="../pages/personagens.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Personagens</a>
-                  <a href="../pages/especies.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Espécies</a>
-                  <a href="../pages/filmes.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Filmes</a>
-                  <a href="../pages/naves.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Naves Espaciais</a>
-                  <a href="../pages/veiculos.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Veículos</a>
-                  <a href="../pages/planetas2.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Planetas</a>
+        <img
+          src="../assets/img/shared/menu-white.svg"
+          alt="Menu"
+          class="btn btnMenu btn--width"
+        />
+
+        <div class="menu menu--positionStart">
+          <nav>
+            <ul class="menu--contentPosition">
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                  >
+                    personagens
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                  >
+                    espécies
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <div class="menu__dropdown--contentPosition">
+                  <a href="./pages/characters.html">
+                    <p
+                      class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                    >
+                      filmes
+                    </p>
+                  </a>
+                  <img
+                    src="./assets/img/shared/chevron-white.svg"
+                    alt=""
+                    class="btn menu__dropdown--chevron"
+                  />
                 </div>
-              </div>
-            </div>
-          </div>
+
+                <ul class="menu__submenu">
+                  <li>
+                    <a href="./pages/characters.html">
+                      <p
+                        class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverWhite activeYellow"
+                      >
+                        ordem se assistir a trilogia
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                  >
+                    naves
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                  >
+                    veículos
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="./pages/characters.html">
+                  <p
+                    class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                  >
+                    planetas
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="space-y-0 px-2 pb-3 pt-2 bg-black-800">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="../index.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
-            <a href="../pages/personagens.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Personagens</a>
-            <a href="../pages/especies.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Espécies</a>
-            <a href="#filmes" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Filmes</a>
-            <a href="../pages/naves.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Naves Espaciais</a>
-            <a href="../pages/veiculos.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Veículos</a>
-            <a href="../pages/planetas.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Planetas</a>
-          </div>
+
+        <nav>
+          <ul class="navBar">
+            <li>
+              <a href="./pages/personagens.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverBlack"
+                >
+                  personagens
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/especies.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverBlack"
+                >
+                  espécies
+                </p>
+              </a>
+            </li>
+
+            <li class="navBar__dropdown">
+              <a href="./pages/filmes.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverBlack"
+                >
+                  filmes
+                </p>
+              </a>
+
+              <ul class="navBar__submenu navBar__submenu--position">
+                <li>
+                  <a href="./pages/oredem-de-se-assistir-os-filmes.html">
+                    <p
+                      class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverBlack"
+                    >
+                      oredem de assistir a trilogia
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./pages/naves.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverBlack"
+                >
+                  naves
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/veiculos.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverBlack"
+                >
+                  veículos
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/planetas2.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverBlack"
+                >
+                  planetas
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="slogan slogan--position">
+          <p class="slogan--fonte">Tudo Sobre Star Wars</p>
+          <img
+            src="./assets/img/shared/estrela.png"
+            alt=""
+            class="slogan--img"
+          />
         </div>
-    </nav>  
+    </header>
+
 
     <div class="tudosobre">Tudo sobre Star Wars</div>
-    
-    <div class="qualpagina">Home / Naves Espaciais
-        <!-- Botão para abrir o popup
-        <button class="Botao" onclick="mostrarPopup()">Fan de verdade clica aqui!!!</button> -->
-    </div>
-    
-    
-    
-    <main>
-        <section class="esquerdo"></section>
+     
 
-        <section class="navios">
-            <div class="DivTxtNaves">naves espaciais</div>
-            <div class="navesgeral">
-                <div class="navefora">   
-                    <div class="nave">
-                        <a href="../pages/navesdetalhe.html">
-                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
-                        </a>
+    <div class="innerWrapper">
+        <main>
+            <section class="esquerdo"></section>
+    
+            <section class="navios">
+                <div class="DivTxtNaves">naves espaciais</div>
+                <div class="navesgeral">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <a href="../pages/navesdetalhe.html">
+                                <img src="../assets/img/big/naves-espaciais/cr90-corvette-big.png" alt="CR90 Corvette">
+                            </a>
+                        </div>
+                            <h4>CR90 Corvette</h4>
                     </div>
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/big/naves-espaciais//death-star-big.png" alt="CR90 Corvette">
+                        </div>
                         <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
-                </div>
-                <div class="navefora">   
-                    <div class="nave">
-                        <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                    <div class="navefora">   
+                        <div class="nave">
+                            <img src="../assets/img/R 6.png" alt="CR90 Corvette">
+                        </div>
+                        <h4>CR90 Corvette</h4>
                     </div>
-                    <h4>CR90 Corvette</h4>
                 </div>
-            </div>
-            <div class="passpaginas">
-                <div class="leftpaginas">
-                    <img class="left" src="../assets/img/ChevronLeft.svg" alt="">
+                <div class="passpaginas">
+                    <div class="leftpaginas">
+                        <img class="left" src="../assets/img/ChevronLeft.svg" alt="">
+                    </div>
+                    <div class="paginas">
+                        <div class="inpaginas">1</div>
+                    </div>
+                    <div class="paginas">
+                        <div class="inpaginas">2</div>
+                    </div>
+                    <div class="paginas">
+                        <div class="inpaginas">3</div>
+                    </div>
+                    <div class="paginas">
+                        <div class="inpaginas">4</div>
+                    </div>
+                    <div class="paginas">
+                        <div class="inpaginas">5</div>
+                    </div>
+                    <div class="rightpaginas">
+                        <img src="../assets/img/ChevronRight.svg" alt="">
+                    </div>
                 </div>
-                <div class="paginas">
-                    <div class="inpaginas">1</div>
-                </div>
-                <div class="paginas">
-                    <div class="inpaginas">2</div>
-                </div>
-                <div class="paginas">
-                    <div class="inpaginas">3</div>
-                </div>
-                <div class="paginas">
-                    <div class="inpaginas">4</div>
-                </div>
-                <div class="paginas">
-                    <div class="inpaginas">5</div>
-                </div>
-                <div class="rightpaginas">
-                    <img src="../assets/img/ChevronRight.svg" alt="">
-                </div>
-            </div>
-        </section>
-  
-        <aside class="esquerdo">
-                <!-- Popup de cadastro -->
-                <div id="overlay"></div>
-                <div id="popup">
-                    <h2>Cadastro de Usuário</h2>
-                    <form id="formularioCadastro">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome">
-                        <br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email">
-                        <br>
-                        <button type="button" onclick="enviarFormulario()">Cadastrar</button>
-                    </form>
-                    <button onclick="fecharPopup()">Fechar</button>
-                </div>
-        </aside>  
-    </main>
-    
+            </section>
+      
+            <aside class="esquerdo">
+            </aside>  
+        </main>
+        
 
+    </div>
     <footer>
-        <div class="Rodape">
-            <div class="VoltarAoTopo">
-                <div class="VoltarAoTopoin">Voltar ao topo</div>
-                <img class="ImgVoltarAoTopo" src="../assets/img/aotopo.svg" alt="VoltarAoTopo">
+        <div class="btn btnTopo btn--left">
+          <p class="btn--fonte colorWhite activeYellow">Voltar ao topo</p>
+          <img
+            src="../assets/img/shared/seta-circular-cima.svg"
+            alt="seta para cima"
+            class="btn--widthImg"
+          />
+        </div>
+
+        <nav class="navFooter">
+          <h3 class="Footer--titulo">Mapa do Site</h3>
+
+          <div class="links">
+            <a href="#" class="links__item animationWord">
+              <p class="Footer--paragrafo colorWhite">Home</p>
+              <img src="../assets/img/shared/external-link-white.svg" alt="" />
+            </a>
+
+            <img
+              src="../assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
+
+            <a
+              href="../pages/personagens.html"
+              class="links__item animationWord"
+            >
+              <p class="Footer--paragrafo colorWhite">Personagens</p>
+              <img
+                src="../assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
+
+            <img
+              src="../assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
+
+            <a href="../pages/especies.html" class="links__item animationWord">
+              <p class="Footer--paragrafo colorWhite">Espécies</p>
+              <img
+                src="../assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
+
+            <img
+              src="../assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
+
+            <a href="../pages/filmes.html" class="links__item animationWord">
+              <p class="Footer--paragrafo colorWhite">Filmes</p>
+              <img
+                src="../assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
+
+            <img
+              src="../assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
+
+            <a
+              href="../pages/oredem-de-se-assistir-os-filmes.html"
+              class="links__item animationWord"
+            >
+              <p class="Footer--paragrafo colorWhite">
+                Ordem de se Assistir os Filmes
+              </p>
+              <img
+                src="../assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
+
+            <img
+              src="../assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
+
+            <a href="../pages/naves.html" class="links__item animationWord">
+              <p class="Footer--paragrafo colorWhite">Naves Espaciais</p>
+              <img
+                src="../assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
+
+            <img
+              src="../assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
+
+            <a href="../pages/veiculos.html" class="links__item animationWord">
+              <p class="Footer--paragrafo colorWhite">Veículos</p>
+              <img
+                src="../assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
+
+            <img
+              src="../assets/img/shared/barra-white.svg"
+              alt=""
+              class="links__item--img"
+            />
+
+            <a href="../pages/planetas.html" class="links__item animationWord">
+              <p class="Footer--paragrafo colorWhite">Planetas</p>
+              <img
+                src="../assets/img/shared/external-link-white.svg"
+                alt=""
+                class="links__item--img"
+              />
+            </a>
+          </div>
+        </nav>
+
+        <div class="desenvolvedores">
+          <h3 class="Footer--titulo">Projetado e Desenvolvido por:</h3>
+
+          <address class="grupoDev">
+            <div class="grupoDev__item">
+              <p class="Footer--paragrafo colorWhite">Gabriel Carneiro Sousa</p>
+              <figure class="grupoDev__item--img">
+                <a
+                  href="https://www.linkedin.com/in/gabriel-carneiro-186680279/"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                    class="btn"
+                  />
+                </a>
+
+                <a
+                  href="https://github.com/GabrielCarneiroSousa"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/github-white.svg"
+                    alt="github"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://www.instagram.com/htmlbiel/" target="_blank">
+                  <img
+                    src="../assets/img/shared/instagram-white.svg"
+                    alt="instagram"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="" target="_blank">
+                  <img
+                    src="../assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://twitter.com/oMavv_x" target="_blank">
+                  <img
+                    src="../assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                    class="btn"
+                  />
+                </a>
+              </figure>
             </div>
-            
-            <div class="MapaDoSite">MAPA DO SITE</div>
 
-            <div class="linkspag">
-                <div class="Home">Home</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="../assets/img/barra.svg" alt="barra">
-                <div class="Home">Personagens</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="../assets/img/barra.svg" alt="barra">
-                <div class="Home">Espécies</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="../assets/img/barra.svg" alt="barra">
-                <div class="Home">Filmes</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="../assets/img/barra.svg" alt="barra">
-                <div class="Home">Ordem de se Assistir os Filmes</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="../assets/img/barra.svg" alt="barra">
-                <div class="Home">Naves Espaciais</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="../assets/img/barra.svg" alt="barra">
-                <div class="Home">Veículos</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
-                <img class="barra" src="../assets/img/barra.svg" alt="barra">
-                <div class="Home">Planetas</div>
-                <div class="Externallink">
-                    <img class="ImgExternallink" src="../assets/img/ExternalLink.svg" alt="ExternalLink">
-                </div>
+            <div class="grupoDev__item">
+              <p class="Footer--paragrafo colorWhite">
+                Paulo Sardeiro Flores Da Cunha
+              </p>
+              <figure class="grupoDev__item--img">
+                <a href="" target="_blank">
+                  <img
+                    src="../assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://github.com/SardeiroPaulo" target="_blank">
+                  <img
+                    src="../assets/img/shared/github-white.svg"
+                    alt="github"
+                    class="btn"
+                  />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/sardeiropaulofelipe"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/instagram-white.svg"
+                    alt="instagram"
+                    class="btn"
+                  />
+                </a>
+
+                <a
+                  href="https://www.facebook.com/profile.php?id=100016552265918"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="" target="_blank">
+                  <img
+                    src="../assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                    class="btn"
+                  />
+                </a>
+              </figure>
             </div>
 
-            <div class="TituloDesenvolvedores">Desenvolvedores:</div>
-            <div class="CxGeralNomesDevs">
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Grabriel 
-                        Carneiro</div>
-                    <div class="RedesSociais">
-                        <img src="../assets/img/linkedin.svg" alt="linkedin">
-                        <img src="../assets/img/github.png" alt="github">
-                        <img src="../assets/img/instagram.png" alt="instagram">
-                        <img src="../assets/img/facebook.png" alt="facebook">
-                        <img src="../assets/img/x.png" alt="x antigo twitter">
-                    </div>
-                </div>
+            <div class="grupoDev__item">
+              <p class="Footer--paragrafo colorWhite">
+                Thiago Bernardo Fernandes
+              </p>
+              <figure class="grupoDev__item--img">
+                <a
+                  href="https://www.linkedin.com/in/thiago-bernardo-fernandes/"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                    class="btn"
+                  />
+                </a>
 
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Paulo 
-                        Sardeiro Flores Da Cunha</div>
-                    <div class="RedesSociais">
-                        <img src="../assets/img/linkedin.svg" alt="linkedin">
-                        <img src="../assets/img/github.png" alt="github">
-                        <img src="../assets/img/instagram.png" alt="instagram">
-                        <img src="../assets/img/facebook.png" alt="facebook">
-                        <img src="../assets/img/x.png" alt="x antigo twitter">
-                    </div>
-                </div>
+                <a
+                  href="https://github.com/thiagobernardofernandes"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/github-white.svg"
+                    alt="github"
+                    class="btn"
+                  />
+                </a>
 
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Thiago 
-                        Bernardo Fernandes</div>
-                    <div class="RedesSociais">
-                        <img src="../assets/img/linkedin.svg" alt="linkedin">
-                        <img src="../assets/img/github.png" alt="github">
-                        <img src="../assets/img/instagram.png" alt="instagram">
-                        <img src="../assets/img/facebook.png" alt="facebook">
-                        <img src="../assets/img/x.png" alt="x antigo twitter">
-                    </div>
-                </div>
+                <a
+                  href="https://www.instagram.com/thiago_bernardo"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/instagram-white.svg"
+                    alt="instagram"
+                    class="btn"
+                  />
+                </a>
 
-                <div class="CxNomesDevs">
-                    <div class="NomeDevs">Uederson 
-                        De Amadeu Ferreira</div>
-                    <div class="RedesSociais">
-                        <img src="../assets/img/linkedin.svg" alt="linkedin">
-                        <img src="../assets/img/github.png" alt="github">
-                        <img src="../assets/img/instagram.png" alt="instagram">
-                        <img src="../assets/img/facebook.png" alt="facebook">
-                        <img src="../assets/img/x.png" alt="x antigo twitter">
-                    </div>    
-                </div>
+                <a
+                  href="https://www.facebook.com/bernardofernandesthiago/"
+                  target="_blank"
+                >
+                  <img
+                    src="../assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://twitter.com/ThiagoB09013321" target="_blank">
+                  <img
+                    src="../assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                    class="btn"
+                  />
+                </a>
+              </figure>
             </div>
-         </div>
+
+            <div class="grupoDev__item">
+              <p class="Footer--paragrafo colorWhite">
+                Uederson De Amadeu Ferreira
+              </p>
+              <figure class="grupoDev__item--img">
+                <a href="https://www.linkedin.com/in/uedersonferreira" target="_blank">
+                  <img
+                    src="../assets/img/shared/linkedin-white.svg"
+                    alt="linkedin"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://github.com/uederson-ferreira" target="_blank">
+                  <img
+                    src="../assets/img/shared/github-white.svg"
+                    alt="github"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://www.instagram.com/uedersonferreira" target="_blank">
+                  <img
+                    src="../assets/img/shared/instagram-white.svg"
+                    alt="instagram"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://www.facebook.com/uedersonferreiramaraba" target="_blank">
+                  <img
+                    src="../assets/img/shared/facebook-white.svg"
+                    alt="facebook"
+                    class="btn"
+                  />
+                </a>
+
+                <a href="https://twitter.com/uedersonaf" target="_blank">
+                  <img
+                    src="../assets/img/shared/twitter-white.svg"
+                    alt="Twitter"
+                    class="btn"
+                  />
+                </a>
+              </figure>
+            </div>
+          </address>
+
+          <p class="copyright">&copy; 2024.</p>
+        </div>
+
+        <p class="disclaimer">
+          "Star Wars" e todos os nomes e/ou imagens associados são protegidos
+          por direitos autorais da Lucasfilm Ltd.
+        </p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../assets/js/global.js"></script>
     <script src="../assets/js/script.js"></script>
-    <!-- <script>
-        window.onload = function () {
-            // Aguardar 5 segundos (5000 milissegundos) antes de chamar mostrarPopup()
-            setTimeout(function () {
-                mostrarPopup();
-            }, 5000);
-        };
-
-            // Função para definir um cookie
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            var expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        }
-
-        // Função para obter o valor de um cookie
-        function getCookie(cname) {
-            var name = cname + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-
-        // Função para verificar se o popup já foi exibido
-        function checkPopup() {
-            var popupShown = getCookie("popupShown");
-            if (!popupShown) {
-                mostrarPopup();
-                setCookie("popupShown", "true", 1);  // Define o cookie para indicar que o popup foi exibido
-            }
-        }
-
-        function mostrarPopup() {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-        }
-
-        function fecharPopup() {
-            document.getElementById('popup').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        }
-
-        function enviarFormulario() {
-            // Lógica de processamento do formulário
-
-            // Exemplo de exibição de mensagem
-            alert('Cadastro realizado com sucesso!');
-
-            // Fechar o popup após o cadastro
-            fecharPopup();
-        }
-    </script> -->
 </body>
 </html>
