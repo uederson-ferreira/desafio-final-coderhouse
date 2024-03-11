@@ -31,7 +31,7 @@
     color: var(--black);
   }
 
-  .imported-sections {
+  .import-section {
     display: flex;
     flex-direction: column;
     gap: 32px;
