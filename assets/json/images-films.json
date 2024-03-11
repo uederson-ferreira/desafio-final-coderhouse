@@ -1,6 +1,6 @@
 [
   {
-    "name": "A New Hope",
+    "title": "A New Hope",
     "images": {
       "small": "./assets/img/small/film/a-new-hope-small.png",
       "medium": "./assets/img/medium/film/a-new-hope-medium.png",
@@ -13,11 +13,11 @@
     }
   },
   {
-    "name": "The Empire Strikes Back",
+    "title": "The Empire Strikes Back",
     "images": {
       "small": "./assets/img/small/film/the-empire-strikes-back-small.png",
       "medium": "./assets/img/medium/film/the-empire-strikes-back-medium.png",
-      "big": "./assets/img/big/film/the-empire-strikes-back.png"
+      "big": "./assets/img/big/film/the-empire-strikes-back-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-2-the-empire-strikes-back-small.png",
@@ -26,11 +26,11 @@
     }
   },
   {
-    "name": "Return of the Jedi",
+    "title": "Return of the Jedi",
     "images": {
       "small": "./assets/img/small/film/return-of-the-jedi-small.png",
       "medium": "./assets/img/medium/film/return-of-the-jedi-medium.png",
-      "big": "./assets/img/big/film/return-of-the-jedi.png"
+      "big": "./assets/img/big/film/return-of-the-jedi-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-3-return-of-the-jedi-small.png",
@@ -39,11 +39,11 @@
     }
   },
   {
-    "name": "The Phantom Menace",
+    "title": "The Phantom Menace",
     "images": {
       "small": "./assets/img/small/film/the-phantom-menace-small.png",
       "medium": "./assets/img/medium/film/the-phantom-menace-medium.png",
-      "big": "./assets/img/big/film/the-phantom-menace.png"
+      "big": "./assets/img/big/film/the-phantom-menace-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-4-the-phantom-menace-small.png",
@@ -52,11 +52,11 @@
     }
   },
   {
-    "name": "Attack of the Clones",
+    "title": "Attack of the Clones",
     "images": {
       "small": "./assets/img/small/film/attack-of-the-clones-small.png",
       "medium": "./assets/img/medium/film/attack-of-the-clones-medium.png",
-      "big": "./assets/img/big/film/attack-of-the-clones.png"
+      "big": "./assets/img/big/film/attack-of-the-clones-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-5-attack-of-the-clones-small.png",
@@ -65,16 +65,29 @@
     }
   },
   {
-    "name": "Revenge of the Sith",
+    "title": "Revenge of the Sith",
     "images": {
       "small": "./assets/img/small/film/revenge-of-the-sith-small.png",
       "medium": "./assets/img/medium/film/revenge-of-the-sith-medium.png",
-      "big": "./assets/img/big/film/revenge-of-the-sith.png"
+      "big": "./assets/img/big/film/revenge-of-the-sith-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-6-revenge-of-the-sith-small.png",
       "medium": "./assets/img/medium/oredem-de-assistir/filme-6-revenge-of-the-sith-medium.png",
       "big": "./assets/img/big/oredem-de-assistir/filme-6-revenge-of-the-sith-big.png"
+    }
+  },
+  {
+    "title": "The Force Awakens",
+    "images": {
+      "small": "./assets/img/small/film/the-force-awakens-small.png",
+      "medium": "./assets/img/medium/film/the-force-awakens-medium.png",
+      "big": "./assets/img/big/film/the-force-awakens-big.png"
+    },
+    "images-ordem-de-assistir": {
+      "small": "./assets/img/small/oredem-de-assistir/filme-6-the-force-awakens-small.png",
+      "medium": "./assets/img/medium/oredem-de-assistir/filme-6-the-force-awakens-medium.png",
+      "big": "./assets/img/big/oredem-de-assistir/filme-6-the-force-awakens-big.png"
     }
   }
 ]

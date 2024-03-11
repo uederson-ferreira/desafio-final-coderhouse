@@ -1,83 +1,133 @@
-// scroll botão voltar ao topo
-$(document).ready(() => {
-  const scrollButton = $(".btnTopo");
+//Função para incorporar seções em importSection
+// function creatSections() {
+//   const importSection = $("<section>").addClass("importSection");
 
-  scrollButton.click(() => {
-    console.log("Clicou no botão de scroll 'voltar ao topo'");
+//   const titulosSecoes = [
+//     "personagens",
+//     "planetas",
+//     "espécies",
+//     "veículos",
+//     "naves espaciais",
+//     // Adicione mais textos conforme necessário
+//   ];
 
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
-  });
-});
+//   //Percorrer os dados e criar sections interna
+//   dadaMerged.forEach(function (item) {
+//     const sectionInterna = $("<section>").addClass("background bgWhite");
 
-//Menu Hamburguer
-document.querySelector(".btnMenu").addEventListener("click", () => {
-  const menu = document.querySelector(".menu");
-  const innerWrapper = document.querySelector(".innerWrapper");
-  const footer = document.querySelector("footer");
-  const menuIcon = document.querySelector(".btnMenu");
-  const basePath = window.location.pathname === "/index.html" ? "./" : "../";
+//     const tituloSecao = $("<h2>")
+//       .addClass("tituloSecao bg yellow")
+//       .text(titulosSecoes[dadaMerged.indexOf(item)]);
 
-  menu.classList.toggle("menu--positionOpen");
-  document.body.classList.toggle("noScroll");
-  innerWrapper.classList.toggle("blurBackground");
-  footer.classList.toggle("blurBackground");
+//     const divInterna = $("<div>");
 
-  if (menu.classList.contains("menu--positionOpen")) {
-    menuIcon.src = basePath + "assets/img/shared/exit-white.svg";
-  } else {
-    menuIcon.src = basePath + "assets/img/shared/menu-white.svg";
-  }
-});
+//     item.results.forEach(function (result) {
+//       // Criar a tag img com o src da imagem
+//       const imagem = $("<img>").attr("src", result.images.small);
 
-//Conteudo dropdown do menu hamburguer
-document
-  .querySelector(".menu__dropdown--chevron")
-  .addEventListener("click", () => {
-    const subMenu = document.querySelector(".menu__submenu");
-    const iconChevron = document.querySelector(".menu__dropdown--chevron");
+//       // Criar a tag p com o nome
+//       const nome = $("<p>").text(result.name);
 
-    subMenu.classList.toggle("menu__submenuOpen");
-    iconChevron.classList.toggle("menu__dropdown--chevronOpen");
-  });
+//       // Adicionar imagem e nome à div
+//       divInterna.append(imagem, nome);
+//     });
 
-// const templatePersonagens = document.getElementById("personagens");
+//     sectionInterna.append(tituloSecao, divInterna);
 
-// function forma(arrayPersonagens) {
-//   arrayPersonagens.forEach((personagem) => {
-//     let divPersonagem = document.createElement("div");
-//     let linkPersonagem = document.createElement("a");
-//     let fotoPersonagem = document.createElement("img");
-//     let nomePersonagem = document.createElement("p");
-
-//     fotoPersonagem.src = personagem.images.small;
-//     nomePersonagem.textContent = personagem.name;
-
-//     divPersonagem.append(linkPersonagem);
-//     linkPersonagem.append(fotoPersonagem);
-//     linkPersonagem.append(nomePersonagem);
-
-//     templatePersonagens.appendChild(divPersonagem);
+//     importSection.append(sectionInterna);
 //   });
+//   $("main").append(importSection);
 // }
 
-// fetch("../assets/json/images-characters.json")
-//   .then((response) => response.json())
-//   .then((personagensImage) => {
-//     fetch("https://swapi.dev/api/people")
-//       .then((response) => response.json())
-//       .then((dada) => {
-//         const personagens = personagensImage.map((itemImage) => ({
-//           ...itemImage,
-//           ...dada.results.find((itemDada) => itemDada.name === itemImage.name),
-//         }));
+// creatSections();
 
-//         console.log(personagens);
+//Requisição Root API
+$.ajax({
+  url: "https://swapi.py4e.com/api/",
+  method: "GET",
+  dataType: "json",
+  success: function (dataRootAPI) {
+    let links = Object.values(dataRootAPI);
 
-//         forma(personagens);
-//       });
-//   });
+    //Função para resolução de requisição de links do Root API
+    function carregarArquivoJson(url) {
+      return new Promise(function (resolve, reject) {
+        $.ajax({
+          url: url,
+          method: "GET",
+          dataType: "json",
+          success: function (data) {
+            resolve(data);
+          },
+          error: function (error) {
+            reject(error);
+          },
+        });
+      });
+    }
+
+    //Função que inicia as requisições
+    function fazerRequisicoes() {
+      let requisicoes = links.map(function (url) {
+        return carregarArquivoJson(url);
+      });
+
+      //Aguarda todas as promessas serem resolvidas
+      Promise.all(requisicoes)
+        .then(async function (dataArray) {
+          const arquivosJson = [
+            "../assets/json/images-people.json",
+            "../assets/json/images-planets.json",
+            "../assets/json/images-films.json",
+            "../assets/json/images-species.json",
+            "../assets/json/images-vehicles.json",
+            "../assets/json/images-starships.json",
+          ];
+
+          //Função para mesclar os dados
+          async function mesclarDados() {
+            const result = [];
+
+            for (let i = 0; i < dataArray.length; i++) {
+              const dataArrayOrigem = dataArray[i];
+              const dadosArray = dataArrayOrigem.results;
+
+              const response = await fetch(arquivosJson[i]);
+              const dataAquivosJson = await response.json();
+
+              const dadaMerged = dadosArray.map((item) => {
+                const campoComparacao = item.hasOwnProperty("name")
+                  ? "name"
+                  : "title";
+
+                const dadosJson = dataAquivosJson.find(
+                  (jsonItem) =>
+                    jsonItem[campoComparacao] === item[campoComparacao]
+                );
+
+                return { ...item, ...dadosJson };
+              });
+
+              result.push({
+                ...dataArrayOrigem,
+                results: dadaMerged,
+              });
+            }
+
+            return result;
+          }
+
+          const dadaMerged = await mesclarDados();
+          console.log(dadaMerged);
+        })
+        .catch(function (error) {
+          console.log("Erro na solicitação: ", error);
+        });
+    }
+
+    fazerRequisicoes();
+  },
+  error: function (error) {
+    console.log("Erro na solicitação:  ", error);
+  },
+});
