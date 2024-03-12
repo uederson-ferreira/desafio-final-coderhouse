@@ -2,81 +2,81 @@
   {
     "name": "CR90 corvette",
     "images": {
-      "small": "./assets/img/small/starship/cr90-corvette-small.png",
-      "medium": "./assets/img/medium/starship/cr90-corvette-medium.png",
-      "big": "./assets/img/big/starship/cr90-corvette.png"
+      "small": "./assets/img/small/starships/cr90-corvette-small.png",
+      "medium": "./assets/img/medium/starships/cr90-corvette-medium.png",
+      "big": "./assets/img/big/starships/cr90-corvette.png"
     }
   },
   {
     "name": "Star Destroyer",
     "images": {
-      "small": "./assets/img/small/starship/star-destroyer-small.png",
-      "medium": "./assets/img/medium/starship/star-destroyer-medium.png",
-      "big": "./assets/img/big/starship/star-destroyer.png"
+      "small": "./assets/img/small/starships/star-destroyer-small.png",
+      "medium": "./assets/img/medium/starships/star-destroyer-medium.png",
+      "big": "./assets/img/big/starships/star-destroyer.png"
     }
   },
   {
     "name": "Sentinel-class landing craft",
     "images": {
-      "small": "./assets/img/small/starship/sentinel-class-landing-craft-small.png",
-      "medium": "./assets/img/medium/starship/sentinel-class-landing-craft-medium.png",
-      "big": "./assets/img/big/starship/sentinel-class-landing-craft.png"
+      "small": "./assets/img/small/starships/sentinel-class-landing-craft-small.png",
+      "medium": "./assets/img/medium/starships/sentinel-class-landing-craft-medium.png",
+      "big": "./assets/img/big/starships/sentinel-class-landing-craft.png"
     }
   },
   {
     "name": "Death Star",
     "images": {
-      "small": "./assets/img/small/starship/death-star-small.png",
-      "medium": "./assets/img/medium/starship/death-star-medium.png",
-      "big": "./assets/img/big/starship/death-star.png"
+      "small": "./assets/img/small/starships/death-star-small.png",
+      "medium": "./assets/img/medium/starships/death-star-medium.png",
+      "big": "./assets/img/big/starships/death-star.png"
     }
   },
   {
     "name": "Millennium Falcon",
     "images": {
-      "small": "./assets/img/small/starship/millennium-falcon-small.png",
-      "medium": "./assets/img/medium/starship/millennium-falcon-medium.png",
-      "big": "./assets/img/big/starship/millennium-falcon.png"
+      "small": "./assets/img/small/starships/millennium-falcon-small.png",
+      "medium": "./assets/img/medium/starships/millennium-falcon-medium.png",
+      "big": "./assets/img/big/starships/millennium-falcon.png"
     }
   },
   {
     "name": "Y-wing",
     "images": {
-      "small": "./assets/img/small/starship/y-wing-small.png",
-      "medium": "./assets/img/medium/starship/y-wing-medium.png",
-      "big": "./assets/img/big/starship/y-wing.png"
+      "small": "./assets/img/small/starships/y-wing-small.png",
+      "medium": "./assets/img/medium/starships/y-wing-medium.png",
+      "big": "./assets/img/big/starships/y-wing.png"
     }
   },
   {
     "name": "X-wing",
     "images": {
-      "small": "./assets/img/small/starship/x-wing-small.png",
-      "medium": "./assets/img/medium/starship/x-wing-medium.png",
-      "big": "./assets/img/big/starship/x-wing.png"
+      "small": "./assets/img/small/starships/x-wing-small.png",
+      "medium": "./assets/img/medium/starships/x-wing-medium.png",
+      "big": "./assets/img/big/starships/x-wing.png"
     }
   },
   {
     "name": "TIE Advanced x1",
     "images": {
-      "small": "./assets/img/small/starship/tie-advanced-x1-small.png",
-      "medium": "./assets/img/medium/starship/tie-advanced-x1-medium.png",
-      "big": "./assets/img/big/starship/tie-advanced-x1.png"
+      "small": "./assets/img/small/starships/tie-advanced-x1-small.png",
+      "medium": "./assets/img/medium/starships/tie-advanced-x1-medium.png",
+      "big": "./assets/img/big/starships/tie-advanced-x1.png"
     }
   },
   {
     "name": "Executor",
     "images": {
-      "small": "./assets/img/small/starship/executor-small.png",
-      "medium": "./assets/img/medium/starship/executor-medium.png",
-      "big": "./assets/img/big/starship/executor.png"
+      "small": "./assets/img/small/starships/executor-small.png",
+      "medium": "./assets/img/medium/starships/executor-medium.png",
+      "big": "./assets/img/big/starships/executor.png"
     }
   },
   {
     "name": "Rebel transport",
     "images": {
-      "small": "./assets/img/small/starship/rebel-transport-small.png",
-      "medium": "./assets/img/medium/starship/rebel-transport-medium.png",
-      "big": "./assets/img/big/starship/rebel-transport.png"
+      "small": "./assets/img/small/starships/rebel-transport-small.png",
+      "medium": "./assets/img/medium/starships/rebel-transport-medium.png",
+      "big": "./assets/img/big/starships/rebel-transport.png"
     }
   }
 ]

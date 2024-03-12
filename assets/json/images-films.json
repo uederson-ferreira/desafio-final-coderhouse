@@ -2,9 +2,9 @@
   {
     "title": "A New Hope",
     "images": {
-      "small": "./assets/img/small/film/a-new-hope-small.png",
-      "medium": "./assets/img/medium/film/a-new-hope-medium.png",
-      "big": "./assets/img/big/film/a-new-hope-big.png"
+      "small": "./assets/img/small/films/a-new-hope-small.png",
+      "medium": "./assets/img/medium/films/a-new-hope-medium.png",
+      "big": "./assets/img/big/films/a-new-hope-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-1-a-new-hope-small.png",
@@ -15,9 +15,9 @@
   {
     "title": "The Empire Strikes Back",
     "images": {
-      "small": "./assets/img/small/film/the-empire-strikes-back-small.png",
-      "medium": "./assets/img/medium/film/the-empire-strikes-back-medium.png",
-      "big": "./assets/img/big/film/the-empire-strikes-back-big.png"
+      "small": "./assets/img/small/films/the-empire-strikes-back-small.png",
+      "medium": "./assets/img/medium/films/the-empire-strikes-back-medium.png",
+      "big": "./assets/img/big/films/the-empire-strikes-back-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-2-the-empire-strikes-back-small.png",
@@ -28,9 +28,9 @@
   {
     "title": "Return of the Jedi",
     "images": {
-      "small": "./assets/img/small/film/return-of-the-jedi-small.png",
-      "medium": "./assets/img/medium/film/return-of-the-jedi-medium.png",
-      "big": "./assets/img/big/film/return-of-the-jedi-big.png"
+      "small": "./assets/img/small/films/return-of-the-jedi-small.png",
+      "medium": "./assets/img/medium/films/return-of-the-jedi-medium.png",
+      "big": "./assets/img/big/films/return-of-the-jedi-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-3-return-of-the-jedi-small.png",
@@ -41,9 +41,9 @@
   {
     "title": "The Phantom Menace",
     "images": {
-      "small": "./assets/img/small/film/the-phantom-menace-small.png",
-      "medium": "./assets/img/medium/film/the-phantom-menace-medium.png",
-      "big": "./assets/img/big/film/the-phantom-menace-big.png"
+      "small": "./assets/img/small/films/the-phantom-menace-small.png",
+      "medium": "./assets/img/medium/films/the-phantom-menace-medium.png",
+      "big": "./assets/img/big/films/the-phantom-menace-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-4-the-phantom-menace-small.png",
@@ -54,9 +54,9 @@
   {
     "title": "Attack of the Clones",
     "images": {
-      "small": "./assets/img/small/film/attack-of-the-clones-small.png",
-      "medium": "./assets/img/medium/film/attack-of-the-clones-medium.png",
-      "big": "./assets/img/big/film/attack-of-the-clones-big.png"
+      "small": "./assets/img/small/films/attack-of-the-clones-small.png",
+      "medium": "./assets/img/medium/films/attack-of-the-clones-medium.png",
+      "big": "./assets/img/big/films/attack-of-the-clones-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-5-attack-of-the-clones-small.png",
@@ -67,9 +67,9 @@
   {
     "title": "Revenge of the Sith",
     "images": {
-      "small": "./assets/img/small/film/revenge-of-the-sith-small.png",
-      "medium": "./assets/img/medium/film/revenge-of-the-sith-medium.png",
-      "big": "./assets/img/big/film/revenge-of-the-sith-big.png"
+      "small": "./assets/img/small/films/revenge-of-the-sith-small.png",
+      "medium": "./assets/img/medium/films/revenge-of-the-sith-medium.png",
+      "big": "./assets/img/big/films/revenge-of-the-sith-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-6-revenge-of-the-sith-small.png",
@@ -80,9 +80,9 @@
   {
     "title": "The Force Awakens",
     "images": {
-      "small": "./assets/img/small/film/the-force-awakens-small.png",
-      "medium": "./assets/img/medium/film/the-force-awakens-medium.png",
-      "big": "./assets/img/big/film/the-force-awakens-big.png"
+      "small": "./assets/img/small/films/the-force-awakens-small.png",
+      "medium": "./assets/img/medium/films/the-force-awakens-medium.png",
+      "big": "./assets/img/big/films/the-force-awakens-big.png"
     },
     "images-ordem-de-assistir": {
       "small": "./assets/img/small/oredem-de-assistir/filme-6-the-force-awakens-small.png",
