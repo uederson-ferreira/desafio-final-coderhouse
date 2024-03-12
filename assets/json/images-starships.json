@@ -34,9 +34,9 @@
   {
     "name": "Millennium Falcon",
     "images": {
-      "small": "./assets/img/small/starship/millennium-falcon-small.png",
-      "medium": "./assets/img/medium/starship/millennium-falcon-medium.png",
-      "big": "./assets/img/big/starship/millennium-falcon.png"
+      "small": "./assets/img/small/starship/millenium-faicon-small.png",
+      "medium": "./assets/img/medium/starship/millenium-falcon-medium.png",
+      "big": "./assets/img/big/starship/millenium-faicon-big.png"
     }
   },
   {
