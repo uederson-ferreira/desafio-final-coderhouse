@@ -40,7 +40,7 @@ function renderData(results) {
         
             const h4Element = document.createElement("h4"); // Cria um novo elemento <h4>
             h4Element.textContent = result.name; // Define o texto do novo elemento <h4> como o nome da nave espacial
-      });
+      })    .catch(error => console.error("Erro x ao buscar dados:", error));
 
     divIn.appendChild(imgElement);
     divIn.appendChild(itemElement);
