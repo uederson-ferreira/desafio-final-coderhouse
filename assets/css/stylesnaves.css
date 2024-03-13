@@ -20,12 +20,43 @@ h4 {
     font-weight: 800;
     letter-spacing: 0.25px;
 }
+
 .passpaginas{
     display: flex;
     gap:  0.5rem;
     align-items: center;
     justify-content: center;
 }
+.pagination-container{
+    background-color: #FFE113;
+}
+button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 10px;
+    margin: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    background-color:  rgba(255, 225, 19, 1);;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: rgba(54, 54, 54, 1);
+  }
+  /* Se desejar um efeito de sombra ao passar o mouse, você pode adicionar estas regras */
+  button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
 .inpaginas{
     color: white;
     font-size: 14px;
@@ -70,7 +101,7 @@ main > section > .DivTxtNaves{
     font-weight: 400;
     letter-spacing: 0.25px;
 }
-#containerDiv{
+#data-container{
     background-color: white;
     display: flex;
     align-items: center;
