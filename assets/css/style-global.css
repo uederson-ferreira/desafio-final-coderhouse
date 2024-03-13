@@ -135,7 +135,14 @@
     line-height: 1rem;
     text-transform: uppercase;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 750;
+  }
+
+  .btn--bg {
+    padding: 3px;
+    display: flex;
+    gap: 5px;
+    width: fit-content;
   }
 
   .animationWord:hover {
@@ -507,8 +514,6 @@
 
   .btnTopo {
     grid-area: 1 / 1;
-    display: flex;
-    gap: 5px;
   }
 
   .navFooter {

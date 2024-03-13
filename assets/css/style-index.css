@@ -31,10 +31,33 @@
     color: var(--black);
   }
 
-  .import-section {
+  .sectionExterna {
     display: flex;
     flex-direction: column;
     gap: 32px;
     width: 100%;
+  }
+
+  .sectionInterna {
+    display: flex;
+    gap: 10px;
+  }
+  .sectionInterna__grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+  .sectionInterna__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .sectionInterna__img {
+    max-width: 129px;
+  }
+  .sectionInterna__text {
+    max-width: 129px;
   }
 }
