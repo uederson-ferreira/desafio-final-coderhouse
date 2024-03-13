@@ -2,81 +2,81 @@
   {
     "name": "Sand Crawler",
     "images": {
-      "small": "./assets/img/small/vehicle/sand-crawler-small.png",
-      "medium": "./assets/img/medium/vehicle/sand-crawler-medium.png",
-      "big": "./assets/img/big/vehicle/sand-crawler.png"
+      "small": "./assets/img/small/vehicles/sand-crawler-small.png",
+      "medium": "./assets/img/medium/vehicles/sand-crawler-medium.png",
+      "big": "./assets/img/big/vehicles/sand-crawler.png"
     }
   },
   {
     "name": "T-16 skyhopper",
     "images": {
-      "small": "./assets/img/small/vehicle/t-16-skyhopper-small.png",
-      "medium": "./assets/img/medium/vehicle/t-16-skyhopper-medium.png",
-      "big": "./assets/img/big/vehicle/t-16-skyhopper.png"
+      "small": "./assets/img/small/vehicles/t-16-skyhooper-small.png",
+      "medium": "./assets/img/medium/vehicles/t-16-skyhooper-medium.png",
+      "big": "./assets/img/big/vehicles/t-16-skyhooper.png"
     }
   },
   {
     "name": "X-34 landspeeder",
     "images": {
-      "small": "./assets/img/small/vehicle/x-34-landspeeder-small.png",
-      "medium": "./assets/img/medium/vehicle/x-34-landspeeder-medium.png",
-      "big": "./assets/img/big/vehicle/x-34-landspeeder.png"
+      "small": "./assets/img/small/vehicles/x-34-landspeeder-small.png",
+      "medium": "./assets/img/medium/vehicles/x-34-landspeeder-medium.png",
+      "big": "./assets/img/big/vehicles/x-34-landspeeder.png"
     }
   },
   {
     "name": "TIE/LN starfighter",
     "images": {
-      "small": "./assets/img/small/vehicle/tie-ln-starfighter-small.png",
-      "medium": "./assets/img/medium/vehicle/tie-ln-starfighter-medium.png",
-      "big": "./assets/img/big/vehicle/tie-ln-starfighter.png"
+      "small": "./assets/img/small/vehicles/tie-ln-starfighter-small.png",
+      "medium": "./assets/img/medium/vehicles/tie-ln-starfighter-medium.png",
+      "big": "./assets/img/big/vehicles/tie-ln-starfighter.png"
     }
   },
   {
     "name": "Snowspeeder",
     "images": {
-      "small": "./assets/img/small/vehicle/snowspeeder-small.png",
-      "medium": "./assets/img/medium/vehicle/snowspeeder-medium.png",
-      "big": "./assets/img/big/vehicle/snowspeeder.png"
+      "small": "./assets/img/small/vehicles/snowspeeder-small.png",
+      "medium": "./assets/img/medium/vehicles/snowspeeder-medium.png",
+      "big": "./assets/img/big/vehicles/snowspeeder.png"
     }
   },
   {
     "name": "TIE bomber",
     "images": {
-      "small": "./assets/img/small/vehicle/tie-bomber-small.png",
-      "medium": "./assets/img/medium/vehicle/tie-bomber-medium.png",
-      "big": "./assets/img/big/vehicle/tie-bomber.png"
+      "small": "./assets/img/small/vehicles/tie-bomber-small.png",
+      "medium": "./assets/img/medium/vehicles/tie-bomber-medium.png",
+      "big": "./assets/img/big/vehicles/tie-bomber.png"
     }
   },
   {
     "name": "AT-AT",
     "images": {
-      "small": "./assets/img/small/vehicle/at-at-small.png",
-      "medium": "./assets/img/medium/vehicle/at-at-medium.png",
-      "big": "./assets/img/big/vehicle/at-at.png"
+      "small": "./assets/img/small/vehicles/at-at-small.png",
+      "medium": "./assets/img/medium/vehicles/at-at-medium.png",
+      "big": "./assets/img/big/vehicles/at-at.png"
     }
   },
   {
     "name": "AT-ST",
     "images": {
-      "small": "./assets/img/small/vehicle/at-st-small.png",
-      "medium": "./assets/img/medium/vehicle/at-st-medium.png",
-      "big": "./assets/img/big/vehicle/at-st.png"
+      "small": "./assets/img/small/vehicles/at-st-small.png",
+      "medium": "./assets/img/medium/vehicles/at-st-medium.png",
+      "big": "./assets/img/big/vehicles/at-st.png"
     }
   },
   {
     "name": "Storm IV Twin-Pod cloud car",
     "images": {
-      "small": "./assets/img/small/vehicle/storm-iv-twin-pod-cloud-car-small.png",
-      "medium": "./assets/img/medium/vehicle/storm-iv-twin-pod-cloud-car-medium.png",
-      "big": "./assets/img/big/vehicle/storm-iv-twin-pod-cloud-car.png"
+      "small": "./assets/img/small/vehicles/storm-iv-twin-pod-cloud-car-small.png",
+      "medium": "./assets/img/medium/vehicles/storm-iv-twin-pod-cloud-car-medium.png",
+      "big": "./assets/img/big/vehicles/storm-iv-twin-pod-cloud-car.png"
     }
   },
   {
     "name": "Sail barge",
     "images": {
-      "small": "./assets/img/small/vehicle/sail-barge-small.png",
-      "medium": "./assets/img/medium/vehicle/sail-barge-medium.png",
-      "big": "./assets/img/big/vehicle/sail-barge.png"
+      "small": "./assets/img/small/vehicles/sail-barge-small.png",
+      "medium": "./assets/img/medium/vehicles/sail-barge-medium.png",
+      "big": "./assets/img/big/vehicles/sail-barge.png"
     }
   }
 ]

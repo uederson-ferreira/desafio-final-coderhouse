@@ -2,81 +2,81 @@
   {
     "name": "Tatooine",
     "images": {
-      "small": "./assets/img/small/planet/tatooine-small.png",
-      "medium": "./assets/img/medium/planet/tatooine-medium.png",
-      "big": "./assets/img/big/planet/tatooine-big.png"
+      "small": "./assets/img/small/planets/tatooine-small.png",
+      "medium": "./assets/img/medium/planets/tatooine-medium.png",
+      "big": "./assets/img/big/planets/tatooine-big.png"
     }
   },
   {
     "name": "Alderaan",
     "images": {
-      "small": "./assets/img/small/planet/alderaan-small.png",
-      "medium": "./assets/img/medium/planet/alderaan-medium.png",
-      "big": "./assets/img/big/planet/alderaan-big.png"
+      "small": "./assets/img/small/planets/alderaan-small.png",
+      "medium": "./assets/img/medium/planets/alderaan-medium.png",
+      "big": "./assets/img/big/planets/alderaan-big.png"
     }
   },
   {
     "name": "Yavin IV",
     "images": {
-      "small": "./assets/img/small/planet/yavin-iv-small.png",
-      "medium": "./assets/img/medium/planet/yavin-iv-medium.png",
-      "big": "./assets/img/big/planet/yavin-iv-big.png"
+      "small": "./assets/img/small/planets/yavin-iv-small.png",
+      "medium": "./assets/img/medium/planets/yavin-iv-medium.png",
+      "big": "./assets/img/big/planets/yavin-iv-big.png"
     }
   },
   {
     "name": "Hoth",
     "images": {
-      "small": "./assets/img/small/planet/hoth-small.png",
-      "medium": "./assets/img/medium/planet/hoth-medium.png",
-      "big": "./assets/img/big/planet/hoth-big.png"
+      "small": "./assets/img/small/planets/hoth-small.png",
+      "medium": "./assets/img/medium/planets/hoth-medium.png",
+      "big": "./assets/img/big/planets/hoth-big.png"
     }
   },
   {
     "name": "Dagobah",
     "images": {
-      "small": "./assets/img/small/planet/dagobah-small.png",
-      "medium": "./assets/img/medium/planet/dagobah-medium.png",
-      "big": "./assets/img/big/planet/dagobah-big.png"
+      "small": "./assets/img/small/planets/dagobah-small.png",
+      "medium": "./assets/img/medium/planets/dagobah-medium.png",
+      "big": "./assets/img/big/planets/dagobah-big.png"
     }
   },
   {
     "name": "Bespin",
     "images": {
-      "small": "./assets/img/small/planet/bespin-small.png",
-      "medium": "./assets/img/medium/planet/bespin-medium.png",
-      "big": "./assets/img/big/planet/bespin-big.png"
+      "small": "./assets/img/small/planets/bespin-small.png",
+      "medium": "./assets/img/medium/planets/bespin-medium.png",
+      "big": "./assets/img/big/planets/bespin-big.png"
     }
   },
   {
     "name": "Endor",
     "images": {
-      "small": "./assets/img/small/planet/endor-small.png",
-      "medium": "./assets/img/medium/planet/endor-medium.png",
-      "big": "./assets/img/big/planet/endor-big.png"
+      "small": "./assets/img/small/planets/endor-small.png",
+      "medium": "./assets/img/medium/planets/endor-medium.png",
+      "big": "./assets/img/big/planets/endor-big.png"
     }
   },
   {
     "name": "Naboo",
     "images": {
-      "small": "./assets/img/small/planet/naboo-small.png",
-      "medium": "./assets/img/medium/planet/naboo-medium.png",
-      "big": "./assets/img/big/planet/naboo-big.png"
+      "small": "./assets/img/small/planets/naboo-small.png",
+      "medium": "./assets/img/medium/planets/naboo-medium.png",
+      "big": "./assets/img/big/planets/naboo-big.png"
     }
   },
   {
     "name": "Coruscant",
     "images": {
-      "small": "./assets/img/small/planet/coruscant-small.png",
-      "medium": "./assets/img/medium/planet/coruscant-medium.png",
-      "big": "./assets/img/big/planet/coruscant-big.png"
+      "small": "./assets/img/small/planets/coruscant-small.png",
+      "medium": "./assets/img/medium/planets/coruscant-medium.png",
+      "big": "./assets/img/big/planets/coruscant-big.png"
     }
   },
   {
     "name": "Kamino",
     "images": {
-      "small": "./assets/img/small/planet/kamino-small.png",
-      "medium": "./assets/img/medium/planet/kamino-medium.png",
-      "big": "./assets/img/big/planet/kamino-big.png"
+      "small": "./assets/img/small/planets/kamino-small.png",
+      "medium": "./assets/img/medium/planets/kamino-medium.png",
+      "big": "./assets/img/big/planets/kamino-big.png"
     }
   }
 ]

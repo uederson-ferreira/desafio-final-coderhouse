@@ -8,7 +8,6 @@ function fetchData(page) {
     .then(data => {
       // Renderiza os dados da página atual
       renderData(data.results);
-      console.log(data);
 
       // Atualiza os controles de navegação
       updateNavigation(data.count);

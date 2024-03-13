@@ -2,81 +2,81 @@
   {
     "name": "Human",
     "images": {
-      "small": "./assets/img/small/especies/luke-skywalker-small.png",
-      "medium": "./assets/img/medium/especies/luke-skywalker-medium.png",
-      "big": "./assets/img/big/especies/luke-skywalker-big.png"
+      "small": "./assets/img/small/species/human-small.png",
+      "medium": "./assets/img/medium/species/human-medium.png",
+      "big": "./assets/img/big/species/human-big.png"
     }
   },
   {
     "name": "Droid",
     "images": {
-      "small": "./assets/img/small/especies/c-3po-small.png",
-      "medium": "./assets/img/medium/especies/c-3po-medium.png",
-      "big": "./assets/img/big/especies/c-3po-big.png"
+      "small": "./assets/img/small/species/droid-small.png",
+      "medium": "./assets/img/medium/species/droid-medium.png",
+      "big": "./assets/img/big/species/droid-big.png"
     }
   },
   {
-    "name": "Wookie",
+    "name": "Wookiee",
     "images": {
-      "small": "./assets/img/small/especies/r2-d2-small.png",
-      "medium": "./assets/img/medium/especies/r2-d2-medium.png",
-      "big": "./assets/img/big/especies/r2-d2-big.png"
+      "small": "./assets/img/small/species/wookiee-small.png",
+      "medium": "./assets/img/medium/species/wookiee-medium.png",
+      "big": "./assets/img/big/species/wookiee-big.png"
     }
   },
   {
     "name": "Rodian",
     "images": {
-      "small": "./assets/img/small/especies/darth-vader-small.png",
-      "medium": "./assets/img/medium/especies/darth-vader-medium.png",
-      "big": "./assets/img/big/especies/darth-vader-big.png"
+      "small": "./assets/img/small/species/rodian-small.png",
+      "medium": "./assets/img/medium/species/rodian-medium.png",
+      "big": "./assets/img/big/species/rodian-big.png"
     }
   },
   {
     "name": "Hutt",
     "images": {
-      "small": "./assets/img/small/especies/leia-organa-small.png",
-      "medium": "./assets/img/medium/especies/leia-organa-medium.png",
-      "big": "./assets/img/big/especies/leia-organa-big.png"
+      "small": "./assets/img/small/species/hutt-small.png",
+      "medium": "./assets/img/medium/species/hutt-medium.png",
+      "big": "./assets/img/big/species/hutt-big.png"
     }
   },
   {
     "name": "Yoda's Species",
     "images": {
-      "small": "./assets/img/small/especies/yoda's-species-small.png",
-      "medium": "./assets/img/medium/especies/yoda's-species-medium.png",
-      "big": "./assets/img/big/especies/yoda's-species-big.png"
+      "small": "./assets/img/small/species/yoda's-species-small.png",
+      "medium": "./assets/img/medium/species/yoda's-species-medium.png",
+      "big": "./assets/img/big/species/yoda's-species-big.png"
     }
   },
   {
     "name": "Trandoshan",
     "images": {
-      "small": "./assets/img/small/especies/trandoshan-small.png",
-      "medium": "./assets/img/medium/especies/trandoshan-medium.png",
-      "big": "./assets/img/big/especies/trandoshan-big.png"
+      "small": "./assets/img/small/species/trandoshan-small.png",
+      "medium": "./assets/img/medium/species/trandoshan-medium.png",
+      "big": "./assets/img/big/species/trandoshan-big.png"
     }
   },
   {
     "name": "Mon Calamari",
     "images": {
-      "small": "./assets/img/small/personagens/mon-calamari-small.png",
-      "medium": "./assets/img/medium/personagens/mon-calamari-medium.png",
-      "big": "./assets/img/big/personagens/mon-calamari-big.png"
+      "small": "./assets/img/small/species/mon-calamari-small.png",
+      "medium": "./assets/img/medium/species/mon-calamari-medium.png",
+      "big": "./assets/img/big/species/mon-calamari-big.png"
     }
   },
   {
     "name": "Ewok",
     "images": {
-      "small": "./assets/img/small/especies/ewok-small.png",
-      "medium": "./assets/img/medium/especies/ewok-medium.png",
-      "big": "./assets/img/big/especies/ewok-big.png"
+      "small": "./assets/img/small/species/ewok-small.png",
+      "medium": "./assets/img/medium/species/ewok-medium.png",
+      "big": "./assets/img/big/species/ewok-big.png"
     }
   },
   {
     "name": "Sullustan",
     "images": {
-      "small": "./assets/img/small/especies/sullustan-small.png",
-      "medium": "./assets/img/medium/especies/Sullustan-medium.png",
-      "big": "./assets/img/big/especies/Sullustan-big.png"
+      "small": "./assets/img/small/species/sullustan-small.png",
+      "medium": "./assets/img/medium/species/Sullustan-medium.png",
+      "big": "./assets/img/big/species/Sullustan-big.png"
     }
   }
 ]
