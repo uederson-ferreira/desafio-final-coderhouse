@@ -1,47 +1,87 @@
-//Função para incorporar seções em importSection
-// function creatSections() {
-//   const importSection = $("<section>").addClass("importSection");
+// Função para incorporar seções em importSection
+function creatSections(dadaMerged, ordemSecoesInternas) {
+  const sectionExterna = $("<section>").addClass("sectionExterna");
 
-//   const titulosSecoes = [
-//     "personagens",
-//     "planetas",
-//     "espécies",
-//     "veículos",
-//     "naves espaciais",
-//     // Adicione mais textos conforme necessário
-//   ];
+  const titulosSecoes = [
+    "Personagens",
+    "Planetas",
+    "Filmes",
+    "Espécies",
+    "veículos",
+    "Naves Espaciais",
+  ];
 
-//   //Percorrer os dados e criar sections interna
-//   dadaMerged.forEach(function (item) {
-//     const sectionInterna = $("<section>").addClass("background bgWhite");
+  //Percorrer os dados de acordo com a nova ordem
+  ordemSecoesInternas.forEach(function (index) {
+    const item = dadaMerged[index];
 
-//     const tituloSecao = $("<h2>")
-//       .addClass("tituloSecao bg yellow")
-//       .text(titulosSecoes[dadaMerged.indexOf(item)]);
+    const sectionInterna = $("<section>").addClass("sectionInterna background");
 
-//     const divInterna = $("<div>");
+    //Seleciona o índice 1 e 2 (seções de Filmes e Planetas)
+    const indice1e2 = index === 1 || index === 2;
 
-//     item.results.forEach(function (result) {
-//       // Criar a tag img com o src da imagem
-//       const imagem = $("<img>").attr("src", result.images.small);
+    const tituloSecao = $("<h2>")
+      .addClass("tituloSecao")
+      .text(titulosSecoes[index]);
 
-//       // Criar a tag p com o nome
-//       const nome = $("<p>").text(result.name);
+    // Adicionar classes de estilização para os índices 2 e 1
+    if (indice1e2) {
+      sectionInterna.removeClass("bgWhite");
+      tituloSecao.removeClass("bgYellow").addClass("colorWhite");
+    } else {
+      sectionInterna.addClass("bgWhite");
+      tituloSecao.addClass("bgYellow");
+    }
 
-//       // Adicionar imagem e nome à div
-//       divInterna.append(imagem, nome);
-//     });
+    const divGrupo = $("<div>").addClass("sectionInterna__grupo");
 
-//     sectionInterna.append(tituloSecao, divInterna);
+    //Iterar sobre os resultados de item(dadaMerged) e criar imagens e parágrafos
+    for (let i = 0; i < 4 && item.results[i]; i++) {
+      const divItem = $("<div>").addClass("sectionInterna__item");
+      const imgSrc = item.results[i].images.small;
+      const itemName = item.results[i].name;
+      const itemTitle = item.results[i].title;
 
-//     importSection.append(sectionInterna);
-//   });
-//   $("main").append(importSection);
-// }
+      //Verificar se o campo 'name' está presente, senão, usar 'title'
+      const itemNameText = itemName ? itemName : itemTitle;
 
-// creatSections();
+      const img = $("<img>")
+        .addClass("sectionInterna__img")
+        .attr("src", imgSrc);
+      const text = $("<p>").addClass("sectionInterna__text").text(itemNameText);
 
-//Requisição Root API
+      if (indice1e2) {
+        text.addClass("colorWhite");
+      }
+
+      divItem.append(img, text);
+      divGrupo.append(divItem);
+    }
+
+    const botaoDireitaImg = $("<img>")
+      .attr("src", "./assets/img/shared/seta-circular-direita.svg")
+      .addClass("btn--widthImg");
+    const botaoDireita = $("<a>")
+      .text("ver mais")
+      .attr("href", "#")
+      .append(botaoDireitaImg)
+      .addClass("botaoDireita btn btn--fonte btn--center btn--bg bgWhite");
+
+    if (indice1e2) {
+      botaoDireita.addClass("bgWhite");
+    }
+
+    sectionInterna.append(tituloSecao, divGrupo, botaoDireita);
+    sectionExterna.append(sectionInterna);
+  });
+
+  $("main").append(sectionExterna);
+}
+
+//Ordem das seções internas
+const ordemSecoesInternas = [0, 3, 5, 4, 2, 1];
+
+// Requisição Root API
 $.ajax({
   url: "https://swapi.py4e.com/api/",
   method: "GET",
@@ -49,7 +89,7 @@ $.ajax({
   success: function (dataRootAPI) {
     let links = Object.values(dataRootAPI);
 
-    //Função para resolução de requisição de links do Root API
+    // Função para resolução de requisição de links do Root API
     function carregarArquivoJson(url) {
       return new Promise(function (resolve, reject) {
         $.ajax({
@@ -66,13 +106,13 @@ $.ajax({
       });
     }
 
-    //Função que inicia as requisições
+    // Função que inicia as requisições
     function fazerRequisicoes() {
       let requisicoes = links.map(function (url) {
         return carregarArquivoJson(url);
       });
 
-      //Aguarda todas as promessas serem resolvidas
+      // Aguarda todas as promessas serem resolvidas
       Promise.all(requisicoes)
         .then(async function (dataArray) {
           const arquivosJson = [
@@ -84,7 +124,7 @@ $.ajax({
             "../assets/json/images-starships.json",
           ];
 
-          //Função para mesclar os dados
+          // Função para mesclar os dados
           async function mesclarDados() {
             const result = [];
 
@@ -119,6 +159,9 @@ $.ajax({
 
           const dadaMerged = await mesclarDados();
           console.log(dadaMerged);
+
+          // Chama a função com os dados mesclados
+          creatSections(dadaMerged, ordemSecoesInternas);
         })
         .catch(function (error) {
           console.log("Erro na solicitação: ", error);
@@ -128,6 +171,6 @@ $.ajax({
     fazerRequisicoes();
   },
   error: function (error) {
-    console.log("Erro na solicitação:  ", error);
+    console.log("Erro na solicitação: ", error);
   },
 });
