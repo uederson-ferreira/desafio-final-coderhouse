@@ -30,3 +30,6 @@ DerivedData
 
 # Arquivos de configuração do CocoaPods
 /Pods
+
+.sass-cache
+node_modules
