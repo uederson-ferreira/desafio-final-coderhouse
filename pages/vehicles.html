@@ -3,35 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/stylesveiculos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- <link rel="stylesheet" href="../assets/css/stylesveiculos.css" /> -->
+    <link rel="stylesheet" href="../assets/css/style-global.css" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link
       href="https://fonts.cdnfonts.com/css/starjedi-special-edition"
       rel="stylesheet"
     />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <title>Veículos - Star Wars</title>
+    <link
+      rel="icon"
+      href="../assets/img/shared/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/shared/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Universo Star Wars | Veículos</title>
   </head>
   <body class="container max-w-full">
     <header>
       <div class="logo">
-        <a href="#">
+        <a href="../index.html">
           <img
-            src="./assets/img/shared/logo.svg"
+            src="../assets/img/shared/logo.svg"
             alt="Star Wars. Clique para ir para home"
           />
         </a>
       </div>
 
       <img
-        src="./assets/img/shared/menu-white.svg"
+        src="../assets/img/shared/menu-white.svg"
         alt="Menu"
         class="btn btnMenu btn--width"
       />
@@ -40,7 +44,7 @@
         <nav>
           <ul class="menu--contentPosition">
             <li>
-              <a href="./pages/people.html">
+              <a href="./people.html">
                 <p
                   class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
                 >
@@ -50,7 +54,7 @@
             </li>
 
             <li>
-              <a href="./pages/species.html">
+              <a href="./species.html">
                 <p
                   class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
                 >
@@ -61,7 +65,7 @@
 
             <li>
               <div class="menu__dropdown--contentPosition">
-                <a href="./pages/films.html">
+                <a href="./films.html">
                   <p
                     class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
                   >
@@ -69,7 +73,7 @@
                   </p>
                 </a>
                 <img
-                  src="./assets/img/shared/chevron-white.svg"
+                  src="../assets/img/shared/chevron-white.svg"
                   alt=""
                   class="btn menu__dropdown--chevron"
                 />
@@ -77,7 +81,7 @@
 
               <ul class="menu__submenu">
                 <li>
-                  <a href="./pages/trilogia-star-wars.html">
+                  <a href="./trilogia-star-wars.html">
                     <p
                       class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverWhite activeYellow"
                     >
@@ -89,7 +93,7 @@
             </li>
 
             <li>
-              <a href="./pages/starships.html">
+              <a href="./starships.html">
                 <p
                   class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
                 >
@@ -99,7 +103,7 @@
             </li>
 
             <li>
-              <a href="./pages/vehicles.html">
+              <a href="./vehicles.html">
                 <p
                   class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
                 >
@@ -109,7 +113,7 @@
             </li>
 
             <li>
-              <a href="./pages/planets.html">
+              <a href="./planets.html">
                 <p
                   class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
                 >
@@ -124,7 +128,7 @@
       <nav>
         <ul class="navBar">
           <li>
-            <a href="./pages/people.html">
+            <a href="./people.html">
               <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 personagens
               </p>
@@ -132,7 +136,7 @@
           </li>
 
           <li>
-            <a href="./pages/species.html">
+            <a href="./species.html">
               <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 espécies
               </p>
@@ -140,7 +144,7 @@
           </li>
 
           <li class="navBar__dropdown">
-            <a href="./pages/films.html">
+            <a href="./films.html">
               <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 filmes
               </p>
@@ -148,7 +152,7 @@
 
             <ul class="navBar__submenu navBar__submenu--position">
               <li>
-                <a href="./pages/trilogia-star-wars.html">
+                <a href="./trilogia-star-wars.html">
                   <p
                     class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverBlack"
                   >
@@ -160,7 +164,7 @@
           </li>
 
           <li>
-            <a href="./pages/starships.html">
+            <a href="./starships.html">
               <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 naves
               </p>
@@ -168,7 +172,7 @@
           </li>
 
           <li>
-            <a href="./pages/vehicles.html">
+            <a href="./vehicles.html">
               <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 veículos
               </p>
@@ -176,7 +180,7 @@
           </li>
 
           <li>
-            <a href="./pages/planets.html">
+            <a href="./planets.html">
               <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 Planetas
               </p>
@@ -190,123 +194,12 @@
         <img src="./assets/img/shared/estrela.png" alt="" class="slogan--img" />
       </div>
     </header>
-    <!-- Nav antes do uso do TwailWindCSS -->
-    <!-- <nav>
-        <a href="../index.html">Home</a>
-        <a href="../pages/personagens.html">Personagens</a>
-        <a href="../pages/especies.html">Espécies</a>
-        <a href="#filmes">Filmes</a>
-        <a href="../pages/naves.html">Naves Espaciais</a>
-        <a href="../pages/veiculos.html">Veículos</a>
-        <a href="../pages/planetas.html">Planetas</a>
-    </nav> -->
-    <nav class="bg-black bg-white-800">
-      <div class="mx-auto max-w-7xl px-2 sm:px-8 lg:px-8">
-        <div class="relative flex h-10 items-center justify-between">
-          <div
-            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
-          >
-            <div class="flex flex-shrink-0 items-center">
-              <img
-                class="h-8 w-auto"
-                src="../assets/img/logo.JPG"
-                alt="Your Company"
-              />
-            </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-1">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a
-                  href="../index.html"
-                  class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                  aria-current="page"
-                  >Home</a
-                >
-                <a
-                  href="../pages/personagens.html"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Personagens</a
-                >
-                <a
-                  href="../pages/especies.html"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Espécies</a
-                >
-                <a
-                  href="../pages/filmes.html"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Filmes</a
-                >
-                <a
-                  href="../pages/naves.html"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Naves Espaciais</a
-                >
-                <a
-                  href="../pages/veiculos.html"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Veículos</a
-                >
-                <a
-                  href="../pages/planetas2.html"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  >Planetas</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-0 px-2 pb-3 pt-2 bg-black-800">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a
-            href="../index.html"
-            class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page"
-            >Home</a
-          >
-          <a
-            href="../pages/personagens.html"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Personagens</a
-          >
-          <a
-            href="../pages/especies.html"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Espécies</a
-          >
-          <a
-            href="#filmes"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Filmes</a
-          >
-          <a
-            href="../pages/naves.html"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Naves Espaciais</a
-          >
-          <a
-            href="../pages/veiculos.html"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Veículos</a
-          >
-          <a
-            href="../pages/planetas.html"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >Planetas</a
-          >
-        </div>
-      </div>
-    </nav>
+    <div class="innerWrapper">
+      <main class="content"></main>
+    </div>
 
-    <div class="tudosobre">Tudo sobre Star Wars</div>
-
-    <div class="qualpagina">Home / Veículos</div>
-
-    <main>
+    <!-- <main>
       <section class="esquerdo"></section>
 
       <section class="navios">
@@ -518,13 +411,13 @@
       </section>
 
       <aside class="esquerdo"></aside>
-    </main>
+    </main> -->
 
     <footer>
       <div class="btn btnTopo btn--left btn--bg">
         <p class="btn--fonte colorWhite activeYellow">Voltar ao topo</p>
         <img
-          src="./assets/img/shared/seta-circular-cima.svg"
+          src="../assets/img/shared/seta-circular-cima.svg"
           alt="seta para cima"
           class="btn--widthImg"
         />
@@ -534,114 +427,111 @@
         <h3 class="Footer--titulo">Mapa do Site</h3>
 
         <div class="links">
-          <a href="#" class="links__item animationWord">
+          <a href="../index.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Home</p>
-            <img src="./assets/img/shared/external-link-white.svg" alt="" />
+            <img src="../assets/img/shared/external-link-white.svg" alt="" />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/people.html" class="links__item animationWord">
+          <a href="./people.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Personagens</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/species.html" class="links__item animationWord">
+          <a href="./species.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Espécies</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/films.html" class="links__item animationWord">
+          <a href="./films.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Filmes</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a
-            href="./pages/trilogia-star-wars.html"
-            class="links__item animationWord"
-          >
+          <a href="./trilogia-star-wars.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Trilogia star wars</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/starships.html" class="links__item animationWord">
+          <a href="./starships.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Naves Espaciais</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/vehicles.html" class="links__item animationWord">
+          <a href="./vehicles.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Veículos</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/planets.html" class="links__item animationWord">
+          <a href="./planets.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Planetas</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
@@ -661,7 +551,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
@@ -669,7 +559,7 @@
 
               <a href="https://github.com/GabrielCarneiroSousa" target="_blank">
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -677,7 +567,7 @@
 
               <a href="https://www.instagram.com/htmlbiel/" target="_blank">
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -685,7 +575,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -693,7 +583,7 @@
 
               <a href="https://twitter.com/oMavv_x" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -708,7 +598,7 @@
             <figure class="grupoDev__item--img">
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
@@ -716,7 +606,7 @@
 
               <a href="https://github.com/SardeiroPaulo" target="_blank">
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -727,7 +617,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -738,7 +628,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -746,7 +636,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -764,7 +654,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
@@ -775,7 +665,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -786,7 +676,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -797,7 +687,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -805,7 +695,7 @@
 
               <a href="https://twitter.com/ThiagoB09013321" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -820,7 +710,7 @@
             <figure class="grupoDev__item--img">
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
@@ -828,7 +718,7 @@
 
               <a href="https://github.com/uederson-ferreira" target="_blank">
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -836,7 +726,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -844,7 +734,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -852,7 +742,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -869,5 +759,8 @@
         direitos autorais da Lucasfilm Ltd.
       </p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/funcoesBasicas.js"></script>
   </body>
 </html>

@@ -1,79 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style-global.css">
-    <link rel="stylesheet" href="../assets/css/stylesnaves.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/starjedi-special-edition" rel="stylesheet">
-
-    <title>Naves - Star Wars</title>
-
-</head>
-<body class="container max-w-full">
-  <header>
-    <div class="logo">
-      <a href="#">
-        <img
-          src="./assets/img/shared/logo.svg"
-          alt="Star Wars. Clique para ir para home"
-        />
-      </a>
-    </div>
-
-    <img
-      src="./assets/img/shared/menu-white.svg"
-      alt="Menu"
-      class="btn btnMenu btn--width"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../assets/css/stylesnaves.css"> -->
+    <link rel="stylesheet" href="../assets/css/style-global.css" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/starjedi-special-edition"
+      rel="stylesheet"
     />
+    <link
+      rel="icon"
+      href="../assets/img/shared/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/shared/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Universo Star Wars | Naves Espaciais</title>
+  </head>
+  <body class="container max-w-full">
+    <header>
+      <div class="logo">
+        <a href="../index.html">
+          <img
+            src="../assets/img/shared/logo.svg"
+            alt="Star Wars. Clique para ir para home"
+          />
+        </a>
+      </div>
 
-    <div class="menu menu--positionStart">
+      <img
+        src="../assets/img/shared/menu-white.svg"
+        alt="Menu"
+        class="btn btnMenu btn--width"
+      />
+
+      <div class="menu menu--positionStart">
+        <nav>
+          <ul class="menu--contentPosition">
+            <li>
+              <a href="./people.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                >
+                  personagens
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./species.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                >
+                  espécies
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <div class="menu__dropdown--contentPosition">
+                <a href="./films.html">
+                  <p
+                    class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                  >
+                    filmes
+                  </p>
+                </a>
+                <img
+                  src="../assets/img/shared/chevron-white.svg"
+                  alt=""
+                  class="btn menu__dropdown--chevron"
+                />
+              </div>
+
+              <ul class="menu__submenu">
+                <li>
+                  <a href="./trilogia-star-wars.html">
+                    <p
+                      class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverWhite activeYellow"
+                    >
+                      trilogia star wars
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./starships.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                >
+                  naves
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./vehicles.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                >
+                  veículos
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="./planets.html">
+                <p
+                  class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
+                >
+                  planetas
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <nav>
-        <ul class="menu--contentPosition">
+        <ul class="navBar">
           <li>
-            <a href="./pages/people.html">
-              <p
-                class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
-              >
+            <a href="./people.html">
+              <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 personagens
               </p>
             </a>
           </li>
 
           <li>
-            <a href="./pages/species.html">
-              <p
-                class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
-              >
+            <a href="./species.html">
+              <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 espécies
               </p>
             </a>
           </li>
 
-          <li>
-            <div class="menu__dropdown--contentPosition">
-              <a href="./pages/films.html">
-                <p
-                  class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
-                >
-                  filmes
-                </p>
-              </a>
-              <img
-                src="./assets/img/shared/chevron-white.svg"
-                alt=""
-                class="btn menu__dropdown--chevron"
-              />
-            </div>
+          <li class="navBar__dropdown">
+            <a href="./films.html">
+              <p class="fonte-navegação colorDimGray animationWord hoverBlack">
+                filmes
+              </p>
+            </a>
 
-            <ul class="menu__submenu">
+            <ul class="navBar__submenu navBar__submenu--position">
               <li>
-                <a href="./pages/trilogia-star-wars.html">
+                <a href="./trilogia-star-wars.html">
                   <p
-                    class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverWhite activeYellow"
+                    class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverBlack"
                   >
                     trilogia star wars
                   </p>
@@ -83,159 +164,66 @@
           </li>
 
           <li>
-            <a href="./pages/starships.html">
-              <p
-                class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
-              >
+            <a href="./starships.html">
+              <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 naves
               </p>
             </a>
           </li>
 
           <li>
-            <a href="./pages/vehicles.html">
-              <p
-                class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
-              >
+            <a href="./vehicles.html">
+              <p class="fonte-navegação colorDimGray animationWord hoverBlack">
                 veículos
               </p>
             </a>
           </li>
 
           <li>
-            <a href="./pages/planets.html">
-              <p
-                class="fonte-navegação colorDimGray animationWord hoverWhite activeYellow"
-              >
-                planetas
+            <a href="./planets.html">
+              <p class="fonte-navegação colorDimGray animationWord hoverBlack">
+                Planetas
               </p>
             </a>
           </li>
         </ul>
       </nav>
-    </div>
 
-    <nav>
-      <ul class="navBar">
-        <li>
-          <a href="./pages/people.html">
-            <p
-              class="fonte-navegação colorDimGray animationWord hoverBlack"
-            >
-              personagens
-            </p>
-          </a>
-        </li>
-
-        <li>
-          <a href="./pages/species.html">
-            <p
-              class="fonte-navegação colorDimGray animationWord hoverBlack"
-            >
-              espécies
-            </p>
-          </a>
-        </li>
-
-        <li class="navBar__dropdown">
-          <a href="./pages/films.html">
-            <p
-              class="fonte-navegação colorDimGray animationWord hoverBlack"
-            >
-              filmes
-            </p>
-          </a>
-
-          <ul class="navBar__submenu navBar__submenu--position">
-            <li>
-              <a href="./pages/trilogia-star-wars.html">
-                <p
-                  class="fonte-navegaçãoSubmenu colorDimGray animationWord hoverBlack"
-                >
-                  trilogia star wars
-                </p>
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="./pages/starships.html">
-            <p
-              class="fonte-navegação colorDimGray animationWord hoverBlack"
-            >
-              naves
-            </p>
-          </a>
-        </li>
-
-        <li>
-          <a href="./pages/vehicles.html">
-            <p
-              class="fonte-navegação colorDimGray animationWord hoverBlack"
-            >
-              veículos
-            </p>
-          </a>
-        </li>
-
-        <li>
-          <a href="./pages/planets.html">
-            <p
-              class="fonte-navegação colorDimGray animationWord hoverBlack"
-            >
-              Planetas
-            </p>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="slogan slogan--position">
-      <p class="slogan--fonte">Tudo Sobre Star Wars</p>
-      <img
-        src="./assets/img/shared/estrela.png"
-        alt=""
-        class="slogan--img"
-      />
-    </div>
-  </header>
-
-
-    <div class="tudosobre">Tudo sobre Star Wars</div>
-     
+      <div class="slogan slogan--position">
+        <p class="slogan--fonte">Tudo Sobre Star Wars</p>
+        <img src="./assets/img/shared/estrela.png" alt="" class="slogan--img" />
+      </div>
+    </header>
 
     <div class="innerWrapper">
-        <main>
-            <section class="esquerdo"></section>
-    
-            <section class="navios">
-                <div class="DivTxtNaves">naves espaciais</div>
-                <div class="navesgeral">
-                    <div id="data-container" class="navefora">
-                      <!-- Os dados desta Div estao sendo inseridos pelo js -->
-                    </div>
-                <div class="passpaginas">
-                    <!-- <div id="data-container" class="paginas"> -->
-                        <!-- Os dados desta Div estao sendo inseridos pelo js -->
-                    <!-- </div> -->
-                    <div id="pagination-container" class="paginas">
-                      <!-- Os dados desta Div estao sendo inseridos pelo js -->
-                  </div>
-                </div>
-            </section>
-      
-            <aside class="esquerdo">
-            </aside>  
-        </main>
-        
+      <main class="content">
+        <section class="esquerdo"></section>
 
+        <section class="navios">
+          <div class="DivTxtNaves">naves espaciais</div>
+          <div class="navesgeral"></div>
+          <div id="data-container" class="navefora">
+            <!-- Os dados desta Div estao sendo inseridos pelo js -->
+          </div>
+          <div class="passpaginas">
+            <!-- <div id="data-container" class="paginas"> -->
+            <!-- Os dados desta Div estao sendo inseridos pelo js -->
+            <!-- </div> -->
+            <div id="pagination-container" class="paginas">
+              <!-- Os dados desta Div estao sendo inseridos pelo js -->
+            </div>
+          </div>
+        </section>
+
+        <aside class="esquerdo"></aside>
+      </main>
     </div>
+
     <footer>
       <div class="btn btnTopo btn--left btn--bg">
         <p class="btn--fonte colorWhite activeYellow">Voltar ao topo</p>
         <img
-          src="./assets/img/shared/seta-circular-cima.svg"
+          src="../assets/img/shared/seta-circular-cima.svg"
           alt="seta para cima"
           class="btn--widthImg"
         />
@@ -245,114 +233,111 @@
         <h3 class="Footer--titulo">Mapa do Site</h3>
 
         <div class="links">
-          <a href="#" class="links__item animationWord">
+          <a href="../index.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Home</p>
-            <img src="./assets/img/shared/external-link-white.svg" alt="" />
+            <img src="../assets/img/shared/external-link-white.svg" alt="" />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/people.html" class="links__item animationWord">
+          <a href="./people.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Personagens</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/species.html" class="links__item animationWord">
+          <a href="./species.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Espécies</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/films.html" class="links__item animationWord">
+          <a href="./films.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Filmes</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a
-            href="./pages/trilogia-star-wars.html"
-            class="links__item animationWord"
-          >
+          <a href="./trilogia-star-wars.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Trilogia star wars</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/starships.html" class="links__item animationWord">
+          <a href="./starships.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Naves Espaciais</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/vehicles.html" class="links__item animationWord">
+          <a href="./vehicles.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Veículos</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
           </a>
 
           <img
-            src="./assets/img/shared/barra-white.svg"
+            src="../assets/img/shared/barra-white.svg"
             alt=""
             class="links__item--img"
           />
 
-          <a href="./pages/planets.html" class="links__item animationWord">
+          <a href="./planets.html" class="links__item animationWord">
             <p class="Footer--paragrafo colorWhite">Planetas</p>
             <img
-              src="./assets/img/shared/external-link-white.svg"
+              src="../assets/img/shared/external-link-white.svg"
               alt=""
               class="links__item--img"
             />
@@ -372,18 +357,15 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
               </a>
 
-              <a
-                href="https://github.com/GabrielCarneiroSousa"
-                target="_blank"
-              >
+              <a href="https://github.com/GabrielCarneiroSousa" target="_blank">
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -391,7 +373,7 @@
 
               <a href="https://www.instagram.com/htmlbiel/" target="_blank">
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -399,7 +381,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -407,7 +389,7 @@
 
               <a href="https://twitter.com/oMavv_x" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -422,7 +404,7 @@
             <figure class="grupoDev__item--img">
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
@@ -430,7 +412,7 @@
 
               <a href="https://github.com/SardeiroPaulo" target="_blank">
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -441,7 +423,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -452,7 +434,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -460,7 +442,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -478,7 +460,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
@@ -489,7 +471,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -500,7 +482,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -511,7 +493,7 @@
                 target="_blank"
               >
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -519,7 +501,7 @@
 
               <a href="https://twitter.com/ThiagoB09013321" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -534,7 +516,7 @@
             <figure class="grupoDev__item--img">
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/linkedin-white.svg"
+                  src="../assets/img/shared/linkedin-white.svg"
                   alt="linkedin"
                   class="btn"
                 />
@@ -542,7 +524,7 @@
 
               <a href="https://github.com/uederson-ferreira" target="_blank">
                 <img
-                  src="./assets/img/shared/github-white.svg"
+                  src="../assets/img/shared/github-white.svg"
                   alt="github"
                   class="btn"
                 />
@@ -550,7 +532,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/instagram-white.svg"
+                  src="../assets/img/shared/instagram-white.svg"
                   alt="instagram"
                   class="btn"
                 />
@@ -558,7 +540,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/facebook-white.svg"
+                  src="../assets/img/shared/facebook-white.svg"
                   alt="facebook"
                   class="btn"
                 />
@@ -566,7 +548,7 @@
 
               <a href="" target="_blank">
                 <img
-                  src="./assets/img/shared/twitter-white.svg"
+                  src="../assets/img/shared/twitter-white.svg"
                   alt="Twitter"
                   class="btn"
                 />
@@ -579,13 +561,13 @@
       </div>
 
       <p class="disclaimer">
-        "Star Wars" e todos os nomes e/ou imagens associados são protegidos
-        por direitos autorais da Lucasfilm Ltd.
+        "Star Wars" e todos os nomes e/ou imagens associados são protegidos por
+        direitos autorais da Lucasfilm Ltd.
       </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../assets/js/global.js"></script>
     <script src="../assets/js/funcoesBasicas.js"></script>
     <script src="../assets/js/naves.js"></script>
-</body>
+  </body>
 </html>
