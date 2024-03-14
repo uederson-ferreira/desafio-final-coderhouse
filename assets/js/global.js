@@ -1,7 +1,100 @@
-// Função para incorporar seções em importSection
-function creatSections(dadaMerged, ordemSecoesInternas) {
-  const sectionExterna = $("<section>").addClass("sectionExterna");
+const content = $("main");
+let h1;
+let h2;
+let h3;
+const sectionExterna = $("<section>")
+  .addClass("sectionExterna")
+  .appendTo(content);
+let sectionInterna;
+let tituloSecao;
 
+if (window.location.pathname === "/index.html") {
+  h1 = $("<h1>")
+    .text("universo star wars")
+    .addClass("tituloPagina colorYellow");
+  content.prepend(h1);
+
+  function presentation() {
+    sectionInterna = $("<section>").addClass(
+      "background presentation--bgPersonagens"
+    );
+
+    const exitPresentation = $("<img>")
+      .attr({
+        src: "./assets/img/shared/exit-black.svg",
+        alt: "fechar",
+        class: "btn btn--width btn--left bgGainsboro",
+      })
+      .on("click", () => {
+        //fechar a apresentação da pagina
+        $(".background.presentation--bgPersonagens").slideUp(550, () => {
+          $(this).remove();
+        });
+      });
+
+    const bgTextPresentation = $("<div>").addClass("background bgGainsboro");
+
+    tituloSecao = $("<h2>")
+      .addClass("tituloSecao bgYellow")
+      .text("Explorando a saga intergalatica");
+
+    const textPresentation = $("<p>")
+      .addClass("presentation--paragrafo")
+      .html(
+        "Este site foi desenvolvido como parte do curso de Desenvolvimento Web da Coderhouse BR, utilizando a <a href='https://swapi.py4e.com/' target='_blank' class='presentation--link'>API SWAPI</a> para agregar funcionalidades e dados específicos relacionados ao universo de Star Wars."
+      );
+
+    sectionInterna
+      .append(
+        exitPresentation,
+        bgTextPresentation.append(tituloSecao, textPresentation)
+      )
+      .appendTo(sectionExterna);
+  }
+  presentation();
+
+  function trilogia(dadaMerged) {
+    sectionInterna = $("<section>").addClass("background");
+
+    const h2 = $("<h2>")
+      .text("Trilogia Star wars")
+      .addClass("tituloSecao colorWhite");
+
+    const roloTrilogia = $("<div>").addClass("roloFilmes");
+
+    const itemFilmes = dadaMerged[2].results;
+
+    for (let i = 0; i < 6; i++) {
+      const titleFilm = itemFilmes[i].title;
+      const imgFilmSrc = itemFilmes[i].trilogia
+        ? itemFilmes[i].trilogia.small
+        : "";
+
+      const divFilm = $("<div>").addClass("roloFilmes__item");
+      const img = $("<img>")
+        .addClass("roloFilmes__item--img")
+        .attr("src", imgFilmSrc);
+      const title = $("<p>")
+        .addClass("roloFilmes__item--text colorWhite")
+        .text(titleFilm);
+
+      divFilm.append(img, title).appendTo(roloTrilogia);
+    }
+
+    sectionInterna.append(h2, roloTrilogia).appendTo(sectionExterna);
+  }
+  // $(document).ready(function () {
+  //   $(".roloFilmes").slick({
+  //     slidesToShow: 3,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     autoplaySpeed: 2000,
+  //   });
+  // });
+}
+
+//Função para incorporar seções com conteudos da API em sectionExterna
+function creatSections(dadaMerged, ordemSecoesInternas) {
   const titulosSecoes = [
     "Personagens",
     "Planetas",
@@ -13,18 +106,16 @@ function creatSections(dadaMerged, ordemSecoesInternas) {
 
   //Percorrer os dados de acordo com a nova ordem
   ordemSecoesInternas.forEach(function (index) {
-    const item = dadaMerged[index];
+    const item = dadaMerged[index].results;
 
-    const sectionInterna = $("<section>").addClass("sectionInterna background");
+    sectionInterna = $("<section>").addClass("sectionInterna background");
 
     //Seleciona o índice 1 e 2 (seções de Filmes e Planetas)
     const indice1e2 = index === 1 || index === 2;
 
-    const tituloSecao = $("<h2>")
-      .addClass("tituloSecao")
-      .text(titulosSecoes[index]);
+    tituloSecao = $("<h2>").addClass("tituloSecao").text(titulosSecoes[index]);
 
-    // Adicionar classes de estilização para os índices 2 e 1
+    //Adicionar classes de estilização para os índices 2 e 1
     if (indice1e2) {
       sectionInterna.removeClass("bgWhite");
       tituloSecao.removeClass("bgYellow").addClass("colorWhite");
@@ -35,27 +126,28 @@ function creatSections(dadaMerged, ordemSecoesInternas) {
 
     const divGrupo = $("<div>").addClass("sectionInterna__grupo");
 
-    //Iterar sobre os resultados de item(dadaMerged) e criar imagens e parágrafos
-    for (let i = 0; i < 4 && item.results[i]; i++) {
-      const divItem = $("<div>").addClass("sectionInterna__item");
-      const imgSrc = item.results[i].images.small;
-      const itemName = item.results[i].name;
-      const itemTitle = item.results[i].title;
+    //Iterar sobre os resultados de item(dadaMerged) e criar imagens e textos
+    for (let i = 0; i < 4; i++) {
+      const divItem = $("<div>").addClass("sectionInterna__grupo__item");
+      const imgSrc = item[i].images.small;
+      const itemName = item[i].name;
+      const itemTitle = item[i].title;
 
       //Verificar se o campo 'name' está presente, senão, usar 'title'
       const itemNameText = itemName ? itemName : itemTitle;
 
       const img = $("<img>")
-        .addClass("sectionInterna__img")
+        .addClass("sectionInterna__grupo__item--img")
         .attr("src", imgSrc);
-      const text = $("<p>").addClass("sectionInterna__text").text(itemNameText);
+      const text = $("<p>")
+        .addClass("sectionInterna__grupo__item--text")
+        .text(itemNameText);
 
       if (indice1e2) {
         text.addClass("colorWhite");
       }
 
-      divItem.append(img, text);
-      divGrupo.append(divItem);
+      divItem.append(img, text).appendTo(divGrupo);
     }
 
     const botaoDireitaImg = $("<img>")
@@ -71,11 +163,10 @@ function creatSections(dadaMerged, ordemSecoesInternas) {
       botaoDireita.addClass("bgWhite");
     }
 
-    sectionInterna.append(tituloSecao, divGrupo, botaoDireita);
-    sectionExterna.append(sectionInterna);
+    sectionInterna
+      .append(tituloSecao, divGrupo, botaoDireita)
+      .appendTo(sectionExterna);
   });
-
-  $("main").append(sectionExterna);
 }
 
 //Ordem das seções internas
@@ -160,6 +251,8 @@ $.ajax({
           const dadaMerged = await mesclarDados();
           console.log(dadaMerged);
 
+          //Chama função para o rolo de trilogia
+          trilogia(dadaMerged);
           // Chama a função com os dados mesclados
           creatSections(dadaMerged, ordemSecoesInternas);
         })

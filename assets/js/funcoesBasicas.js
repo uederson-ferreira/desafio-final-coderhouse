@@ -27,13 +27,6 @@ $(".menu__dropdown--chevron").on("click", () => {
   iconChevron.toggleClass("menu__dropdown--chevronOpen");
 });
 
-//fechar a apresentação da pagina
-$("#closePresentation").on("click", () => {
-  $(".background.presentation--bgPersonagens").slideUp(500, () => {
-    $(this).remove();
-  });
-});
-
 // scroll botão voltar ao topo
 $(document).ready(() => {
   const scrollButton = $(".btnTopo");
