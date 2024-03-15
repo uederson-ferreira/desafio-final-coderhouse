@@ -15,41 +15,56 @@ if (window.location.pathname === "/index.html") {
   content.prepend(h1);
 
   function presentation() {
-    sectionInterna = $("<section>").addClass(
-      "background presentation--bgPersonagens"
-    );
+    sectionInterna = $("<section>").addClass("background presentation bgWhite");
 
     const exitPresentation = $("<img>")
       .attr({
         src: "./assets/img/shared/exit-black.svg",
         alt: "fechar",
-        class: "btn btn--width btn--left bgGainsboro",
+        class: "btn btn--width btn--left",
       })
       .on("click", () => {
         //fechar a apresentação da pagina
-        $(".background.presentation--bgPersonagens").slideUp(550, () => {
+        $(".background.presentation").slideUp(550, () => {
           $(this).remove();
         });
       });
 
-    const bgTextPresentation = $("<div>").addClass("background bgGainsboro");
-
     tituloSecao = $("<h2>")
-      .addClass("tituloSecao bgYellow")
+      .addClass("presentation__titulo tituloSecao bgYellow")
       .text("Explorando a saga intergalatica");
 
+    const divPresentation = $("<div>").addClass("divPresentation");
+
     const textPresentation = $("<p>")
-      .addClass("presentation--paragrafo")
+      .addClass("presentation__paragrafo")
       .html(
-        "Este site foi desenvolvido como parte do curso de Desenvolvimento Web da Coderhouse BR, utilizando a <a href='https://swapi.py4e.com/' target='_blank' class='presentation--link'>API SWAPI</a> para agregar funcionalidades e dados específicos relacionados ao universo de Star Wars."
+        "Este site foi desenvolvido como parte do curso de Desenvolvimento Web da Coderhouse BR, utilizando a <a href='https://swapi.py4e.com/' target='_blank' class='presentation__paragrafo--link'>API SWAPI</a> para agregar funcionalidades e dados específicos relacionados ao universo de Star Wars."
       );
+
+    const imgPersonagens = $("<img>").attr({
+      src: "./assets/img/shared/personagens-animados.png",
+      class: "imgPersonagens",
+    });
 
     sectionInterna
       .append(
         exitPresentation,
-        bgTextPresentation.append(tituloSecao, textPresentation)
+        tituloSecao,
+        divPresentation.append(textPresentation)
       )
       .appendTo(sectionExterna);
+
+    $(window)
+      .on("resize", () => {
+        const windowWidth = $(window).width();
+        if (windowWidth <= 768) {
+          imgPersonagens.remove();
+        } else {
+          divPresentation.prepend(imgPersonagens);
+        }
+      })
+      .resize();
   }
   presentation();
 
@@ -58,9 +73,43 @@ if (window.location.pathname === "/index.html") {
 
     const h2 = $("<h2>")
       .text("Trilogia Star wars")
-      .addClass("tituloSecao colorWhite");
+      .addClass("tituloSecao colorWhite tituloTrilogia");
+    const setaH2 = $("<img>")
+      .attr("src", "./assets/img/shared/seta-circular-direita.svg")
+      .addClass("tituloTrilogia--img")
+      .appendTo(h2);
 
     const roloTrilogia = $("<div>").addClass("roloFilmes");
+
+    $(document).ready(() => {
+      $(".roloFilmes").slick({
+        centerMode: true,
+        centerPadding: "50px",
+        slidesToShow: 5,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "30px",
+              slidesToShow: 2,
+            },
+          },
+        ],
+      });
+    });
 
     const itemFilmes = dadaMerged[2].results;
 
@@ -83,14 +132,6 @@ if (window.location.pathname === "/index.html") {
 
     sectionInterna.append(h2, roloTrilogia).appendTo(sectionExterna);
   }
-  // $(document).ready(function () {
-  //   $(".roloFilmes").slick({
-  //     slidesToShow: 3,
-  //     slidesToScroll: 1,
-  //     autoplay: true,
-  //     autoplaySpeed: 2000,
-  //   });
-  // });
 }
 
 //Função para incorporar seções com conteudos da API em sectionExterna

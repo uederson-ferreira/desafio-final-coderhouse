@@ -37,51 +37,139 @@
   .sectionInterna__grupo__item--text {
     max-width: 129px;
   }
+
+  @media screen and (min-width: 768px) {
+    .tituloSecao {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+
+    .sectionInterna__grupo__item--img {
+      min-width: 150px;
+    }
+    .sectionInterna__grupo__item--text {
+      max-width: 150px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .tituloSecao {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    .sectionInterna {
+      gap: 15px;
+    }
+    .sectionInterna__grupo__item--img {
+      min-width: 170px;
+    }
+    .sectionInterna__grupo__item--text {
+      max-width: 170px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .tituloSecao {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    .sectionInterna {
+      gap: 20px;
+    }
+    .sectionInterna__grupo__item--img {
+      min-width: 190px;
+    }
+    .sectionInterna__grupo__item--text {
+      max-width: 190px;
+    }
+  }
 }
 
 @layer content {
-  .presentation--bgPersonagens {
-    background-image: url(../img/shared/personagens-animados.png);
-    background-size: 600px;
-    background-position: center top;
+  .presentation__titulo {
+    position: relative;
+    z-index: 2;
   }
-  .presentation--paragrafo {
+  .divPresentation {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .presentation__paragrafo {
     font-size: 1.25rem;
     line-height: 1.375rem;
     font-weight: 600;
-    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    z-index: 10;
   }
-  .presentation--link {
+  .presentation__paragrafo--link {
     color: var(--green);
     font-weight: 700;
     text-decoration: underline;
     white-space: nowrap;
     padding: 0 4px 0;
   }
-  .presentation--link:visited {
+  .presentation__paragrafo--link:visited {
     color: var(--black);
   }
+  .imgPersonagens {
+    width: 50%;
+    transform: scale(2) translateY(-40px) translateX(-90px);
+  }
 
-  .roloFilmes {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .roloFilmes::-webkit-scrollbar {
-    display: none;
-  }
   .roloFilmes__item {
+    padding: 0 5px 0;
+  }
+
+  .tituloTrilogia {
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    justify-content: center;
+    gap: 10px;
   }
-  .roloFilmes__item--img {
-    min-width: 129px;
+  .tituloTrilogia--img {
+    width: 1.5rem;
   }
-  .roloFilmes__item--text {
-    text-align: end;
+
+  @media screen and (min-width: 768px) {
+    .divPresentation {
+      height: 200px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .divPresentation {
+      height: 250px;
+    }
+    .presentation__paragrafo {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      margin: 0 30px 0;
+    }
+    .imgPersonagens {
+      transform: scale(1.6) translateY(-40px) translateX(-120px);
+    }
+
+    .roloFilmes {
+      margin: 0 25px 0;
+    }
+    .roloFilmes__item {
+      padding: 0 10px 0;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .divPresentation {
+      height: 300px;
+    }
+    .presentation__paragrafo {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    .imgPersonagens {
+      transform: scale(1.5) translateY(-40px) translateX(-150px);
+    }
   }
 }

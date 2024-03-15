@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Explore os Personagens de Star Wars",
+    "images": {
+      "medium": "./assets/img/shared/imagem-personagens-medium.png",
+      "big": "./assets/img/shared/imagem-personagens-big.png"
+    }
+  },
+  {
+    "title": "Descubra a Trilogia de Star Wars",
+    "images": {
+      "medium": "./assets/img/shared/imagem-filmes-medium.png",
+      "big": "./assets/img/shared/imagem-filmes-big.png"
+    }
+  },
+  {
+    "title": "Veja as Naves de Star Wars",
+    "images": {
+      "medium": "./assets/img/shared/imagem-naves-medium.png",
+      "big": "./assets/img/shared/imagem-naves-big.png"
+    }
+  },
+  {
+    "title": "Descubra a Galáxia de Star Wars",
+    "images": {
+      "medium": "./assets/img/shared/imagem-planetas-medium.png",
+      "big": "./assets/img/shared/imagem-planetas-big.png"
+    }
+  }
+]

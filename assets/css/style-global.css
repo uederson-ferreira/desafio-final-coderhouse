@@ -169,6 +169,7 @@
     width: 100%;
     padding: 10px;
     border-radius: 5px;
+    overflow: hidden;
   }
 
   .bgYellow {
@@ -187,7 +188,7 @@
   .tituloPagina {
     font-family: var(--fonte-principal);
     font-size: 3.25rem;
-    line-height: 2.675rem;
+    line-height: 2.7rem;
     letter-spacing: 2px;
     margin: 0;
   }
@@ -236,6 +237,11 @@
   }
 
   @media screen and (min-width: 768px) {
+    .tituloPagina {
+      font-size: 3.75rem;
+      line-height: 3rem;
+    }
+
     .btn--width {
       width: 50px;
     }
@@ -251,6 +257,10 @@
   }
 
   @media screen and (min-width: 1024px) {
+    .tituloPagina {
+      font-size: 4.25rem;
+    }
+
     .fonte-navegação {
       font-size: 1.625rem;
       line-height: 1.625rem;
@@ -258,6 +268,10 @@
   }
 
   @media screen and (min-width: 1440px) {
+    .tituloPagina {
+      font-size: 4.75rem;
+    }
+
     .fonte-navegação {
       font-size: 1.75rem;
       line-height: 1.75rem;
@@ -485,7 +499,6 @@
   .innerWrapper {
     display: flex;
     justify-content: center;
-    background-image: url(../img/shared/background-Estrelas.png);
     background-size: cover;
   }
 
@@ -506,6 +519,22 @@
   @media screen and (min-width: 768px) {
     .content {
       max-width: 768px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .innerWrapper {
+      background-image: url(../img/shared/background-Estrelas.png);
+    }
+
+    .content {
+      max-width: 1024px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .content {
+      max-width: 1440px;
     }
   }
 }
