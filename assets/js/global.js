@@ -8,126 +8,130 @@ const sectionExterna = $("<section>")
 let sectionInterna;
 let tituloSecao;
 
-h1 = $("<h1>").text("universo star wars").addClass("tituloPagina colorYellow");
-content.prepend(h1);
+if (window.location.pathname === "/index.html") {
+  h1 = $("<h1>")
+    .text("universo star wars")
+    .addClass("tituloPagina colorYellow");
+  content.prepend(h1);
 
-function presentation() {
-  sectionInterna = $("<section>").addClass("background presentation bgWhite");
+  function presentation() {
+    sectionInterna = $("<section>").addClass("background presentation bgWhite");
 
-  const exitPresentation = $("<img>")
-    .attr({
-      src: "./assets/img/shared/exit-black.svg",
-      alt: "fechar",
-      class: "btn btn--width btn--left",
-    })
-    .on("click", () => {
-      //fechar a apresentação da pagina
-      $(".background.presentation").slideUp(550, () => {
-        $(this).remove();
+    const exitPresentation = $("<img>")
+      .attr({
+        src: "./assets/img/shared/exit-black.svg",
+        alt: "fechar",
+        class: "btn btn--width btn--left",
+      })
+      .on("click", () => {
+        //fechar a apresentação da pagina
+        $(".background.presentation").slideUp(550, () => {
+          $(this).remove();
+        });
+      });
+
+    tituloSecao = $("<h2>")
+      .addClass("presentation__titulo tituloSecao bgYellow")
+      .text("Explorando a saga intergalatica");
+
+    const divPresentation = $("<div>").addClass("divPresentation");
+
+    const textPresentation = $("<p>")
+      .addClass("presentation__paragrafo")
+      .html(
+        "Este site foi desenvolvido como parte do curso de Desenvolvimento Web da Coderhouse BR, utilizando a <a href='https://swapi.py4e.com/' target='_blank' class='presentation__paragrafo--link'>API SWAPI</a> para agregar funcionalidades e dados específicos relacionados ao universo de Star Wars."
+      );
+
+    const imgPersonagens = $("<img>").attr({
+      src: "./assets/img/shared/personagens-animados.png",
+      class: "imgPersonagens",
+    });
+
+    sectionInterna
+      .append(
+        exitPresentation,
+        tituloSecao,
+        divPresentation.append(textPresentation)
+      )
+      .appendTo(sectionExterna);
+
+    $(window)
+      .on("resize", () => {
+        const windowWidth = $(window).width();
+        if (windowWidth <= 768) {
+          imgPersonagens.remove();
+        } else {
+          divPresentation.prepend(imgPersonagens);
+        }
+      })
+      .resize();
+  }
+  presentation();
+
+  function trilogia(dadaMerged) {
+    sectionInterna = $("<section>").addClass("background");
+
+    const h2 = $("<h2>")
+      .text("Trilogia Star wars")
+      .addClass("tituloSecao colorWhite tituloTrilogia");
+    const setaH2 = $("<img>")
+      .attr("src", "./assets/img/shared/seta-circular-direita.svg")
+      .addClass("tituloTrilogia--img")
+      .appendTo(h2);
+
+    const roloTrilogia = $("<div>").addClass("roloFilmes");
+
+    $(document).ready(() => {
+      $(".roloFilmes").slick({
+        centerMode: true,
+        centerPadding: "50px",
+        slidesToShow: 5,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 4,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "30px",
+              slidesToShow: 2,
+            },
+          },
+        ],
       });
     });
 
-  tituloSecao = $("<h2>")
-    .addClass("presentation__titulo tituloSecao bgYellow")
-    .text("Explorando a saga intergalatica");
+    const itemFilmes = dadaMerged[2].results;
 
-  const divPresentation = $("<div>").addClass("divPresentation");
+    for (let i = 0; i < 6; i++) {
+      const titleFilm = itemFilmes[i].title;
+      const imgFilmSrc = itemFilmes[i].trilogia
+        ? itemFilmes[i].trilogia.small
+        : "";
 
-  const textPresentation = $("<p>")
-    .addClass("presentation__paragrafo")
-    .html(
-      "Este site foi desenvolvido como parte do curso de Desenvolvimento Web da Coderhouse BR, utilizando a <a href='https://swapi.py4e.com/' target='_blank' class='presentation__paragrafo--link'>API SWAPI</a> para agregar funcionalidades e dados específicos relacionados ao universo de Star Wars."
-    );
+      const divFilm = $("<div>").addClass("roloFilmes__item");
+      const img = $("<img>")
+        .addClass("roloFilmes__item--img")
+        .attr("src", imgFilmSrc);
+      const title = $("<p>")
+        .addClass("roloFilmes__item--text colorWhite")
+        .text(titleFilm);
 
-  const imgPersonagens = $("<img>").attr({
-    src: "./assets/img/shared/personagens-animados.png",
-    class: "imgPersonagens",
-  });
+      divFilm.append(img, title).appendTo(roloTrilogia);
+    }
 
-  sectionInterna
-    .append(
-      exitPresentation,
-      tituloSecao,
-      divPresentation.append(textPresentation)
-    )
-    .appendTo(sectionExterna);
-
-  $(window)
-    .on("resize", () => {
-      const windowWidth = $(window).width();
-      if (windowWidth <= 768) {
-        imgPersonagens.remove();
-      } else {
-        divPresentation.prepend(imgPersonagens);
-      }
-    })
-    .resize();
-}
-presentation();
-
-function trilogia(dadaMerged) {
-  sectionInterna = $("<section>").addClass("background");
-
-  const h2 = $("<h2>")
-    .text("Trilogia Star wars")
-    .addClass("tituloSecao colorWhite tituloTrilogia");
-  const setaH2 = $("<img>")
-    .attr("src", "./assets/img/shared/seta-circular-direita.svg")
-    .addClass("tituloTrilogia--img")
-    .appendTo(h2);
-
-  const roloTrilogia = $("<div>").addClass("roloFilmes");
-
-  $(document).ready(() => {
-    $(".roloFilmes").slick({
-      centerMode: true,
-      centerPadding: "50px",
-      slidesToShow: 5,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: "40px",
-            slidesToShow: 4,
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: "30px",
-            slidesToShow: 2,
-          },
-        },
-      ],
-    });
-  });
-
-  const itemFilmes = dadaMerged[2].results;
-
-  for (let i = 0; i < 6; i++) {
-    const titleFilm = itemFilmes[i].title;
-    const imgFilmSrc = itemFilmes[i].trilogia
-      ? itemFilmes[i].trilogia.small
-      : "";
-
-    const divFilm = $("<div>").addClass("roloFilmes__item");
-    const img = $("<img>")
-      .addClass("roloFilmes__item--img")
-      .attr("src", imgFilmSrc);
-    const title = $("<p>")
-      .addClass("roloFilmes__item--text colorWhite")
-      .text(titleFilm);
-
-    divFilm.append(img, title).appendTo(roloTrilogia);
+    sectionInterna.append(h2, roloTrilogia).appendTo(sectionExterna);
   }
-
-  sectionInterna.append(h2, roloTrilogia).appendTo(sectionExterna);
 }
 
 //Função para incorporar seções com conteudos da API em sectionExterna
@@ -208,7 +212,6 @@ function creatSections(dadaMerged, ordemSecoesInternas) {
 
 //Ordem das seções internas
 const ordemSecoesInternas = [0, 3, 5, 4, 2, 1];
-
 // Requisição Root API
 $.ajax({
   url: "https://swapi.py4e.com/api/",
