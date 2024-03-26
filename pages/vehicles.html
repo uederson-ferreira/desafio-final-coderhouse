@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="../assets/css/stylesveiculos.css" /> -->
+    <link rel="stylesheet" href="../assets/css/stylesnaves.css">
     <link rel="stylesheet" href="../assets/css/style-global.css" />
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -196,222 +196,28 @@
     </header>
 
     <div class="innerWrapper">
-      <main class="content"></main>
+      <main class="content">
+        <section class="esquerdo"></section>
+
+        <section class="navios">
+          <div class="DivTxtNaves">veículos</div>
+          <div class="navesgeral"></div>
+          <div id="data-container" class="navefora">
+            <!-- Os dados desta Div estao sendo inseridos pelo js -->
+          </div>
+          <div class="passpaginas">
+            <!-- <div id="data-container" class="paginas"> -->
+            <!-- Os dados desta Div estao sendo inseridos pelo js -->
+            <!-- </div> -->
+            <div id="pagination-container" class="paginas">
+              <!-- Os dados desta Div estao sendo inseridos pelo js -->
+            </div>
+          </div>
+        </section>
+
+        <aside class="esquerdo"></aside>
+      </main>
     </div>
-
-    <!-- <main>
-      <section class="esquerdo"></section>
-
-      <section class="navios">
-        <div class="DivTxtNaves">veículos</div>
-        <div class="navesgeral">
-          <div class="navefora">
-            <div class="nave">
-              <a href="veiculosdetalhes.html">
-                <img src="../assets/img/Sandcrawler 1.png" alt="Sandcrawler" />
-              </a>
-            </div>
-            <h4>Sand Crawler</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/T-16_skyhopper_-_SW_20 1.png"
-                alt="T-16_skyhopper_-_SW_20"
-              />
-            </div>
-            <h4>T-16 Skyhopper</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/MarkIIMediumBlaster-SWL36 1.png"
-                alt="X-34 Landspeeder"
-              />
-            </div>
-            <h4>X-34 Landspeeder</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/TIEfighter2-Fathead 1.png"
-                alt="TIEfighter2-Fathead"
-              />
-            </div>
-            <h4>Tie LN Starfighter</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Snowspeeder"
-              />
-            </div>
-            <h4>Snowspeeder</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="TIE Bomber"
-              />
-            </div>
-            <h4>TIE Bomber</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="AT-AT"
-              />
-            </div>
-            <h4>AT-AT</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="AT-ST"
-              />
-            </div>
-            <h4>AT-ST</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Storm IV Twin-Pod cloud car"
-              />
-            </div>
-            <h4>Storm IV Twin-Pod cloud car</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Sail Barge"
-              />
-            </div>
-            <h4>Sail Barge</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Bantha-II Cargo Skiff"
-              />
-            </div>
-            <h4>Bantha-II Cargo Skiff</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="TIE/IN Interceptor"
-              />
-            </div>
-            <h4>TIE/IN Interceptor</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Imperial Spreeder Bike"
-              />
-            </div>
-            <h4>Imperial Spreeder Bike</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Vulture Droid"
-              />
-            </div>
-            <h4>Vulture Droid</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Multi-Troop Transport"
-              />
-            </div>
-            <h4>Multi-Troop Transport</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Armored Assault Tank"
-              />
-            </div>
-            <h4>Armored Assault Tank</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Single TrooperAerial Platform"
-              />
-            </div>
-            <h4>Single TrooperAerial Platform</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="C-9979 Landing Craft"
-              />
-            </div>
-            <h4>C-9979 Landing Craft</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Tribubble Bongo"
-              />
-            </div>
-            <h4>Tribubble Bongo</h4>
-          </div>
-          <div class="navefora">
-            <div class="nave">
-              <img
-                src="../assets/img/snowspeeder-removebg-preview 1-1.png"
-                alt="Sith Speeder"
-              />
-            </div>
-            <h4>Sith Speeder</h4>
-          </div>
-        </div>
-        <div class="passpaginas">
-          <div class="leftpaginas">
-            <img class="left" src="../assets/img/ChevronLeft.svg" alt="" />
-          </div>
-          <div class="paginas">
-            <div class="inpaginas">1</div>
-          </div>
-          <div class="paginas">
-            <div class="inpaginas">2</div>
-          </div>
-          <div class="paginas">
-            <div class="inpaginas">3</div>
-          </div>
-          <div class="paginas">
-            <div class="inpaginas">4</div>
-          </div>
-          <div class="paginas">
-            <div class="inpaginas">5</div>
-          </div>
-          <div class="rightpaginas">
-            <img src="../assets/img/ChevronRight.svg" alt="" />
-          </div>
-        </div>
-      </section>
-
-      <aside class="esquerdo"></aside>
-    </main> -->
 
     <footer>
       <div class="btn btnTopo btn--left btn--bg">
@@ -762,5 +568,6 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../assets/js/global.js"></script>
     <script src="../assets/js/funcoesBasicas.js"></script>
+    <script src="../assets/js/vehicles.js"></script>
   </body>
 </html>
